@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* {ToDo} Optimize the import using only required font styles
+    - https://fonts.google.com/specimen/Raleway
+*/
+
+/* {ToDo} Put the right color values */
+
+/* Reset CSS */
+* {
+  margin: 0;
+}
+
+/* Specs */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+#wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Utilitary classes */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+header nav {
+  min-width: 24%;
+  justify-content: end;
+}
+
+#head-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+#head-menu li a {
+  display: block;
+  text-decoration: none;
+  padding-top: 45px;
+  padding-bottom: 25px;
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+#head-menu-logo {
+  height: 29px;
+  margin-top: 25px;
+  padding-bottom: 5px;
+}
+
+#head-menu li {
+  border: 0.1em solid transparent;
+  padding: 0 12px;
+}
+
+#head-menu li:hover {
+  border-top: 0.1em solid blue;
+}
