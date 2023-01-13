@@ -38,16 +38,17 @@ body {
 }
 
 /* Header */
-#header {
-  justify-content: space-between;
-  margin-top: -3px;
-}
-
 #head-menu {
   --_menu-active-item-overline-color: var(--inactive-menu-elm-indicator-color);
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+}
+
+/* Paddings (hard-coded and very dependants... :/) */
+#header {
+  justify-content: space-between;
+  margin-top: -3px;
 }
 
 #head-menu a {
@@ -67,6 +68,7 @@ body {
   min-width: 285px;
 }
 
+/* !Paddings (hard-coded and very dependants... :/) */
 #head-menu-logo img {
   max-height: 29px;
 }
