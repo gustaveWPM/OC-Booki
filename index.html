@@ -24,7 +24,7 @@
           ></a>
         </div>
         <nav>
-          <div id="head-menu">
+          <div id="head-menu" class="flex-container">
             <a href="#">Hébergements</a>
             <a href="#">Activités</a>
           </div>
@@ -34,29 +34,28 @@
       <main>
         <section id="title-section">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-          <h2>En plein centre-ville ou en pleine nature</h2>
+          <h2 class="is-subheading">En plein centre-ville ou en pleine nature</h2>
         </section>
         <section id="form-section">
           <form class="searchbar" action="#">
-            <label for="search-input"><i class="fa fa-map-marker searchbar-icon"></i></label>
-            <input type="text" placeholder="Marseille, France" name="recherche" id="search-input">
-            <button type="submit" class="search-btn"></button>
+            <label for="search-input"><i class="fa fa-map-marker searchbar-icon is-bold"></i></label>
+            <input type="text" placeholder="Marseille, France" name="recherche" id="search-input" class="is-bold">
+            <button type="submit" class="search-btn is-bold"></button>
           </form>
-                
-          </section></main>
-        <!--
-        <section id="filters-section">
-          <span>Filtres</span>
-          <ul id="filters-buttons">
-            <li><a href="#">Économique</a></li>
-            <li><a href="#">Familial</a></li>
-            <li><a href="#">Romantique</a></li>
-            <li><a href="#">Animaux autorisés</a></li>
+        </section>
+        <section id="filters-section" class="flex-container">
+          <p class="is-bold">Filtres</p>
+          <ul id="filters-buttons" class="flex-container is-bold">
+            <li><a href="#" class="filter-btn"><i class="fas fa-money-bill-wave" aria-hidden="true"></i>Économique</a></li>
+            <li><a href="#" class="filter-btn"><i class="fas fa-person" aria-hidden="true"></i>Familial</a></li>
+            <li><a href="#" class="filter-btn"><i class="fas fa-heart" aria-hidden="true"></i>Romantique</a></li>
+            <li><a href="#" class="filter-btn"><i class="fas fa-dog" aria-hidden="true"></i>Animaux autorisés</a></li>
           </ul>
         </section>
-      </section>
-
-      <p>Plus de 500 logements sont disponibles dans cette ville</p>
+      </main>
+      
+      <!--
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
 
       <aside>
         <article id="best-lodgings">
