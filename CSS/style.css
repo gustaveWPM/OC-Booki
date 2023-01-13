@@ -3,7 +3,14 @@
 /* Configuration */
 /* {ToDo} Put the right color values */
 :root {
-  --booki-chart-blue: blue;
+  --booki-chart-blue: #0065FC;
+  --booki-chart-light-blue: #DEEBFF;
+  --booki-chart-grey: #F2F2F2;
+  --booki-chart-white: white;
+  --booki-chart-black: black;
+
+  --booki-chart-blue-hover-btn: #0065FC; /* {ToDo} not specified */
+
   --active-menu-elm-indicator-color: var(--booki-chart-blue);
   --inactive-menu-elm-indicator-color: transparent;
 }
@@ -40,27 +47,34 @@ body {
 /* Header */
 #head-menu {
   --_menu-active-item-overline-color: var(--inactive-menu-elm-indicator-color);
+  --_menu-active-item-a-color: var(--booki-chart-black);
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
+#head-menu a:hover {
+  --_menu-active-item-overline-color: var(--active-menu-elm-indicator-color);
+  --_menu-active-item-a-color: var(--booki-chart-blue);
+}
+
 /* Paddings (hard-coded and very dependants... :/) */
 #header {
   justify-content: space-between;
-  margin-top: -3px;
+  margin-top: -12px;
 }
 
 #head-menu a {
   text-decoration: none;
-  padding-top: 58px;
-  margin-top: -50px;
+  padding-top: 48px;
+  margin-top: -40px;
   padding-left: 25px;
   padding-right: 15px;
   border-top: 0.3em solid var(--_menu-active-item-overline-color);
+  color: var(--_menu-active-item-a-color);
 }
 
-#logo-container {
+#head-menu-logo-container {
   padding: 50px 0;
 }
 
@@ -70,26 +84,78 @@ body {
 
 /* !Paddings (hard-coded and very dependants... :/) */
 #head-menu-logo img {
-  max-height: 29px;
-}
-
-#head-menu a:hover {
-  --_menu-active-item-overline-color: var(--active-menu-elm-indicator-color);
+  margin-top: 5px;
+  max-height: 22px;
 }
 
 /* Title section */
 #title-section {
-  line-height: 2.25em;
+  line-height: 1.75em;
 }
 
 #title-section h1 {
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.3em;
 }
 
 #title-section h2 {
   font-weight: normal;
-  font-size: 1.18em;
+  font-size: 0.95em;
 }
 
 /* Searchbar */
+#form-section {
+  margin-top: 10px;
+}
+
+form.searchbar input[type=text],
+.searchbar-icon,
+form.searchbar button {
+  float: left;
+  padding: 15px 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 1px solid var(--booki-chart-grey);
+  text-align: center;
+}
+
+form.searchbar input::placeholder {
+  color: var(--booki-chart-black);
+}
+
+form.searchbar input[type=text] {
+  width: 13em;
+  text-align: left;
+  text-indent: 0.30em;
+  border-left: none;
+  border-right: none;
+  background: var(--booki-chart-white);
+}
+
+.searchbar-icon {
+  width: 1.25em;
+  font-size: 1.15em;
+  text-indent: 0.05em;
+  border-radius: 15px 0 0 15px;
+  border-right: none;
+  background: var(--booki-chart-grey);
+}
+
+form.searchbar .search-btn {
+  --_searchbar-active-btn-color: var(--booki-chart-blue);
+  width: 8em;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+  border-left: none;
+  background: var(--_searchbar-active-btn-color);
+  border: 1px solid var(--booki-chart-blue);
+  color: var(--booki-chart-white);
+}
+
+form.searchbar .search-btn:hover {
+  --_searchbar-active-btn-color: var(--booki-chart-blue-hover-btn);
+}
+
+form.searchbar .search-btn:before {
+  content: "Rechercher";
+}
