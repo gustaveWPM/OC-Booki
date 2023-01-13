@@ -36,8 +36,28 @@ body {
   justify-content: space-between;
 }
 
+#head-menu a {
+  text-decoration: none;
+}
+
+#head-menu-logo img {
+  max-height: 29px;
+}
+
+/* Designed to be tweaked together */
 #header nav {
   min-width: 285px;
+}
+
+#head-menu li {
+  padding-left: 25px;
+  padding-right: 15px;
+  border: 0.13em solid transparent;
+}
+/* !Designed to be tweaked together */
+
+#head-menu li:hover {
+  border-top: 0.13em solid blue;
 }
 
 #head-menu {
@@ -47,28 +67,11 @@ body {
   list-style-type: none;
 }
 
-#head-menu a {
-  text-decoration: none;
-}
-
 #head-menu-logo {
   padding: 35px;
   transform: translateX(-35px);
 }
-
-#head-menu-logo img {
-  max-height: 29px;
-}
-
-#head-menu li {
-  padding-left: 25px;
-  padding-right: 15px;
-  border: 0.13em solid transparent;
-}
-
-#head-menu li:hover {
-  border-top: 0.13em solid blue;
-}
+/* ^ Adding some deadzone */
 
 /* Title section */
 #title-section {
@@ -85,3 +88,5 @@ body {
   font-weight: normal;
   font-size: 1.18em;
 }
+
+/* Searchbar */
