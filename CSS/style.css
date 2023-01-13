@@ -43,6 +43,10 @@ body {
   font-weight: bold;
 }
 
+.is-label {
+  user-select: none;
+}
+
 .is-subheading {
   font-weight: normal;
   font-size: 0.95em;
