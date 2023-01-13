@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Configuration */
+/* {ToDo} Put the right color values */
+:root {
+  --booki-chart-blue: blue;
+  --active-menu-elm-indicator-color: var(--booki-chart-blue);
+  --inactive-menu-elm-indicator-color: transparent;
+}
+
 /* {ToDo} Optimize the import using only required font styles
     - https://fonts.google.com/specimen/Raleway
 */
-
-/* {ToDo} Put the right color values */
 
 /* Reset CSS */
 * {
@@ -36,42 +42,37 @@ body {
   justify-content: space-between;
 }
 
-#head-menu a {
-  text-decoration: none;
-}
-
-#head-menu-logo img {
-  max-height: 29px;
-}
-
-/* Designed to be tweaked together */
-#header nav {
-  min-width: 285px;
-}
-
-#head-menu li {
-  padding-left: 25px;
-  padding-right: 15px;
-  border: 0.13em solid transparent;
-}
-/* !Designed to be tweaked together */
-
-#head-menu li:hover {
-  border-top: 0.13em solid blue;
-}
-
 #head-menu {
+  --_menu-active-item-overline-color: var(--inactive-menu-elm-indicator-color);
   line-height: 135px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
+#head-menu a {
+  text-decoration: none;
+  padding-left: 25px;
+  padding-right: 15px;
+  border-top: 0.13em solid var(--_menu-active-item-overline-color);
+}
+
+#header nav {
+  min-width: 285px;
+}
+
+#head-menu-logo img {
+  max-height: 29px;
+}
+
 #head-menu-logo {
   padding: 35px;
   transform: translateX(-35px);
 }
-/* ^ Adding some deadzone */
+
+#head-menu a:hover {
+  --_menu-active-item-overline-color: var(--active-menu-elm-indicator-color);
+}
 
 /* Title section */
 #title-section {
