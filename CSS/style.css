@@ -9,6 +9,7 @@
 /* Reset CSS */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* Specs */
@@ -18,6 +19,8 @@ body {
 
 #wrapper {
   max-width: 1400px;
+  padding-right: 60px;
+  padding-left: 60px;
   margin: auto;
 }
 
@@ -26,47 +29,38 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* Header */
-header {
-  padding-right: 60px;
-  padding-left: 60px;
+#header {
+  line-height: 125px;
+  justify-content: space-between;
 }
 
-header nav {
-  min-width: 24%;
-  justify-content: end;
+#header nav {
+  min-width: 22%;
 }
 
 #head-menu {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   list-style-type: none;
 }
 
-#head-menu li a {
-  display: block;
+#head-menu a {
   text-decoration: none;
-  padding-top: 45px;
-  padding-bottom: 25px;
-  padding-left: 8px;
-  padding-right: 4px;
+  padding-left: 18px;
+  padding-right: 14px;
 }
 
 #head-menu-logo {
-  height: 29px;
-  margin-top: 25px;
-  padding-bottom: 5px;
+  max-height: 29px;
 }
 
 #head-menu li {
-  border: 0.1em solid transparent;
+  border: 0.13em solid transparent;
 }
 
 #head-menu li:hover {
-  border-top: 0.1em solid blue;
+  border-top: 0.13em solid blue;
 }
