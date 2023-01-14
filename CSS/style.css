@@ -119,7 +119,7 @@ body {
   padding-left: 25px;
   padding-right: 15px;
   margin: 0 20px;
-  border-top: 0.3em solid var(--_menu-active-item-overline-color);
+  border-top: 2px solid var(--_menu-active-item-overline-color);
   color: var(--_menu-active-item-a-color);
 }
 
@@ -503,7 +503,7 @@ h3 {
     padding-left: 0;
     padding-right: 0;
     border-top: 0 solid transparent;
-    border-bottom: 0.3em solid var(--_menu-active-item-overline-color);
+    border-bottom: 3px solid var(--_menu-active-item-overline-color);
     color: var(--_menu-active-item-a-color);
   }
 }
