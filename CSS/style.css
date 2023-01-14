@@ -207,12 +207,20 @@ body {
     justify-content: center;
   }
 
-  .searchbar input[type=text] {
-    width: 53vw;
+  .searchbar {
+    width: 100%;
   }
-  
+
+  .searchbar-icon {
+    width: 50px;
+  }
+
   .searchbar .search-btn {
-    width: 2.75em;
+    width: 50px;
+  }
+
+  .searchbar input[type=text] {
+    width: calc(100% - 100px);
   }
 
   .searchbar .search-btn:before {
