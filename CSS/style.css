@@ -34,10 +34,10 @@ body {
 }
 
 #main-wrapper {
-  max-width: 1400px;
-  padding: 0 50px;
+  max-width: 1440px;
   margin: auto;
   background-color: var(--booki-chart-white);
+  padding: 0 50px;
 }
 
 /* Utilitary classes */
@@ -285,20 +285,36 @@ body {
 
 #lodgings {
   margin: 1em 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 50px;
+  gap: 40px;
 }
 
+#lodgings-best,
 #lodgings-city {
   background-color: var(--booki-chart-grey);
   border-radius: 20px;
+  min-height: 625px;
+}
+
+#lodgings-city {
   width: 880px;
 }
 
+#lodgings-best {
+  width: 420px;
+}
+
 #lodgings-city h3,
+#lodgings-best h3 {
+  margin-left: 35px;
+  margin-top: 40px;
+}
+
 .show-more-btn {
   margin-left: 35px;
-  margin-top: 35px;
-  margin-bottom: 5px;
+  margin-top: 25px;
 }
 
 h3 {
@@ -323,8 +339,9 @@ h3 {
 .lodging-card-wrapper {
   outline-offset: -5px;
   outline: 5px solid var(--booki-chart-white);
-  margin: 1.25em 23px 0.65em 23px;
+  margin: 1.25em 0;
   z-index: 1;
+  margin: 15px 15px;
 }
 
 .lodging-cards-container {
@@ -373,7 +390,7 @@ h3 {
 }
 
 .show-more-btn {
-  display: block;
+  display: inline-flex;
   margin-bottom: 40px;
   font-size: 1.20em;
   font-weight: 700;
