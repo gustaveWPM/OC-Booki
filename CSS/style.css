@@ -143,7 +143,7 @@ body {
 
 /* Searchbar */
 #form-section {
-  display: flow-root;
+  display: flex;
   margin-top: 10px;
 }
 
@@ -198,6 +198,32 @@ body {
   content: "Rechercher";
 }
 
+.search-btn i {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #form-section {
+    justify-content: center;
+  }
+
+  .searchbar input[type=text] {
+    width: 53vw;
+  }
+  
+  .searchbar .search-btn {
+    width: 2.75em;
+  }
+
+  .searchbar .search-btn:before {
+    content: "";
+  }
+
+  .search-btn i {
+    display: block;
+  }
+}
+
 /* Filters section */
 #filters-section {
   max-width: 914px;
@@ -207,6 +233,7 @@ body {
 #filters-section ul {
   list-style-type: none;
   justify-content: space-between;
+  flex: 1;
 }
 
 #filters-section p {
@@ -214,7 +241,6 @@ body {
 }
 
 #filters-buttons {
-  width: 100%;
   padding-left: 35px;
 }
 
