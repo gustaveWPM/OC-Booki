@@ -22,6 +22,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Specs */
@@ -50,22 +51,42 @@ body {
 .is-caption {
   font-weight: normal;
   font-size: 0.95em;
-  text-rendering : optimizeLegibility;
+  text-rendering: optimizeLegibility;
 }
 
 .is-circular {
   border-radius: 100%;
 }
 
-.is-caption i {
-  margin-right: 20px;
+.is-checked {
+  color: var(--booki-chart-blue);
+}
+
+.is-unchecked {
+  color: var(--booki-chart-grey);
 }
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+}
+
+.flex-container-vcentered {
+  display: flex;
   align-items: center;
-  margin: auto;
+}
+
+.flex-container-vhcentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-flex-column {
+  flex-direction: column;
+}
+
+.flex-wrapped {
+  flex-wrap: wrap;
 }
 
 /* Header */
@@ -141,7 +162,7 @@ body {
 }
 
 .searchbar input[type=text] {
-  width: 13em;
+  width: 13.75em;
   text-align: left;
   text-indent: 0.30em;
   border-left: none;
@@ -150,7 +171,7 @@ body {
 }
 
 .searchbar-icon {
-  width: 1.25em;
+  width: 2.75em;
   font-size: 1.15em;
   text-indent: 0.05em;
   border-radius: 15px 0 0 15px;
@@ -179,18 +200,25 @@ body {
 
 /* Filters section */
 #filters-section {
+  width: 914px;
   margin-top: 20px;
 }
 
 #filters-section ul {
   list-style-type: none;
+  justify-content: space-between;
+}
+
+#filters-buttons {
+  width: 100%;
+  padding-left: 30px;
+  justify-content: space-between;
 }
 
 #filters-buttons,
 #filters-buttons a {
-  margin: 5px 20px;
+  margin: 5px 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -208,7 +236,7 @@ body {
   text-decoration: none;
   padding: 0.75em 1em 0.75em 0.75em;
   text-indent: 5pt;
-  border-radius: 20px;
+  border-radius: 30px;
   color: var(--booki-chart-black);
   background-color: var(--_filter-btn-bg-color);
   border: 0.15em solid var(--booki-chart-filter-border-color);
@@ -234,3 +262,99 @@ body {
   color: var(--booki-chart-blue);
   border: 0.15em solid var(--booki-chart-filter-border-color);
 }
+
+#lodgings {
+  margin: 1em 0;
+  padding-bottom: 50px;
+}
+
+#lodgings-city {
+  background-color: var(--booki-chart-grey);
+  border-radius: 20px;
+  width: 880px;
+  padding: 35px;
+}
+
+h3 {
+  margin: 5px 0;
+  font-size: 1.38em;
+  font-weight: 700;
+}
+
+.lodging-card-wrapper,
+.lodging-card {
+  border-radius: 20px;
+}
+
+.lodging-card {
+  min-width: 246px;
+  min-height: 199px;
+  line-height: 1.25em;
+  border-radius: 20px;
+  background-color: var(--booki-chart-white);
+}
+
+.lodging-card-wrapper {
+  outline-offset: -5px;
+  outline: 5px solid var(--booki-chart-white);
+  margin-top: 1.25em;
+  margin-bottom: 0.65em;
+  z-index: 1;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lodging-cards-container {
+  justify-content: space-between;
+}
+
+.lodging-cards-container a {
+  --_lodging-cards-container-a-color: var(--booki-chart-black);
+  text-decoration: none;
+  color: var(--_lodging-cards-container-a-color)
+}
+
+.lodging-cards-container a:hover {
+  --_lodging-cards-container-a-color: var(--booki-chart-blue);
+}
+
+.lodging-card-description {
+  padding-left: 0.6em;
+  margin-top: 4px;
+  scale: 97%;
+  z-index: 1;
+}
+
+.lodging-card-description p {
+  font-size: 0.88em;
+  text-rendering: optimizeLegibility;  
+}
+
+.lodging-card-description p::after {
+  content: "€";
+  font-weight: bold;
+}
+
+.rating-container {
+  margin: 8px 0;
+  font-size: 0.75em;
+  letter-spacing: 1pt;
+}
+
+.lodging-card img {
+  width: 100%;
+  height: 119px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.show-more-btn {
+  display: block;
+  margin-top: 25px;
+  font-size: 1.20em;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--booki-chart-black)
+}
+
+/* {ToDo} "Les plus populaires" */

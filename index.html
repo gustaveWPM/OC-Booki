@@ -1,110 +1,194 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta
-      name="description"
-      content="Trouvez l'Hébergement et les Activités pour des vacances idéales sur Booki.fr, site de Voyages N°1 en France. Tarifs imbattables et Réservation Gratuite."
-    >
-    <link href="./CSS/style.css" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/575c2fb10a.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <title>Booki | Accueil</title>
-  </head>
 
-  <body>
-    <div id="wrapper">
-      <header id="header" class="flex-container">
-        <div id="head-menu-logo-container">
-          <a id="head-menu-logo" href="./index.html">
-            <img src="./images/logo/Booki.png" alt="Logo Booki" draggable="false"
-          ></a>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Trouvez l'Hébergement et les Activités pour des vacances idéales sur Booki.fr, site de Voyages N°1 en France. Tarifs imbattables et Réservation Gratuite.">
+  <link href="./CSS/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/575c2fb10a.js" crossorigin="anonymous" defer></script>
+  <title>Booki | Accueil</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header" class="flex-container-vcentered">
+      <div id="head-menu-logo-container">
+        <a id="head-menu-logo" href="./index.html">
+          <img src="./images/logo/Booki.png" alt="Logo Booki" draggable="false"></a>
+      </div>
+      <nav>
+        <div id="head-menu" class="flex-container">
+          <a href="#">Hébergements</a>
+          <a href="#">Activités</a>
         </div>
-        <nav>
-          <div id="head-menu" class="flex-container">
-            <a href="#">Hébergements</a>
-            <a href="#">Activités</a>
-          </div>
-        </nav>
-      </header>
+      </nav>
+    </header>
 
-      <main>
-        <section id="title-section">
-          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-          <h2 class="is-caption">En plein centre-ville ou en pleine nature</h2>
-        </section>
-        <section id="form-section">
-          <form class="searchbar" action="#">
-            <label for="search-input"><i class="fa fa-map-marker searchbar-icon is-bold"></i></label>
-            <input type="text" placeholder="Marseille, France" name="recherche" id="search-input" class="is-bold">
-            <button type="submit" class="search-btn is-bold"></button>
-          </form>
-        </section>
-        <section id="filters-section" class="flex-container">
-          <p class="is-bold is-label">Filtres</p>
-          <ul id="filters-buttons" class="flex-container is-bold">
-            <li><a href="#" class="filter-btn"><i class="fas fa-money-bill-wave" aria-hidden="true"></i>Économique</a></li>
-            <li><a href="#" class="filter-btn"><i class="fas fa-person" aria-hidden="true"></i>Familial</a></li>
-            <li><a href="#" class="filter-btn"><i class="fas fa-heart" aria-hidden="true"></i>Romantique</a></li>
-            <li><a href="#" class="filter-btn"><i class="fas fa-dog" aria-hidden="true"></i>Animaux autorisés</a></li>
-          </ul>
-        </section>
-        <section id="lodgings-section">
-          <div id="lodging-info" class="flex-container">
-            <i class="fas fa-info is-circular lodging-info-icon" aria-hidden="true"></i>
-            <p class="is-caption is-label">Plus de 500 logements sont disponibles dans cette ville</p>
-          </div>
-        </section>
-      </main>
-      <!--
+    <main>
+      <section id="title-section">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <h2 class="is-caption">En plein centre-ville ou en pleine nature</h2>
+      </section>
+      <div id="form-section">
+        <form class="searchbar" action="#">
+          <label for="search-input"><i class="fa fa-map-marker searchbar-icon is-bold"></i></label>
+          <input type="text" placeholder="Marseille, France" name="recherche" id="search-input" class="is-bold">
+          <button type="submit" class="search-btn is-bold"></button>
+        </form>
+      </div>
+      <div id="filters-section" class="flex-container-vcentered">
+        <p class="is-bold is-label">Filtres</p>
+        <ul id="filters-buttons" class="flex-container is-bold">
+          <li>
+            <a href="#" class="filter-btn"><i class="fas fa-money-bill-wave" aria-hidden="true"></i>Économique</a>
+          </li>
+          <li>
+            <a href="#" class="filter-btn"><i class="fas fa-person" aria-hidden="true"></i>Familial</a>
+          </li>
+          <li>
+            <a href="#" class="filter-btn"><i class="fas fa-heart" aria-hidden="true"></i>Romantique</a>
+          </li>
+          <li>
+            <a href="#" class="filter-btn"><i class="fas fa-dog" aria-hidden="true"></i>Animaux
+              autorisés</a>
+          </li>
+        </ul>
+      </div>
 
-      <aside>
-        <article id="best-lodgings">
-          <h3>Les plus populaires</h3>
-          <article class="best-lodgings-card">
-            <a href="#">Hôtel Le soleil du matin</a>
+      <div id="lodgings-section">
+        <div id="lodging-info" class="flex-container-vcentered">
+          <i class="fas fa-info is-circular lodging-info-icon" aria-hidden="true"></i>
+          <p class="is-caption is-label">
+            Plus de 500 logements sont disponibles dans cette ville
+          </p>
+        </div>
+        <div id="lodgings" class="flex-container">
+          <article id="lodgings-city">
+            <h3>Hébergements à Marseille</h3>
+            <div class="flex-container-vhcentered flex-wrapped lodging-cards-container">
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                      alt="Aperçu de l'Auberge La Canebière" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Auberge La Canebière</h4>
+                      <p>Nuit à partir de 25</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                      alt="Aperçu de l'Hôtel du Port" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Hôtel du Port</h4>
+                      <p>Nuit à partir de 52</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                      alt="Aperçu de l'Hôtel Les mouettes" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Hôtel Les mouettes</h4>
+                      <p>Nuit à partir de 76</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                      alt="Aperçu de l'Hôtel de la mer" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Hôtel de la mer</h4>
+                      <p>Nuit à partir de 46</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                      alt="Aperçu de l'Auberge Le Panier" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Auberge Le Panier</h4>
+                      <p>Nuit à partir de 23</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+              <div class="lodging-card-wrapper">
+                <article class="lodging-card">
+                  <a href="#">
+                    <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                      alt="Aperçu de l'Hôtel Chez Amina" draggable="false">
+                    <div class="flex-container is-flex-column lodging-card-description">
+                      <h4>Hôtel Chez Amina</h4>
+                      <p>Nuit à partir de 96</p>
+                      <div class="flex-container rating-container">
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                        <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+            <a href="#" class="show-more-btn">Afficher plus</p>
           </article>
-          <article class="best-lodgings-card">
-            <a href="#">Chambres d’hôtes Au coeur de l’œau</a>
-          </article>
-          <article class="best-lodgings-card">
-            <a href="#">Hôtel Bleu et Blanc</a>
-          </article>
-        </article>
-      </aside>
 
-      <article id="lodgings">
-        <h3>Hébergements à Marseille</h3>
-        <article class="lodgings-card">Auberge La Canebière</article>
-        <article class="lodgings-card">Hôtel du port</article>
-        <article class="lodgings-card">Hôtel Les mouettes</article>
-        <article class="lodgings-card">Hôtel de la mer</article>
-        <article class="lodgings-card">Auberge Le Panier</article>
-        <article class="lodgings-card">Hôtel Chez Amina</article>
-        <h4>Afficher plus</h4>
-      </article>
-      <h3>Activités à Marseille</h3>
-      <h5>Vieux-Port</h5>
-      <h5>Fort de Pomègues</h5>
-      <h5>Parc national des Calanques</h5>
-      <h5>Notre-Dame-de-la-Garde</h5>
+        </div>
+      </div>
     </main>
+  </div>
+</body>
 
-    <footer>
-      <h4>À propos</h4>
-      <a href="#">Fonctionnement du site</a>
-      <a href="#">Conditions générales</a>
-      <a href="#">Données et confidentialité</a>
-      <h4>Nos hébergements</h4>
-      <a href="#">Charte qualité</a>
-      <a href="#">Proposer votre hôtel</a>
-      <h4>Assistance</h4>
-      <a href="#">Centre d’aide</a>
-      <a href="#">Nous contacter</a>
-    </footer>
-    --></div>
-  </body>
 </html>
