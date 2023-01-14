@@ -200,7 +200,7 @@ body {
 
 /* Filters section */
 #filters-section {
-  max-width: 964px;
+  max-width: 914px;
   margin-top: 20px;
 }
 
@@ -209,10 +209,13 @@ body {
   justify-content: space-between;
 }
 
+#filters-section p {
+  margin-left: 5px;
+}
+
 #filters-buttons {
   width: 100%;
-  padding-left: 30px;
-  justify-content: space-between;
+  padding-left: 35px;
 }
 
 #filters-buttons,
