@@ -155,6 +155,7 @@ body {
   font-size: 1em;
   border: 1px solid var(--booki-chart-grey);
   text-align: center;
+  height: 50px;
 }
 
 .searchbar input::placeholder {
@@ -200,36 +201,6 @@ body {
 
 .search-btn i {
   display: none;
-}
-
-@media (max-width: 768px) {
-  #form-section {
-    justify-content: center;
-  }
-
-  .searchbar {
-    width: 100%;
-  }
-
-  .searchbar-icon {
-    width: 50px;
-  }
-
-  .searchbar .search-btn {
-    width: 50px;
-  }
-
-  .searchbar input[type=text] {
-    width: calc(100% - 100px);
-  }
-
-  .searchbar .search-btn:before {
-    content: "";
-  }
-
-  .search-btn i {
-    display: block;
-  }
 }
 
 /* Filters section */
@@ -397,3 +368,37 @@ h3 {
 }
 
 /* {ToDo} "Les plus populaires" */
+
+
+/* Mobile */
+/* Searchbar */
+@media (max-width: 768px) {
+  #form-section {
+    justify-content: center;
+  }
+
+  .searchbar {
+    width: 100%;
+  }
+
+  .searchbar-icon {
+    width: 50px;
+  }
+
+  .searchbar .search-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .searchbar input[type=text] {
+    width: calc(100% - 100px);
+  }
+
+  .searchbar .search-btn:before {
+    content: "";
+  }
+
+  .search-btn i {
+    display: block;
+  }
+}
