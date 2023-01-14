@@ -41,6 +41,10 @@ body {
 }
 
 /* Utilitary classes */
+.kinda-dodge-and-burn-filter {
+  filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
+}
+
 .is-bold {
   font-weight: bold;
 }
@@ -324,6 +328,10 @@ body {
   margin-top: 25px;
 }
 
+.show-more-btn:hover {
+  color: var(--booki-chart-blue)
+}
+
 h3 {
   font-size: 1.38em;
   font-weight: 700;
@@ -404,7 +412,7 @@ h3 {
   color: var(--booki-chart-black)
 }
 
-/* {ToDo} "Les plus populaires" */
+/* Best lodgings section (full of monkey patches) */
 
 .best-lodging-card {
   display: flex;
@@ -452,6 +460,91 @@ h3 {
 .best-lodging-card .rating-container {
   margin: 0;
   margin-top: 50px;
+}
+
+/* Activities section */
+
+#activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.activity-card {
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card:hover {
+  color: var(--booki-chart-blue);
+}
+
+.activity-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.activity-card h5 {
+  font-size: 1em;
+  font-weight: 700;
+  text-indent: 15pt;
+}
+
+.activity-card img {
+  width: 302px;
+  height: 390px;
+  object-fit: cover;
+}
+
+.activity-card-description {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+
+/* Footer */
+
+#footer-sections-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 25px;
+  padding-bottom: 40px;
+  background-color: var(--booki-chart-grey);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 226px;
+}
+
+.footer-section h6 {
+  font-size: 1.08em;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 25pt;
+}
+
+.footer-section a:hover {
+  color: var(--booki-chart-blue);
+}
+
+#footer-sections-container > div:first-of-type {
+  margin-left: 73px;
+}
+
+#footer-sections-container > div:last-of-type {
+  margin-left: 50px;
 }
 
 /* Mobile */
