@@ -570,6 +570,10 @@ footer {
     min-width: 80vw;
   }
 
+  .padding-wrapper {
+    padding: 0 70px;
+  }
+  
   /* Header */
   #header {
     padding: 0;
