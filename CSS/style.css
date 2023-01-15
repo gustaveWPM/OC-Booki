@@ -19,7 +19,8 @@
   --active-menu-elm-indicator-color: var(--booki-chart-blue);
   --inactive-menu-elm-indicator-color: transparent;
 
-  --global-padding: 0 50px;
+  --global-padding-desktop: 0 50px;
+  --global-padding-mobile: 0 20px;
 }
 
 /* Reset CSS */
@@ -36,7 +37,7 @@ body {
 }
 
 .padding-wrapper {
-  padding: var(--global-padding);
+  padding: var(--global-padding-desktop);
 }
 
 #main-wrapper {
@@ -577,7 +578,7 @@ footer {
   }
 
   .padding-wrapper {
-    padding: 0 70px;
+    padding: var(--global-padding-mobile);
   }
   
   /* Header */
