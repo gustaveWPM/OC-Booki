@@ -673,3 +673,10 @@ footer {
     height: 135px;
   }
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+  * {
+    background-color: red;
+  }
+}
