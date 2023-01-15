@@ -118,7 +118,7 @@ body {
 
 #header-nav {
   --_menu-active-item-overline-color: var(--inactive-menu-elm-indicator-color);
-  --_menu-active-item-a-color: var(--booki-chart-black);
+  --_menu-active-item-a-color: inherit;
   justify-content: space-between;
   align-self: stretch;
 }
@@ -271,7 +271,7 @@ body {
   padding: 0.75em 1em 0.75em 0.75em;
   text-indent: 5pt;
   border-radius: 30px;
-  color: var(--booki-chart-black);
+  color: inherit;
   background-color: var(--_filter-btn-bg-color);
   border: 0.15em solid var(--booki-chart-filter-border-color);
 }
@@ -372,7 +372,7 @@ h3 {
 }
 
 .lodging-cards-container a {
-  --_lodging-cards-container-a-color: var(--booki-chart-black);
+  --_lodging-cards-container-a-color: inherit;
   text-decoration: none;
   color: var(--_lodging-cards-container-a-color);
 }
@@ -418,7 +418,7 @@ h3 {
   font-size: 1.20em;
   font-weight: 700;
   text-decoration: none;
-  color: var(--booki-chart-black)
+  color: inherit;
 }
 
 /* Best lodgings section (full of monkey patches) */
@@ -605,7 +605,7 @@ footer {
 
   .header-nav-item:hover {
     --_menu-active-item-overline-color: var(--booki-chart-grey);
-    --_menu-active-item-a-color: var(--booki-chart-black);
+    --_menu-active-item-a-color: inherit;
   }
 
   .is-active,
