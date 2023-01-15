@@ -106,7 +106,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: var(--global-padding);
   min-height: 65px;
   margin-bottom: 55px;
 }
@@ -584,6 +583,7 @@ footer {
   /* Header */
   #header {
     padding: 0;
+    margin-bottom: 15px;
     flex-direction: column;
   }
 
