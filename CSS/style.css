@@ -508,7 +508,6 @@ h3 {
 }
 
 /* Footer */
-
 footer {
   background-color: var(--booki-chart-grey);
 }
@@ -556,6 +555,14 @@ footer {
 
   main {
     padding: 0 50px;
+  }
+
+  .section-element-a {
+    order: 2;
+  }
+
+  .section-element-b {
+    order: 1;
   }
 }
 
