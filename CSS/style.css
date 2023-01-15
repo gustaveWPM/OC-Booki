@@ -468,8 +468,9 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 25px;
+  gap: 44px;
 }
 
 .activity-card {
