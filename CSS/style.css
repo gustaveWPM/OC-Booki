@@ -526,7 +526,8 @@ footer {
 .footer-section {
   display: flex;
   flex-direction: column;
-  margin-right: 226px;
+  margin-right: 196px;
+  min-width: 220px;
 }
 
 .footer-section h6 {
