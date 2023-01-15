@@ -508,14 +508,18 @@ h3 {
 
 /* Footer */
 
+footer {
+  background-color: var(--booki-chart-grey);
+}
+
 #footer-sections-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
+  margin-left: 73px;
   margin-top: 25px;
   padding-bottom: 40px;
-  background-color: var(--booki-chart-grey);
 }
 
 .footer-section {
@@ -525,7 +529,8 @@ h3 {
 }
 
 .footer-section h6 {
-  font-size: 1.08em;
+  font-size: 1.15em;
+  font-weight: 700;
   margin-top: 45px;
   margin-bottom: 15px;
 }
@@ -533,19 +538,12 @@ h3 {
 .footer-section a {
   text-decoration: none;
   color: inherit;
+  font-weight: 400;
   line-height: 25pt;
 }
 
 .footer-section a:hover {
   color: var(--booki-chart-blue);
-}
-
-#footer-sections-container > div:first-of-type {
-  margin-left: 73px;
-}
-
-#footer-sections-container > div:last-of-type {
-  margin-left: 50px;
 }
 
 /* Mobile */
