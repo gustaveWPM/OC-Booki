@@ -295,7 +295,7 @@ body {
 }
 
 #lodgings {
-  margin: 1em 0;
+  margin: 15px 15px;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 50px;
@@ -379,7 +379,7 @@ h3 {
 }
 
 .lodging-card-description {
-  padding-left: 0.6em;
+  padding-left: 12px;
   margin-top: 4px;
   scale: 97%;
   z-index: 1;
@@ -644,6 +644,10 @@ footer {
   }
 
   /* Lodgings */
+  #lodgings {
+    margin: 15px 0;
+  }
+
   .lodging-cards-container {
     flex-direction: column;
   }
