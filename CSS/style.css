@@ -186,10 +186,6 @@ body {
   font-size: 1em;
 }
 
-.searchbar input::placeholder {
-  color: var(--booki-chart-black);
-}
-
 .searchbar input[type=text] {
   width: 13.75em;
   text-indent: 0.30em;
