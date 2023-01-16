@@ -576,11 +576,14 @@ footer {
     order: 0;
   }
 
-  .lodging-card,
-  .best-lodging-card,
-  .activity-card,
-  .searchbar {
-    min-width: 80vw;
+  .lodging-cards-container,
+  #activities {
+    margin: 0 2%;
+    align-items: stretch;
+  }
+
+  .activity-card {
+    width: 100%;
   }
 
   .padding-wrapper {
