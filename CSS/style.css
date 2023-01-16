@@ -561,6 +561,26 @@ footer {
   color: var(--booki-chart-blue);
 }
 
+/* Custom breakpoints */
+@media (max-width: 1460px) {
+  #lodgings-best,
+  #lodgings-city {
+    width: 100%;
+    margin: 0 2%;
+  }
+
+  .activity-card, #lodgings-city .lodging-card-wrapper {
+    flex: 1 1 39%;
+    margin: 2% 3%;
+  }
+
+  #lodgings-best .lodging-cards-container {
+    flex-flow: wrap column;
+    align-items: stretch;
+    margin: 0 2%;
+  }
+}
+
 /* Tablet */
 @media (max-width: 992px) {
 }
