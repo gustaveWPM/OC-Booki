@@ -79,18 +79,6 @@ body {
   color: var(--booki-chart-grey);
 }
 
-.flex-container {
-  display: flex;
-}
-
-.is-flex-column {
-  flex-direction: column;
-}
-
-.flex-wrapped {
-  flex-wrap: wrap;
-}
-
 /* Header */
 #header {
   display: flex;
@@ -305,9 +293,10 @@ body {
 }
 
 #lodgings {
-  margin: 15px 15px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 15px 15px;
   padding-bottom: 50px;
   gap: 40px;
 }
@@ -394,6 +383,8 @@ h3 {
 }
 
 .lodging-card-description {
+  display: flex;
+  flex-direction: column;
   padding-left: 12px;
   margin-top: 4px;
   scale: 97%;
@@ -410,6 +401,7 @@ h3 {
 }
 
 .rating-container {
+  display: flex;
   margin: 8px 0;
   font-size: 0.75em;
   letter-spacing: 1pt;
