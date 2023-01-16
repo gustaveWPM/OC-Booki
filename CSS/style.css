@@ -503,10 +503,11 @@ h3 {
   color: inherit;
 }
 
-.activity-card h5 {
-  font-size: 1em;
+.activity-card-description {
+  font-size: 1.25em;
   font-weight: 700;
-  text-indent: 15pt;
+  margin-left: 8pt;
+  word-break: break-word;
 }
 
 .activity-card img {
@@ -583,6 +584,25 @@ footer {
 
 /* Tablet */
 @media (max-width: 992px) {
+  #activities {
+    margin-bottom: 45px;
+  }
+
+  .activity-card {
+    width: 182px;
+    height: 267px;
+    flex-flow: nowrap row;
+    flex: 1 1 152px;
+    margin: 0;
+  }
+
+  .activity-card img {
+    height: 210px;
+  }
+
+  .activity-card-description {
+    margin-top: -4px;
+  }
 }
 
 /* Mobile */
