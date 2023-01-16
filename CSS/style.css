@@ -758,6 +758,28 @@ footer {
     padding-bottom: 55px;
   }
 
+  .best-lodging-card h4 {
+    max-width: 100%;
+  }
+
+  .best-lodging-card img {
+    width: 137px;
+    height: 144px;
+  }
+
+  #lodgings-best .lodging-cards-container {
+    flex-flow: nowrap column;
+    align-items: stretch;
+  }
+
+  #lodgings-best {
+    margin: 0;
+  }
+
+  #lodgings-best .lodging-cards-container {
+    margin: 0 4%;
+  }
+
   .show-more-btn {
     display: none;
   }
@@ -771,6 +793,10 @@ footer {
 
   .activity-card img {
     height: 135px;
+  }
+
+  .activity-card {
+    width: 94%;
   }
 
   /* Footer */
