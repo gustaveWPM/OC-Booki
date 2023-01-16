@@ -192,15 +192,14 @@ body {
   display: flex;
   border-radius: var(--_border-radius) 0 0 var(--_border-radius);
   background-color: var(--booki-chart-grey);
+}
+
+.searchbar .searchbar-input, .searchbar .searchbar-search-button, .searchbar .searchbar-map-button {
   height: 100%;
 }
 
 .searchbar .searchbar-map-button > i {
   align-self: center;
-}
-
-.searchbar .searchbar-input, .searchbar .searchbar-search-button {
-  height: 100%;
 }
 
 .searchbar .searchbar-input {
