@@ -83,17 +83,6 @@ body {
   display: flex;
 }
 
-.flex-container-vcentered {
-  display: flex;
-  align-items: center;
-}
-
-.flex-container-vhcentered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .is-flex-column {
   flex-direction: column;
 }
@@ -238,6 +227,10 @@ body {
 
 /* Filters section */
 #filters-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 914px;
   margin-top: 20px;
 }
@@ -253,6 +246,9 @@ body {
 }
 
 #filters-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-left: 35px;
 }
 
@@ -287,6 +283,11 @@ body {
 }
 
 /* Lodgings section */
+#lodging-info {
+  display: flex;
+  align-items: center;
+}
+
 #lodging-info p {
   margin-left: 10px;
 }
@@ -375,6 +376,10 @@ h3 {
 }
 
 .lodging-cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
