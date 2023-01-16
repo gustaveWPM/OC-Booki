@@ -355,6 +355,7 @@ h3 {
 }
 
 .lodging-card {
+  overflow: hidden;
   min-width: 246px;
   min-height: 199px;
   line-height: 1.25em;
@@ -410,7 +411,6 @@ h3 {
   margin-top: 5px;
   width: 100%;
   height: 114px;
-  border-radius: 18px 18px 0 0;
   object-fit: cover;
   z-index: -1;
 }
@@ -430,7 +430,7 @@ h3 {
   flex-direction: row;
   align-items: flex-start;
   justify-content: left;
-
+  overflow: hidden;
   min-width: 343px;
   min-height: 144px;
   line-height: 1.25em;
@@ -443,7 +443,6 @@ h3 {
   margin-top: 5px;
   width: 137px;
   height: 144px;
-  border-radius: 15px 0 0 20px;
   object-fit: cover;
 }
 
