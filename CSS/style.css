@@ -456,27 +456,31 @@ h3 {
 }
 
 .best-lodging-card .lodging-card-description {
-  margin-top: 15px;
   margin-left: 8px;
   width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-between;
 }
 
-.best-lodging-card .lodging-card-description p {
+.best-lodging-card .best-lodging-head {
+  margin-top: 10px;
+  line-height: 14pt;
+}
+
+.best-lodging-card .best-lodging-head p {
   margin-top: 5px;
 }
 
-.best-lodging-card .lodging-card-description .rating-container {
-  display: flex;
-  align-items: flex-end;
-}
-
-.best-lodging-card .rating-container {
-  margin: 0;
-  margin-top: 50px;
-}
-
 /* Activities section */
-#activities-container {
+#activities h3 {
+  display: flex;
+  align-self: flex-start;
+  flex: 1 0 100%;
+}
+
+#activities {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -673,7 +677,7 @@ footer {
   }
 
   /* Activities */
-  #activities-container {
+  #activities {
     flex-direction: column;
     align-items: center;
   }
