@@ -565,11 +565,11 @@ footer {
 @media (max-width: 768px) {
   /* Global */
   .section-element-a {
-    order: 2;
+    order: 1;
   }
 
   .section-element-b {
-    order: 1;
+    order: 0;
   }
 
   .lodging-card,
