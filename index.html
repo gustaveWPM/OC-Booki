@@ -28,14 +28,16 @@
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <h2 class="is-caption">En plein centre-ville ou en pleine nature</h2>
       </section>
-      <!-- QC Ok till this line -->
       <div id="form-section" class="padding-wrapper">
-        <form class="searchbar" action="#">
-          <label for="search-input"><i class="fa fa-map-marker searchbar-icon is-bold"></i></label>
-          <input type="text" placeholder="Recherche" name="recherche" id="search-input" class="is-bold">
-          <button type="submit" class="search-btn is-bold"><i class="fas fa-search"></i></button>
-        </form>
+        <div class="searchbar-container">
+          <form class="searchbar" action="#">
+              <label class="searchbar-map-button" for="search-input"><i class="fa fa-map-marker"></i></label>
+              <input type="text" placeholder="Paris, Marseille, Toulon..." name="recherche" id="search-input" class="searchbar-input is-bold">
+              <button type="submit" class="searchbar-search-button is-bold"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
       </div>
+      <!-- QC Ok till this line -->
       <div id="filters-section" class="flex-container-vhcentered flex-wrapped padding-wrapper">
         <p class="is-bold is-label">Filtres</p>
         <ul id="filters-buttons" class="flex-container-vhcentered is-bold">
