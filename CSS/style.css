@@ -27,6 +27,7 @@
 * {
   margin: 0;
   padding: 0;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -182,6 +183,7 @@ body {
 
 .searchbar .searchbar-search-button {
   padding: 15px;
+  min-width: auto;
 }
 
 .searchbar .searchbar-map-button > i {
@@ -192,6 +194,7 @@ body {
   display: flex;
   border-radius: var(--_border-radius) 0 0 var(--_border-radius);
   background-color: var(--booki-chart-grey);
+  min-width: auto;
 }
 
 .searchbar .searchbar-input, .searchbar .searchbar-search-button, .searchbar .searchbar-map-button {
