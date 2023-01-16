@@ -531,8 +531,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
-  margin-left: 73px;
+  justify-content: space-around;
   margin-top: 25px;
   padding-bottom: 40px;
 }
@@ -540,7 +539,6 @@ footer {
 .footer-section {
   display: flex;
   flex-direction: column;
-  margin-right: 196px;
   min-width: 220px;
 }
 
@@ -623,6 +621,7 @@ footer {
   }
 
   .activity-card {
+    flex: 0 0 100%;
     width: 100%;
   }
 
@@ -719,9 +718,16 @@ footer {
   #activities {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
   }
 
   .activity-card img {
     height: 135px;
+  }
+
+  /* Footer */
+  #footer-sections-container {
+    flex-flow: column;
+    padding: var(--global-padding-desktop);
   }
 }
