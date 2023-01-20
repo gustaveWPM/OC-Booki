@@ -170,9 +170,12 @@
   margin-top: 5px;
 }
 
-.lodging-card-wrapper,
-.lodging-card {
+.lodging-card-wrapper {
   border-radius: 20px;
+}
+
+.lodging-card {
+  border-radius: 22px;
 }
 
 /* Custom breakpoints */
