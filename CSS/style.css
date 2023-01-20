@@ -359,10 +359,10 @@ h1 {
 
 /* Constants: filters list buttons' gaps (mutate on BREAKPOINTS) */
 .lodging-info-icon-specs {
-  --_border-color: var(--booki-chart-filter-border-color);
-  --_border-thickness: 0.1rem;
+  --_border-color: var(--booki-chart-bg-color);
+  --_border-thickness: 0.12rem;
   padding: 5px 9px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   margin-right: 10px;
 }
 
@@ -685,6 +685,7 @@ ol, ul {
 .lodging-info-icon {
   color: var(--booki-chart-primary);
   border: var(--_border-thickness) solid var(--_border-color);
+  margin-bottom: 1px;
 }
 
 /* Activities section */
