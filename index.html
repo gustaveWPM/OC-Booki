@@ -23,7 +23,7 @@
 
 <body>
   <div id="top-level-wrapper" class="top-level-wrapper-specs">
-    <header id="header" class="header-specs">
+    <header role="banner" id="header" class="header-specs">
       <a id="header-logo" class="header-logo-specs" href="./index.html">
         <img id="header-logo-img" src="./images/logo/Booki.png" alt="Logo Booki" draggable="false"></a>
       <nav id="header-nav" class="header-nav-specs">
@@ -42,40 +42,50 @@
       <div id="form-section">
         <div class="searchbar-container searchbar-specs">
           <form class="searchbar" action="#">
-            <label class="searchbar-map-button searchbar-map-button-specs" for="search-input"><i class="fa fa-map-marker"></i></label>
+            <label class="searchbar-map-button searchbar-map-button-specs" for="search-input"><i
+                class="fa fa-map-marker"></i></label>
             <input type="text" placeholder="Paris, Marseille, Toulon..." name="recherche" id="search-input"
               class="searchbar-input searchbar-input-specs is-bold">
-            <button type="submit" class="searchbar-search-button searchbar-search-button-specs is-bold"><i class="fas fa-search"></i></button>
+            <button type="submit" class="searchbar-search-button searchbar-search-button-specs is-bold"><i
+                class="fas fa-search"></i></button>
           </form>
         </div>
       </div>
-      <!-- QC Ok till this line -->
-      <div id="filters-section">
-        <p class="is-bold is-label">Filtres</p>
-        <ul id="filters-buttons" class="is-bold">
-          <li>
-            <a href="#" class="filter-btn"><i class="fas fa-money-bill-wave" aria-hidden="true"></i>Économique</a>
-          </li>
-          <li>
-            <a href="#" class="filter-btn"><i class="fas fa-person" aria-hidden="true"></i>Familial</a>
-          </li>
-          <li>
-            <a href="#" class="filter-btn"><i class="fas fa-heart" aria-hidden="true"></i>Romantique</a>
-          </li>
-          <li>
-            <a href="#" class="filter-btn"><i class="fas fa-dog" aria-hidden="true"></i>Animaux
-              autorisés</a>
-          </li>
-        </ul>
+
+      <div id="filters-section" class="filters-section-specs">
+          <p class="is-bold is-label">Filtres</p>
+          <div class="filters-list-container">
+            <ul class="filters-list filters-list-specs is-bold">
+              <li class="filter-button filter-button-specs"><a href="#">
+                  <div class="filter-button-content-container">
+                    <span class="filter-icon-wrapper"><i class="fas fa-money-bill-wave"
+                        aria-hidden="true"></i></span>Économique</div>
+                </a></li>
+              <li class="filter-button filter-button-specs"><a href="#">
+                  <div class="filter-button-content-container">
+                    <span class="filter-icon-wrapper"><i class="fas fa-person" aria-hidden="true"></i></span>Familial</div>
+                </a></li>
+              <li class="filter-button filter-button-specs"><a href="#">
+                  <div class="filter-button-content-container">
+                    <span class="filter-icon-wrapper"><i class="fas fa-heart" aria-hidden="true"></i></span>Romantique</div>
+                </a></li>
+              <li class="filter-button filter-button-specs"><a href="#">
+                  <div class="filter-button-content-container">
+                    <span class="filter-icon-wrapper"><i class="fas fa-dog" aria-hidden="true"></i></span>Animaux autorisés
+                  </div>
+                </a></li>
+            </ul>
+          </div>
       </div>
 
       <div id="lodging-info">
-        <i class="fas fa-info is-ring lodging-info-icon" aria-hidden="true"></i>
+        <i class="fas fa-info is-ring lodging-info-icon lodging-info-icon-specs" aria-hidden="true"></i>
         <p class="is-caption is-label">
           Plus de 500 logements sont disponibles dans cette ville
         </p>
       </div>
 
+      <!-- QC Ok till this line -->
       <div id="lodgings-section">
         <div id="lodgings">
           <article id="lodgings-city" class="section-element-a">

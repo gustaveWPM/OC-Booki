@@ -46,7 +46,6 @@ body {
 
 .top-level-wrapper-specs {
   --_top-level-wrapper-width: 1400px;
-  max-width: calc(var(--_top-level-wrapper-width) + var(--booki-bleed-current-state-value));
 }
 
 /* A.2) [§ Granular Configuration] */
@@ -77,7 +76,7 @@ h1 {
 
 /* Constants: Header navigation's item */
 .header-nav-item-specs {
-  margin: 0 20px; /* Defines the gap between each button (set it to 0 if you DON'T want any deadzone) */
+  --_deadzone: 20px; /* Defines the gap between each button (set it to 0 if you DON'T want any deadzone) */
   padding-left: 25px; /* Defines the mouse-over appearing border-top's left offset */
   padding-right: 15px; /* Defines the mouse-over appearing border-top's right offset */
   border-top: 2px solid; /* Defines the the mouse-over appearing border-top's thickness */
@@ -94,11 +93,12 @@ h1 {
   line-height: 1.75rem;
 }
 
-/* Constants: Searchbar's width and height */
+/* Constants: Searchbar's width, height and bottom gap */
 .searchbar-specs {
   --_searchbar-border-radius: 15px;
   width: 418px;
   height: 3.1rem;
+  margin-bottom: 30px;
 }
 
 /* Constants: Searchbar map button's icon specs */
@@ -122,6 +122,41 @@ h1 {
   content: "Rechercher";
 }
 
+/* Mutables: filters section width and label "Filtres" gap (mutate on BREAKPOINTS) */
+.filters-section-specs {
+  --_max-width: 982px;
+  --_label-gap: 30px;
+  --_label-gap-tablet: 15px;
+  --_label-gap-mobile: 20px;
+}
+
+/* Constants: filter buttons properties */
+.filter-button-specs {
+  --_vcentered-basis: 105%; /* Defines the vertical scale (use PERCENTS) */
+  --_border-thickness: 0.15rem;
+  border-radius: 30px;
+  padding: 0.9rem 1.2rem 0.9rem 0.9rem; /* Defines the padding as: up | right | down | left */
+}
+
+/* Constants: filters list buttons' gaps */
+.filters-list-specs {
+  --_gap-x: 49px;
+  --_gap-y: 0;
+  --_gap-x-tablet: 20px;
+  --_gap-y-mobile: 20px;
+}
+
+/* Constants: filters list buttons' gaps (mutate on BREAKPOINTS) */
+.lodging-info-icon-specs {
+  --_border-color: var(--booki-chart-filter-border-color);
+  --_border-thickness: 0.1rem;
+  padding: 5px 9px;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+/* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
+/* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 /* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 
 /* A.3) Preprocessing */
@@ -153,7 +188,8 @@ ol, ul {
   margin: 0 auto;
   justify-content: center;
   justify-items: center;
-  background-color: var(--booki-chart-sections-bg-color); /* ⛔ IMPLEMENTATION: Don't edit this line */
+  background-color: var(--booki-chart-sections-bg-color);
+  max-width: calc(var(--_top-level-wrapper-width) + var(--booki-bleed-current-state-value));
 }
 
 /* Webpage Bleed */
@@ -226,6 +262,7 @@ ol, ul {
 }
 
 .header-nav-item {
+  margin: 0 var(--_deadzone);
   height: 100%;
   display: inline-flex;
   text-decoration: none;
@@ -303,89 +340,141 @@ ol, ul {
   display: none;
 }
 
-/* ⬇️ TO REFACTOR ⬇️ */
-
 /* Filters section */
 #filters-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 914px;
-  margin-top: 20px;
-}
-
-#filters-section ul {
-  list-style-type: none;
-  justify-content: space-between;
-  flex: 1;
-}
-
-#filters-section p {
-  margin-left: 5px;
-}
-
-#filters-buttons {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 35px;
+  max-width: calc(var(--_max-width) + var(--booki-bleed-current-state-value));
 }
 
-#filters-buttons,
-#filters-buttons a {
-  margin: 5px 0;
-  display: flex;
-  flex-wrap: wrap;
+#filters-section p:first-of-type {
+  margin-right: var(--_label-gap);
 }
 
-.filter-btn i {
-  font-size: 125%;
-  margin-right: 0.28em;
-  color: var(--booki-chart-primary)
+.filters-list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  row-gap: var(--_gap-y);
 }
 
-.filter-btn {
+.filter-button {
   --_filter-btn-bg-color: var(--booki-chart-sections-bg-color);
-  line-height: 125%;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 0.75em 1em 0.75em 0.75em;
-  text-indent: 5pt;
-  border-radius: 30px;
   color: inherit;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: var(--_vcentered-basis);
+  line-height: var(--_vcentered-basis);
   background-color: var(--_filter-btn-bg-color);
-  border: 0.15em solid var(--booki-chart-filter-border-color);
+  border: var(--_border-thickness) solid var(--booki-chart-filter-border-color);
 }
 
-.filter-btn:hover {
+/* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+.filter-button:not(:last-child) {
+  margin-right: var(--_gap-x);
+}
+
+.filter-button a:first-of-type {
+  text-decoration: none;
+}
+
+.filter-button-content-container {
+  display: flex;
+}
+
+/* {REM} Too much unsafe values to move it on the configuration section */
+.filter-icon-wrapper {
+  width: 30px;
+  text-align: center;
+  transform: scale(125%) translateX(-8%);
+  color: var(--booki-chart-primary);
+  font-size: var(--_vcentered-basis);
+}
+
+.filter-button:hover {
   --_filter-btn-bg-color: var(--booki-chart-filter-btn-hover);
 }
+
+/* Custom breakpoints */
+@media (max-width: 1060px) {
+  #filters-section {
+    padding-right: 0 !important;
+  }
+
+  #filters-section {
+    --_label-gap: var(--_label-gap-tablet);
+  }
+
+  #filters-section {
+    flex-wrap: nowrap;
+  }
+
+  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+  .filter-button:not(:last-child) {
+    --_gap-x: var(--_gap-x-tablet);
+  }
+
+  .filter-icon-wrapper {
+    transform: scale(115%) translateX(-5%);
+  }
+}
+
+@media (max-width: 905px) {
+  #filters-section {
+    flex-wrap: wrap;
+    padding-right: var(--booki-bleed-current-state-value) !important;
+  }
+
+  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+  .filter-button:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .filters-section {
+    max-width: 100%;
+  }
+
+  #filters-section p:first-of-type, .filters-list-container {
+    flex-basis: 100%;
+  }
+
+  #filters-section p:first-of-type {
+    margin-bottom: var(--_label-gap-mobile);
+  }
+
+  .filters-list {
+    --_gap-y: var(--_gap-y-mobile);
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    flex-basis: calc(100% - var(--booki-bleed-current-state-value));
+  }
+
+  .filter-icon-wrapper {
+    width: 35px;
+    transform: scale(125%) translateX(-8%);
+  }  
+}
+
+.lodging-info-icon {
+  color: var(--booki-chart-primary);
+  border: var(--_border-thickness) solid var(--_border-color);
+}
+
+/* ⬇️ {ToDo} TO REFACTOR ⬇️ */
 
 /* Lodgings section */
 #lodging-info {
   display: flex;
   align-items: center;
   margin: 25px 0;
-  margin-left: -5px;
-}
-
-#lodging-info p {
-  margin-left: 10px;
-}
-
-.lodging-info-icon {
-  padding: 5px 9px;
-  font-size: 0.75em;
-  margin-left: -5px;
-  color: var(--booki-chart-primary);
-  border: 0.15em solid var(--booki-chart-filter-border-color);
 }
 
 #lodgings {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 50px;
   gap: calc(var(--booki-bleed-current-state-value) * 0.8);
 }
@@ -403,6 +492,27 @@ ol, ul {
 
 #lodgings-best {
   width: 420px;
+}
+
+/* Custom breakpoints */
+@media (max-width: 1460px) {
+  #lodgings-section {
+    margin: 0;
+  }
+
+  #lodgings-best, #lodgings-city {
+    flex-basis: 100%;
+  }
+  
+  #lodgings-best .lodging-cards-container {
+    flex-flow: wrap column;
+    align-items: stretch;
+    margin: 0 2%;
+  }
+
+  .activity-card {
+    flex: 1 1 39%;
+  }
 }
 
 .lodgings-title-container {
@@ -677,41 +787,8 @@ footer {
   }
 }
 
-/* Custom breakpoints */
-@media (max-width: 1460px) {
-  #lodgings-section {
-    margin: 0;
-  }
-
-  #lodgings-best {
-    width: 880px;
-  }
-
-  #lodgings-best .lodging-cards-container {
-    flex-flow: wrap column;
-    align-items: stretch;
-    margin: 0 2%;
-  }
-
-  .activity-card {
-    flex: 1 1 39%;
-  }
-}
-
 /* Tablet */
 @media (max-width: 992px) {
-  #lodgings-best,
-  #lodgings-city {
-    width: 100%;
-    margin: 0 4%;
-  }
-
-  #lodgings-best .lodging-cards-container {
-    flex-flow: wrap column;
-    align-items: stretch;
-    margin: 0 2%;
-  }
-
   #activities {
     margin-bottom: 45px;
   }
@@ -842,11 +919,6 @@ footer {
   }
 
   /* Lodgings */
-  /* [DISABLED]
-  #lodgings {
-    margin: 15px 0;
-  } */
-
   .lodging-cards-container {
     flex-direction: column;
   }
