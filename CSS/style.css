@@ -262,12 +262,13 @@ body {
 
 /* Constants: Main title font's size and weight */
 h1 {
-  font-size: 1.375rem;
+  font-size: 1.35rem;
   font-weight: var(--booki-fw-bold);
 }
 
-/* Constants: Header's height and its bottom gap */
+/* Constants: Header nav's deadzone, header's height and its bottom gap */
 .header-specs {
+  --_nav-btn-deadzone: 34px; /* Defines the gap between each nav button (set it to 0 if you DON'T want any deadzone) */
   min-height: 65px;
   margin-bottom: 55px;
 }
@@ -286,7 +287,6 @@ h1 {
 
 /* Constants: Header navigation's item */
 .header-nav-item-specs {
-  --_deadzone: 20px; /* Defines the gap between each button (set it to 0 if you DON'T want any deadzone) */
   padding-left: 25px; /* Defines the mouse-over appearing border-top's left offset */
   padding-right: 15px; /* Defines the mouse-over appearing border-top's right offset */
   border-top: 2px solid; /* Defines the the mouse-over appearing border-top's thickness */
@@ -306,7 +306,8 @@ h1 {
 /* Constants: Searchbar's width, height and bottom gap */
 .searchbar-specs {
   --_searchbar-border-radius: 15px;
-  width: 418px;
+  --_width: 418px;
+  --_tablet-width: 438px;
   height: 3.1rem;
   margin-bottom: 30px;
 }
@@ -483,7 +484,6 @@ ol, ul {
 }
 
 .header-nav-item {
-  margin: 0 var(--_deadzone);
   height: 100%;
   display: inline-flex;
   text-decoration: none;
@@ -491,6 +491,10 @@ ol, ul {
   justify-content: center;
   color: var(--_menu-active-item-hyperlink-color);
   border-top-color: var(--_menu-active-item-border-top-color);
+}
+
+#header-nav-container > li:first-child > a {
+  margin-right: var(--_nav-btn-deadzone);
 }
 
 #header-logo {
@@ -514,7 +518,7 @@ ol, ul {
 }
 
 .searchbar {
-  width: 100%;
+  width: var(--_width);
   height: 100%;
 }
 
@@ -856,6 +860,15 @@ footer {
     flex-flow: nowrap row;
     align-items: center;
   }
+
+  .searchbar {
+    width: var(--_tablet-width);
+    height: 100%;
+  }
+
+  #header-nav-container > li:first-child > a {
+    margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
+  }
 }
 
 /* Mobile */
@@ -919,7 +932,7 @@ footer {
   }
 
   /* Searchbar */
-  .searchbar-container {
+  .searchbar {
     width: 100%;
   }
   
