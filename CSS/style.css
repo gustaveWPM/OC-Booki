@@ -737,11 +737,15 @@ ol, ul {
 }
 
 /* Footer */
-footer {
+#footer {
+  background-color: var(--booki-chart-sections-bg-color);
+}
+
+.footer-sections-wrapper {
   background-color: var(--booki-chart-bg-color);
 }
 
-footer nav {
+#footer nav {
   display: flex;
   flex-direction: column;
 }
