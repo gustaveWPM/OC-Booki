@@ -100,7 +100,7 @@
 
 .lodging-card-description p::after {
   content: "€";
-  font-weight: semibold;
+  font-weight: var(--booki-fw-semibold);
 }
 
 .rating-container {
@@ -262,6 +262,10 @@ body {
 /* Constants: Main title font's size and weight */
 h1 {
   font-size: 1.35rem;
+  font-weight: var(--booki-fw-bold);
+}
+
+h4, h5, h6 {
   font-weight: var(--booki-fw-bold);
 }
 
@@ -718,8 +722,6 @@ ol, ul {
 }
 
 .activity-card-description {
-  font-size: 1.25em;
-  font-weight: bold;
   margin-left: 8pt;
   word-break: break-word;
 }
