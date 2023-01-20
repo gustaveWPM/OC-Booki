@@ -1,7 +1,7 @@
 /*
-   Booki CSS v1.0 for lastest Gecko & Blink based browsers
-   Free for non commercial and commercial use (just beware of cheating if you're into OC... 😏)
-   Use CTRL+F `§` | '***' to navigate throughout this CSS file sections.
+   Booki CSS v1.0 for lastest Gecko & Blink based browsers.
+   Free for non commercial and commercial use. Just beware of cheating if you're into OC... 😏
+   Use CTRL+F `§` & CTRL+F `***` to navigate throughout this CSS file sections.
 */
 
 /*** A. Macro */
@@ -387,7 +387,7 @@ ol, ul {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 50px;
-  gap: 40px;
+  gap: calc(var(--booki-bleed-current-state-value) * 0.8);
 }
 
 #lodgings-best,
