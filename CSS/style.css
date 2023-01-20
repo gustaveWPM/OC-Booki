@@ -70,7 +70,6 @@
 .lodging-cards-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 15px;
@@ -742,19 +741,35 @@ footer {
   background-color: var(--booki-chart-bg-color);
 }
 
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav a {
+  display: inline-flex;
+}
+
+#footer-sections-container:first-child {
+  margin-left: -3.6%;
+}
+
+#footer-sections-container:last-child {
+  margin-right: 12.8%;
+}
+
 #footer-sections-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 25px;
+  padding-bottom: 40px;
   justify-content: space-around;
-  margin-top: 25px;
-  margin-bottom: 40px;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
-  min-width: 220px;
 }
 
 .footer-section h6 {
@@ -869,6 +884,29 @@ footer {
 
   #header-nav-container > li:first-child > a {
     margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
+  }
+
+  footer {
+    background-color: var(--booki-chart-sections-bg-color) !important;
+  }
+
+  #footer-sections-container {
+    margin: 0;
+    background-color: var(--booki-chart-bg-color) !important;
+    justify-content: space-evenly;
+    gap: 0 15px;
+  }  
+  
+  #footer-sections-container:first-child {
+    margin-left: 0;
+  }
+
+  #footer-sections-container:first-child > div {
+    margin-left: -50px;
+  }
+
+  #footer-sections-container:last-child {
+    margin-right: 0;
   }
 }
 
@@ -1009,5 +1047,11 @@ footer {
   #footer-sections-container {
     flex-flow: column;
     padding: var(--booki-global-bleed);
+    padding-left: 60px;
+    padding-bottom: 40px;
+  }
+
+  #footer-sections-container:first-child > div {
+    margin-left: 0;
   }
 }
