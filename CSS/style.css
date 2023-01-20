@@ -1,155 +1,253 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* {ToDo} Optimize the import using only required font styles
-    - https://fonts.google.com/specimen/Raleway
+/*
+   Booki CSS v1.0 for lastest Gecko & Blink based browsers
+   Free for non commercial and commercial use (just beware of cheating if you're into OC... 😏)
+   Use CTRL+F `§` | '***' to navigate throughout this CSS file sections.
 */
 
-/* Configuration */
+/*** A. Macro */
+/*
+   A.1) ⚙️ [§ Global Configuration]
+            (You can edit the lines which are underneath this one as you wish)
+*/
+
 :root {
-  --booki-chart-blue: #0065FC;
-  --booki-chart-light-blue: #DEEBFF;
-  --booki-chart-grey: #F2F2F2;
-  --booki-chart-white: white;
-  --booki-chart-black: black;
+  /* Configuration.chart => Static Colors */
+  --booki-chart-primary: #0065FC;
+  --booki-chart-bg-color: #F2F2F2;
+  --booki-chart-sections-bg-color: white;
+  --booki-chart-filter-border-color: #D9D9D9; /* {REM} Unspecified value, but retrieved it on the mockup */
 
-  --booki-chart-filter-border-color: #D9D9D9;
-  /* {REM} Not specified, but found it on the mockup */
-  --booki-chart-blue-hover-btn: #0065FC;
-  /* {ToDo} Not specified */
+  /* Configuration.chart => FX Colors */
+  --booki-chart-filter-btn-hover: #DEEBFF;
+  --booki-inactive-menu-elm-indicator-color: transparent;
+  --booki-active-menu-elm-indicator-color: var(--booki-chart-primary);
+  --booki-chart-blue-btn-hover: var(--booki-chart-primary); /* {REM} Vacuous truth: unspecified value */
 
-  --active-menu-elm-indicator-color: var(--booki-chart-blue);
-  --inactive-menu-elm-indicator-color: transparent;
+  /* Configuration.globalLayout => Bleed [📖 https://tinyurl.com/bleed-def] */
+  --booki-bleed-desktop: 50px;
+  --booki-bleed-tablet: 70px;
+  --booki-bleed-mobile: 15px;
+  --booki-bleed-current-state-value: var(--booki-bleed-desktop);
+  --booki-global-bleed: 0 var(--booki-bleed-current-state-value);
 
-  --global-padding-desktop: 0 50px;
-  --global-padding-mobile: 0 20px;
+  /* Configuration.globalLayout => Font weight aliases */
+  --booki-fw-normal: 400;
+  --booki-fw-medium: 500;
+  --booki-fw-semibold: 600;
+  --booki-fw-bold: 700;
 }
 
-/* Reset CSS */
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1;
+  font-weight: var(--booki-fw-normal); /* ⛔ IMPLEMENTATION: Don't edit this line */
+  background-color: var(--booki-chart-bg-color); /* ⛔ IMPLEMENTATION: Don't edit this line */
+}
+
+.top-level-wrapper-specs {
+  --_top-level-wrapper-width: 1400px;
+  max-width: calc(var(--_top-level-wrapper-width) + var(--booki-bleed-current-state-value));
+}
+
+/* A.2) [§ Granular Configuration] */
+
+/* Constants: Main title font's size and weight */
+h1 {
+  font-size: 1.375rem;
+  font-weight: var(--booki-fw-bold);
+}
+
+/* Constants: Header's height and its bottom gap */
+.header-specs {
+  min-height: 65px;
+  margin-bottom: 55px;
+}
+
+/* Mutables: Header navigation menu's colors (NOT on mouse-over) */
+.header-nav-specs {
+  --_menu-active-item-hyperlink-color: inherit;
+  --_menu-active-item-border-top-color: var(--booki-inactive-menu-elm-indicator-color);
+}
+
+/* Mutables: Header navigation menu's colors (WHEN on mouse-over) */
+.header-nav-item-specs:hover {
+  --_menu-active-item-hyperlink-color: var(--booki-chart-primary);
+  --_menu-active-item-border-top-color: var(--booki-active-menu-elm-indicator-color);
+}
+
+/* Constants: Header navigation's item */
+.header-nav-item-specs {
+  margin: 0 20px; /* Defines the gap between each button (set it to 0 if you DON'T want any deadzone) */
+  padding-left: 25px; /* Defines the mouse-over appearing border-top's left offset */
+  padding-right: 15px; /* Defines the mouse-over appearing border-top's right offset */
+  border-top: 2px solid; /* Defines the the mouse-over appearing border-top's thickness */
+}
+
+/* Constants: Header's logo height */
+.header-logo-specs {
+  height: 20px;
+}
+
+/* Constants: Title section's bottom gap and line-height */
+.title-section-specs {
+  margin-bottom: 15px;
+  line-height: 1.75rem;
+}
+
+/* Constants: Searchbar's width and height */
+.searchbar-specs {
+  --_searchbar-border-radius: 15px;
+  width: 418px;
+  height: 3.1rem;
+}
+
+/* Constants: Searchbar map button's icon specs */
+.searchbar .searchbar-map-button-specs > i {
+  font-size: 1.15rem;
+  padding: 18px;
+}
+
+/* Constants: Searchbar search button's specs */
+.searchbar .searchbar-search-button-specs {
+  padding: 15px;
+}
+
+/* Constants: Searchbar search input's specs */
+.searchbar .searchbar-input-specs {
+  text-indent: 12pt;
+}
+
+/* Constants: Searchbar search button's label */
+.searchbar .searchbar-search-button-specs:before {
+  content: "Rechercher";
+}
+
+/* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
+
+/* A.3) Preprocessing */
+/* 🧰 [§ A.3) i. Reset CSS => 📖 https://tinyurl.com/reset-css] */
 * {
+  box-sizing: border-box; /* [📖 https://tinyurl.com/border-box] */
+  min-width: 0; /* [📖 https://tinyurl.com/flex-min-width-0] */
   margin: 0;
   padding: 0;
-  min-width: 0;
-  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* Specs */
-body {
-  font-family: "Raleway", sans-serif;
-  background-color: var(--booki-chart-grey);
+ol, ul {
+  list-style-type: none;
 }
 
-.padding-wrapper {
-  padding: var(--global-padding-desktop);
+/* 🪐 [§ A.3) ii. Large scope properties] */
+/* Top level elements fully flexed (personal preference for debugging) */
+#top-level-wrapper, #main, #footer {
+  display: flex;
+  flex-direction: column;
 }
 
-#main-wrapper {
-  max-width: 1440px;
-  margin: auto;
-  background-color: var(--booki-chart-white);
+/* Webpage Wrapper */
+#top-level-wrapper {
+  margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--booki-chart-sections-bg-color); /* ⛔ IMPLEMENTATION: Don't edit this line */
 }
 
-/* Utilitary classes */
-.kinda-dodge-and-burn-filter {
-  filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
+/* Webpage Bleed */
+#top-level-wrapper > *:not(#main),
+#main > * {
+  padding: var(--booki-global-bleed);
+}
+
+/* A.4) 🧰 [§ Utilitary classes]
+            (Kinda minimalist internal CSS framework) => [📖 https://tinyurl.com/fk-clean-code] */
+.is-normal {
+  font-weight: var(--booki-fw-normal);
+}
+        
+.is-medium {
+  font-weight: var(--booki-fw-medium);
+}
+
+.is-semibold {
+  font-weight: var(--booki-fw-semibold);
 }
 
 .is-bold {
-  font-weight: bold;
+  font-weight: var(--booki-fw-bold);
 }
 
 .is-label {
   user-select: none;
 }
 
-.is-caption {
-  font-weight: normal;
-  font-size: 0.95em;
-  text-rendering: optimizeLegibility;
-}
-
-.is-circular {
+.is-ring {
   border-radius: 100%;
 }
 
 .is-checked,
 .is-blue {
-  color: var(--booki-chart-blue);
+  color: var(--booki-chart-primary);
 }
 
 .is-unchecked {
-  color: var(--booki-chart-grey);
+  color: var(--booki-chart-bg-color);
 }
 
-/* Header */
+/* {Bonus} Let those crappy pictures shine again [📖 https://tinyurl.com/css-dodge-and-burn-ersatz] */
+.kinda-dodge-and-burn-filter {
+  filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
+}
+
+/*** B. Micro (Desktop first) */
+/*
+   B.1) 🧱 [§ Header]
+*/
+#header, #header-nav-container {
+  display: flex;
+}
+
 #header {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  min-height: 65px;
-  margin-bottom: 55px;
+  justify-content: space-between;
 }
 
-#header-nav-container {
-  display: flex;
-  list-style-type: none;
-  height: 100%;
-}
-
-#header-nav-container li {
+#header-nav-container, #header-nav-container li {
   height: 100%;
 }
 
 #header-nav {
-  --_menu-active-item-overline-color: var(--inactive-menu-elm-indicator-color);
-  --_menu-active-item-a-color: inherit;
-  justify-content: space-between;
   align-self: stretch;
+  justify-content: space-between;
 }
 
 .header-nav-item {
+  height: 100%;
   display: inline-flex;
+  text-decoration: none;
   align-items: flex-end;
   justify-content: center;
-  text-decoration: none;
-  height: 100%;
-  padding-left: 25px;
-  padding-right: 15px;
-  margin: 0 20px;
-  border-top: 2px solid var(--_menu-active-item-overline-color);
-  color: var(--_menu-active-item-a-color);
-}
-
-.header-nav-item:hover {
-  --_menu-active-item-overline-color: var(--active-menu-elm-indicator-color);
-  --_menu-active-item-a-color: var(--booki-chart-blue);
+  color: var(--_menu-active-item-hyperlink-color);
+  border-top-color: var(--_menu-active-item-border-top-color);
 }
 
 #header-logo {
   align-self: flex-end;
-  height: 20px;
 }
 
 #header-logo-img {
-  height: 100%;
   width: auto;
+  height: 100%;
   object-fit: contain;
-}
-
-/* Title section */
-#title-section {
-  margin-bottom: 15px;
-  line-height: 1.75em;
-}
-
-#title-section h1 {
-  font-size: 1.375em;
 }
 
 /* Searchbar */
 .searchbar-container {
   display: flex;
-  width: 418px;
-  height: 50px;
 }
 
 .searchbar, .searchbar .searchbar-search-button, .searchbar .searchbar-input {
@@ -158,65 +256,54 @@ body {
 }
 
 .searchbar {
-  --_border-radius: 15px;
   width: 100%;
   height: 100%;
 }
 
 .searchbar .searchbar-search-button {
-  padding: 15px;
   min-width: auto;
-}
-
-.searchbar .searchbar-map-button > i {
-  padding: 18px;
-}
-
-.searchbar .searchbar-map-button {
-  display: flex;
-  border-radius: var(--_border-radius) 0 0 var(--_border-radius);
-  background-color: var(--booki-chart-grey);
-  min-width: auto;
-}
-
-.searchbar .searchbar-input, .searchbar .searchbar-search-button, .searchbar .searchbar-map-button {
-  height: 100%;
 }
 
 .searchbar .searchbar-map-button > i {
   align-self: center;
 }
 
+.searchbar .searchbar-map-button {
+  display: flex;
+  min-width: auto;
+  background-color: var(--booki-chart-bg-color);
+  border-radius: var(--_searchbar-border-radius) 0 0 var(--_searchbar-border-radius);
+}
+
+.searchbar .searchbar-input, .searchbar .searchbar-search-button, .searchbar .searchbar-map-button {
+  height: 100%;
+}
+
 .searchbar .searchbar-input {
-  border: 1px solid var(--booki-chart-grey);
+  width: 100%;
   border-left: none;
   border-right: none;
-  text-indent: 12pt;
-  width: 100%;
+  border: 1px solid var(--booki-chart-bg-color);
 }
 
 .searchbar .searchbar-search-button {
-  border-radius: 0 var(--_border-radius) var(--_border-radius) 0;
+  --_search-btn-bg-color: var(--booki-chart-primary);
   cursor: pointer;
-  border: 1px solid var(--booki-chart-blue);
-  background-color: var(--booki-chart-blue);
-  color: var(--booki-chart-white);
+  color: var(--booki-chart-sections-bg-color);
+  border: 1px solid var(--_search-btn-bg-color);
+  background-color: var(--_search-btn-bg-color);
+  border-radius: 0 var(--_searchbar-border-radius) var(--_searchbar-border-radius) 0;
 }
 
-.searchbar .searchbar-search-button:before {
-  content: "Rechercher";
+.searchbar-search-button:hover {
+  --_search-btn-bg-color: var(--booki-chart-blue-btn-hover);
 }
 
 .searchbar .searchbar-search-button i {
   display: none;
 }
 
-.searchbar-container form,
-.searchbar-container input,
-.searchbar-container button
-{
-  font-size: 1em;
-}
+/* ⬇️ TO REFACTOR ⬇️ */
 
 /* Filters section */
 #filters-section {
@@ -255,11 +342,11 @@ body {
 .filter-btn i {
   font-size: 125%;
   margin-right: 0.28em;
-  color: var(--booki-chart-blue)
+  color: var(--booki-chart-primary)
 }
 
 .filter-btn {
-  --_filter-btn-bg-color: var(--booki-chart-white);
+  --_filter-btn-bg-color: var(--booki-chart-sections-bg-color);
   line-height: 125%;
   cursor: pointer;
   text-decoration: none;
@@ -272,28 +359,26 @@ body {
 }
 
 .filter-btn:hover {
-  --_filter-btn-bg-color: var(--booki-chart-light-blue);
+  --_filter-btn-bg-color: var(--booki-chart-filter-btn-hover);
 }
 
 /* Lodgings section */
 #lodging-info {
   display: flex;
   align-items: center;
+  margin: 25px 0;
+  margin-left: -5px;
 }
 
 #lodging-info p {
   margin-left: 10px;
 }
 
-#lodging-info {
-  padding: 25px 0;
-}
-
 .lodging-info-icon {
   padding: 5px 9px;
   font-size: 0.75em;
   margin-left: -5px;
-  color: var(--booki-chart-blue);
+  color: var(--booki-chart-primary);
   border: 0.15em solid var(--booki-chart-filter-border-color);
 }
 
@@ -301,14 +386,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 15px 15px;
   padding-bottom: 50px;
   gap: 40px;
 }
 
 #lodgings-best,
 #lodgings-city {
-  background-color: var(--booki-chart-grey);
+  background-color: var(--booki-chart-bg-color);
   border-radius: 20px;
   min-height: 625px;
 }
@@ -339,12 +423,12 @@ body {
 }
 
 .show-more-btn:hover {
-  color: var(--booki-chart-blue)
+  color: var(--booki-chart-primary)
 }
 
 h3 {
   font-size: 1.38em;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .lodging-card-wrapper,
@@ -358,14 +442,14 @@ h3 {
   min-height: 199px;
   line-height: 1.25em;
   border-radius: 20px;
-  background-color: var(--booki-chart-white);
+  background-color: var(--booki-chart-sections-bg-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .lodging-card-wrapper {
   outline-offset: -5px;
-  outline: 5px solid var(--booki-chart-white);
-  margin: 13px 15px;
+  outline: 5px solid var(--booki-chart-sections-bg-color);
+  margin: 13px 0;
   z-index: 1;
 }
 
@@ -375,6 +459,7 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0 15px;
 }
 
 .lodging-cards-container a {
@@ -402,7 +487,7 @@ h3 {
 
 .lodging-card-description p::after {
   content: "€";
-  font-weight: bold;
+  font-weight: semibold;
 }
 
 .rating-container {
@@ -424,7 +509,7 @@ h3 {
   display: inline-flex;
   margin-bottom: 40px;
   font-size: 1.20em;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
   color: inherit;
 }
@@ -440,7 +525,7 @@ h3 {
   min-height: 144px;
   line-height: 1.25em;
   border-radius: 20px;
-  background-color: var(--booki-chart-white);
+  background-color: var(--booki-chart-sections-bg-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -507,7 +592,7 @@ h3 {
 
 .activity-card-description {
   font-size: 1.25em;
-  font-weight: 700;
+  font-weight: bold;
   margin-left: 8pt;
   word-break: break-word;
 }
@@ -526,7 +611,7 @@ h3 {
 
 /* Footer */
 footer {
-  background-color: var(--booki-chart-grey);
+  background-color: var(--booki-chart-bg-color);
 }
 
 #footer-sections-container {
@@ -546,7 +631,7 @@ footer {
 
 .footer-section h6 {
   font-size: 1.15em;
-  font-weight: 700;
+  font-weight: bold;
   margin-top: 45px;
   margin-bottom: 15px;
 }
@@ -559,11 +644,45 @@ footer {
 }
 
 .footer-section a:hover {
-  color: var(--booki-chart-blue);
+  color: var(--booki-chart-primary);
+}
+
+
+/*** C. Breakpoints */
+/*
+   C.1) ⚙️ [§ Kinda Global Monkey Patches]
+            (📖 https://tinyurl.com/monkey-patch)
+*/
+
+/* TABLET AND ABOVE */
+@media (max-width: 992px) {
+  :root {
+    --booki-bleed-current-state-value: var(--booki-bleed-tablet);
+  }
+
+  #main > *:not(#lodgings-section) {
+    padding: var(--booki-global-bleed);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  :root {
+    --booki-bleed-current-state-value: var(--booki-bleed-mobile);
+  }
+
+  #top-level-wrapper > *:not(#main),
+  #main > * {
+    padding: 0;
+  }
 }
 
 /* Custom breakpoints */
 @media (max-width: 1460px) {
+  #lodgings-section {
+    margin: 0;
+  }
+
   #lodgings-best {
     width: 880px;
   }
@@ -640,7 +759,7 @@ footer {
   }
 
   .lodging-card-description {
-    background-color: var(--booki-chart-white);
+    background-color: var(--booki-chart-sections-bg-color);
   }
 
   #lodgings-best .lodging-cards-container {
@@ -670,10 +789,6 @@ footer {
     flex: 0 0 100%;
     width: 100%;
   }
-
-  .padding-wrapper {
-    padding: var(--global-padding-mobile);
-  }
   
   /* Header */
   #header {
@@ -694,7 +809,7 @@ footer {
   }
 
   #header-nav {
-    --_menu-active-item-overline-color: var(--booki-chart-grey);
+    --_menu-active-item-border-top-color: var(--booki-chart-bg-color);
     min-height: 50px;
   }
 
@@ -709,16 +824,16 @@ footer {
     padding-left: 0;
     padding-right: 0;
     border-top: 0 solid transparent;
-    border-bottom: 3px solid var(--_menu-active-item-overline-color);
-    color: var(--_menu-active-item-a-color);
+    border-bottom: 3px solid var(--_menu-active-item-border-top-color);
+    color: var(--_menu-active-item-hyperlink-color);
   }
 
   /* Searchbar */
   .searchbar-container {
     width: 100%;
   }
-
-  .searchbar .searchbar-search-button:before {
+  
+  .searchbar .searchbar-search-button-specs:before {
     content: "";
   }
 
@@ -727,9 +842,10 @@ footer {
   }
 
   /* Lodgings */
+  /* [DISABLED]
   #lodgings {
     margin: 15px 0;
-  }
+  } */
 
   .lodging-cards-container {
     flex-direction: column;
@@ -740,7 +856,7 @@ footer {
   }
 
   #lodgings-city {
-    background-color: var(--booki-chart-white);
+    background-color: var(--booki-chart-sections-bg-color);
   }
 
   #lodgings-best {
@@ -793,6 +909,6 @@ footer {
   /* Footer */
   #footer-sections-container {
     flex-flow: column;
-    padding: var(--global-padding-desktop);
+    padding: var(--booki-global-bleed);
   }
 }

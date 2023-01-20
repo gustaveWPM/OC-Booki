@@ -2,44 +2,55 @@
 <html lang="fr">
 
 <head>
+  <!-- Standardization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+
+  <!-- SEO -->
   <meta name="description"
     content="Trouvez l'Hébergement et les Activités pour des vacances idéales sur Booki.fr, site de Voyages N°1 en France. Tarifs imbattables et Réservation Gratuite.">
+  <title>Booki | Accueil</title>
+
+  <!-- CSS -->
   <link href="./CSS/style.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/575c2fb10a.js" crossorigin="anonymous" defer></script>
-  <title>Booki | Accueil</title>
+
+  <!-- GFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="main-wrapper">
-    <header id="header" class="padding-wrapper">
-      <a id="header-logo" href="./index.html">
+  <div id="top-level-wrapper" class="top-level-wrapper-specs">
+    <header id="header" class="header-specs">
+      <a id="header-logo" class="header-logo-specs" href="./index.html">
         <img id="header-logo-img" src="./images/logo/Booki.png" alt="Logo Booki" draggable="false"></a>
-      <nav id="header-nav">
-        <ul id="header-nav-container">
-          <li><a class="header-nav-item" href="#lodgings-city">Hébergements</a></li>
-          <li><a class="header-nav-item" href="#activities">Activités</a></li>
+      <nav id="header-nav" class="header-nav-specs">
+        <ul id="header-nav-container" class="is-medium">
+          <li><a class="header-nav-item header-nav-item-specs" href="#lodgings-city">Hébergements</a></li>
+          <li><a class="header-nav-item header-nav-item-specs" href="#activities">Activités</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section id="title-section" class="padding-wrapper">
+    <main id="main">
+      <section id="title-section" class="title-section-specs">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <h2 class="is-caption">En plein centre-ville ou en pleine nature</h2>
+        <h2>En plein centre-ville ou en pleine nature</h2>
       </section>
-      <div id="form-section" class="padding-wrapper">
-        <div class="searchbar-container">
+      <div id="form-section">
+        <div class="searchbar-container searchbar-specs">
           <form class="searchbar" action="#">
-            <label class="searchbar-map-button" for="search-input"><i class="fa fa-map-marker"></i></label>
+            <label class="searchbar-map-button searchbar-map-button-specs" for="search-input"><i class="fa fa-map-marker"></i></label>
             <input type="text" placeholder="Paris, Marseille, Toulon..." name="recherche" id="search-input"
-              class="searchbar-input is-bold">
-            <button type="submit" class="searchbar-search-button is-bold"><i class="fas fa-search"></i></button>
+              class="searchbar-input searchbar-input-specs is-bold">
+            <button type="submit" class="searchbar-search-button searchbar-search-button-specs is-bold"><i class="fas fa-search"></i></button>
           </form>
         </div>
       </div>
       <!-- QC Ok till this line -->
-      <div id="filters-section" class="padding-wrapper">
+      <div id="filters-section">
         <p class="is-bold is-label">Filtres</p>
         <ul id="filters-buttons" class="is-bold">
           <li>
@@ -58,13 +69,11 @@
         </ul>
       </div>
 
-      <div class="padding-wrapper">
-        <div id="lodging-info">
-          <i class="fas fa-info is-circular lodging-info-icon" aria-hidden="true"></i>
-          <p class="is-caption is-label">
-            Plus de 500 logements sont disponibles dans cette ville
-          </p>
-        </div>
+      <div id="lodging-info">
+        <i class="fas fa-info is-ring lodging-info-icon" aria-hidden="true"></i>
+        <p class="is-caption is-label">
+          Plus de 500 logements sont disponibles dans cette ville
+        </p>
       </div>
 
       <div id="lodgings-section">
@@ -285,7 +294,7 @@
         </div>
       </div>
 
-      <article id="activities" class="padding-wrapper">
+      <article id="activities">
         <h3>Activités à Marseille</h3>
         <article class="activity-card">
           <a href="#">
@@ -336,7 +345,7 @@
         </article>
       </article>
     </main>
-    <footer>
+    <footer id="footer">
       <div id="footer-sections-container">
         <div class="footer-section">
           <h6>À propos</h6>
