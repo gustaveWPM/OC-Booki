@@ -25,7 +25,11 @@
   <div id="top-level-wrapper" class="top-level-wrapper-specs">
     <header id="header" class="header-specs">
       <a id="header-logo" class="header-logo-specs" href="./index.html">
-        <img id="header-logo-img" src="./images/logo/Booki.png" alt="Logo Booki"></a>
+        <picture id="header-logo-img">
+          <source srcset="./images/logo/Booki@3x.png" media="(max-width: 768px)">
+          <img src="./images/logo/Booki.png" alt="Logo Booki">
+        </picture>
+      </a>
       <nav id="header-nav" class="header-nav-specs">
         <ul id="header-nav-container" class="is-medium">
           <li><a class="header-nav-item header-nav-item-specs" href="#city-lodgings">Hébergements</a></li>

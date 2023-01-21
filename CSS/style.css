@@ -335,8 +335,12 @@ ul {
 }
 
 #header-logo-img {
-  width: auto;
+  display: flex;
+  width: 100%;
   height: 100%;
+}
+
+#header-logo-img > img {
   object-fit: contain;
 }
 
@@ -1023,6 +1027,8 @@ footer nav a {
     display: flex;
     align-self: center;
     margin-top: 25px;
+    width: 60px;
+    height: auto;
   }
 
   #header-nav {
