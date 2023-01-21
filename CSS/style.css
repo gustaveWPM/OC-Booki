@@ -12,13 +12,15 @@
   --booki-chart-primary: #0065FC;
   --booki-chart-bg-color: #F2F2F2;
   --booki-chart-sections-bg-color: white;
-  --booki-chart-filter-border-color: #D9D9D9; /* {REM} Unspecified value, but retrieved it on the mockup */
+  --booki-chart-filter-border-color: #D9D9D9;
+  /* {REM} Unspecified value, but retrieved it on the mockup */
 
   /* Configuration.chart => FX Colors */
   --booki-chart-filter-btn-hover: #DEEBFF;
   --booki-inactive-menu-elm-indicator-color: transparent;
   --booki-active-menu-elm-indicator-color: var(--booki-chart-primary);
-  --booki-chart-blue-btn-hover: var(--booki-chart-primary); /* {REM} Vacuous truth: unspecified value */
+  --booki-chart-blue-btn-hover: var(--booki-chart-primary);
+  /* {REM} Vacuous truth: unspecified value */
 
   /* Configuration.globalLayout => Bleed [📖 https://tinyurl.com/bleed-def] */
   --booki-bleed-desktop: 50px;
@@ -37,8 +39,10 @@
 body {
   font-family: 'Raleway', sans-serif;
   line-height: 1;
-  font-weight: var(--booki-fw-normal); /* ⛔ IMPLEMENTATION: Don't edit this line */
-  background-color: var(--booki-chart-bg-color); /* ⛔ IMPLEMENTATION: Don't edit this line */
+  font-weight: var(--booki-fw-normal);
+  /* ⛔ IMPLEMENTATION: Don't edit this line */
+  background-color: var(--booki-chart-bg-color);
+  /* ⛔ IMPLEMENTATION: Don't edit this line */
 }
 
 .top-level-wrapper-specs {
@@ -67,7 +71,8 @@ h6 {
 
 /* Constants: Header nav's deadzone, header's height and its bottom gap */
 .header-specs {
-  --_nav-btn-deadzone: 34px; /* Defines the gap between each nav button (set it to 0 if you DON'T want any deadzone) */
+  --_nav-btn-deadzone: 34px;
+  /* Defines the gap between each nav button (set it to 0 if you DON'T want any deadzone) */
   min-height: 65px;
   margin-bottom: 55px;
 }
@@ -86,9 +91,12 @@ h6 {
 
 /* Constants: Header navigation's item */
 .header-nav-item-specs {
-  padding-left: 25px; /* Defines the mouse-over appearing border-top's left offset */
-  padding-right: 15px; /* Defines the mouse-over appearing border-top's right offset */
-  border-top: 2px solid; /* Defines the the mouse-over appearing border-top's thickness */
+  padding-left: 25px;
+  /* Defines the mouse-over appearing border-top's left offset */
+  padding-right: 15px;
+  /* Defines the mouse-over appearing border-top's right offset */
+  border-top: 2px solid;
+  /* Defines the the mouse-over appearing border-top's thickness */
 }
 
 /* Constants: Header's logo height */
@@ -112,7 +120,7 @@ h6 {
 }
 
 /* Constants: Searchbar map button's icon specs */
-.searchbar .searchbar-map-button-specs > i {
+.searchbar .searchbar-map-button-specs>i {
   font-size: 1.15rem;
   padding: 18px;
 }
@@ -142,10 +150,12 @@ h6 {
 
 /* Constants: filter buttons properties */
 .filter-button-specs {
-  --_vcentered-basis: 105%; /* Defines the vertical scale (use PERCENTS) */
+  --_vcentered-basis: 105%;
+  /* Defines the vertical scale (use PERCENTS) */
   --_border-thickness: 0.15rem;
   border-radius: 30px;
-  padding: 0.9rem 1.2rem 0.9rem 0.9rem; /* Defines the padding as: up | right | down | left */
+  padding: 0.9rem 1.2rem 0.9rem 0.9rem;
+  /* Defines the padding as: up | right | down | left */
 }
 
 /* Constants: filters list buttons' gaps */
@@ -178,8 +188,10 @@ h6 {
 /* 🧰 [§ A.3) i. Reset CSS => 📖 https://tinyurl.com/reset-css] */
 /* (Preprocessing) */
 * {
-  box-sizing: border-box; /* [📖 https://tinyurl.com/border-box] */
-  min-width: 0; /* [📖 https://tinyurl.com/flex-min-width-0] */
+  box-sizing: border-box;
+  /* [📖 https://tinyurl.com/border-box] */
+  min-width: 0;
+  /* [📖 https://tinyurl.com/flex-min-width-0] */
   margin: 0;
   padding: 0;
   font: inherit;
@@ -188,13 +200,16 @@ h6 {
   vertical-align: baseline;
 }
 
-ol, ul {
+ol,
+ul {
   list-style-type: none;
 }
 
 /* 🪐 [§ A.3) ii. Large scope properties] */
 /* Top level elements fully flexed (personal preference for debugging) */
-#top-level-wrapper, #main, #footer {
+#top-level-wrapper,
+#main,
+#footer {
   display: flex;
   flex-direction: column;
 }
@@ -209,8 +224,8 @@ ol, ul {
 }
 
 /* Webpage Bleed */
-#top-level-wrapper > *:not(#main),
-#main > * {
+#top-level-wrapper>*:not(#main),
+#main>* {
   padding: var(--booki-global-bleed);
 }
 
@@ -219,7 +234,7 @@ ol, ul {
 .is-normal {
   font-weight: var(--booki-fw-normal);
 }
-        
+
 .is-medium {
   font-weight: var(--booki-fw-medium);
 }
@@ -257,7 +272,8 @@ ol, ul {
 
 /*** B. Micro (Desktop first) */
 /* 🧱 [§ B.1) Header] */
-#header, #header-nav-container {
+#header,
+#header-nav-container {
   display: flex;
 }
 
@@ -267,7 +283,8 @@ ol, ul {
   justify-content: space-between;
 }
 
-#header-nav-container, #header-nav-container li {
+#header-nav-container,
+#header-nav-container li {
   height: 100%;
 }
 
@@ -285,7 +302,7 @@ ol, ul {
   border-top-color: var(--_menu-active-item-border-top-color);
 }
 
-#header-nav-container > li:first-child > a {
+#header-nav-container>li:first-child>a {
   margin-right: var(--_nav-btn-deadzone);
 }
 
@@ -304,7 +321,9 @@ ol, ul {
   display: flex;
 }
 
-.searchbar, .searchbar .searchbar-search-button, .searchbar .searchbar-input {
+.searchbar,
+.searchbar .searchbar-search-button,
+.searchbar .searchbar-input {
   display: flex;
   align-items: center;
 }
@@ -318,7 +337,7 @@ ol, ul {
   min-width: auto;
 }
 
-.searchbar .searchbar-map-button > i {
+.searchbar .searchbar-map-button>i {
   align-self: center;
 }
 
@@ -329,7 +348,9 @@ ol, ul {
   border-radius: var(--_searchbar-border-radius) 0 0 var(--_searchbar-border-radius);
 }
 
-.searchbar .searchbar-input, .searchbar .searchbar-search-button, .searchbar .searchbar-map-button {
+.searchbar .searchbar-input,
+.searchbar .searchbar-search-button,
+.searchbar .searchbar-map-button {
   height: 100%;
 }
 
@@ -447,7 +468,8 @@ ol, ul {
     max-width: 100%;
   }
 
-  #filters-section p:first-of-type, .filters-list-container {
+  #filters-section p:first-of-type,
+  .filters-list-container {
     flex-basis: 100%;
   }
 
@@ -506,7 +528,7 @@ ol, ul {
   margin-bottom: 40px;
 }
 
-.city-lodgings-grid-container > a {
+.city-lodgings-grid-container>a {
   text-decoration: none;
 }
 
@@ -545,10 +567,11 @@ ol, ul {
   height: calc(114px + var(--_delta));
   margin-top: var(--_delta);
   margin-left: calc(var(--_negative-delta) * 2);
-  width: 104%; /* {REM} Hack in the matrix :'( */
+  width: 104%;
+  /* {REM} Hack in the matrix :'( */
 }
 
-.lodging-card .thumbnail > img {
+.lodging-card .thumbnail>img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -645,7 +668,7 @@ ol, ul {
   margin-bottom: 50px;
 }
 
-.best-lodgings-grid-container > a {
+.best-lodgings-grid-container>a {
   text-decoration: none;
 }
 
@@ -666,7 +689,8 @@ ol, ul {
 #best-lodgings .lodging-card .thumbnail {
   min-width: calc(106px - var(--_delta));
   width: calc(137px - var(--_delta));
-  height: 104%; /* {REM} Hack in the matrix :'( */
+  height: 104%;
+  /* {REM} Hack in the matrix :'( */
   margin-left: var(--_delta);
   margin-top: -1px;
 }
@@ -694,7 +718,8 @@ ol, ul {
     min-width: 200px;
   }
 
-  #best-lodgings, #city-lodgings {
+  #best-lodgings,
+  #city-lodgings {
     flex-basis: 100%;
   }
 
@@ -732,7 +757,7 @@ ol, ul {
     margin-left: calc(var(--_delta) * 3 - 1px);
   }
 
-  #best-lodgings .best-lodgings-grid-container > .lodging-card-wrapper:nth-child(odd) .lodging-card-description {
+  #best-lodgings .best-lodgings-grid-container>.lodging-card-wrapper:nth-child(odd) .lodging-card-description {
     font-size: 0.93em;
   }
 
@@ -858,7 +883,7 @@ footer nav a {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
   }
 
-  #main > *:not(#lodgings-section) {
+  #main>*:not(#lodgings-section) {
     padding: var(--booki-global-bleed);
   }
 }
@@ -868,16 +893,17 @@ footer nav a {
     --booki-bleed-current-state-value: var(--booki-bleed-mobile);
   }
 
-  #top-level-wrapper > *:not(#main),
-  #main > * {
+  #top-level-wrapper>*:not(#main),
+  #main>* {
     padding: 0;
   }
 }
 
 /* ⚙️ [§ C.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
+
   /* Header */
-  #header-nav-container > li:first-child > a {
+  #header-nav-container>li:first-child>a {
     margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
   }
 
@@ -918,13 +944,13 @@ footer nav a {
     background-color: var(--booki-chart-bg-color) !important;
     justify-content: space-evenly;
     gap: 0 15px;
-  }  
-  
+  }
+
   #footer-sections-container:first-child {
     margin-left: 0;
   }
 
-  #footer-sections-container:first-child > div {
+  #footer-sections-container:first-child>div {
     margin-left: -50px;
   }
 
@@ -935,6 +961,7 @@ footer nav a {
 
 /* ⚙️ [§ C.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
+
   /* Global */
   .section-element-a {
     order: 1;
@@ -953,7 +980,7 @@ footer nav a {
     flex: 0 0 100%;
     width: 100%;
   }
-  
+
   /* Header */
   #header {
     padding: 0;
@@ -996,12 +1023,12 @@ footer nav a {
   .searchbar {
     width: 100%;
   }
-  
+
   .searchbar .searchbar-search-button-specs:before {
     content: "";
   }
 
-  .searchbar .searchbar-search-button > i {
+  .searchbar .searchbar-search-button>i {
     display: flex;
   }
 
@@ -1015,14 +1042,15 @@ footer nav a {
     display: none;
   }
 
-  #best-lodgings, #city-lodgings {
+  #best-lodgings,
+  #city-lodgings {
     flex-basis: 100%;
     border-radius: 0;
   }
 
   #city-lodgings {
     background-color: var(--booki-chart-sections-bg-color);
-  }  
+  }
 
   /* Activities */
   #activities {
@@ -1047,7 +1075,7 @@ footer nav a {
     padding-bottom: 40px;
   }
 
-  #footer-sections-container:first-child > div {
+  #footer-sections-container:first-child>div {
     margin-left: 0;
   }
 }
