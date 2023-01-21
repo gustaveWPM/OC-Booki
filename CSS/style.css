@@ -901,7 +901,7 @@ footer nav a {
 
 
 /*** C. Breakpoints */
-/* ⚙️ [§ C.1) Bleed Manager] */
+/* ✨ [§ C.1) Bleed Manager] */
 @media (max-width: 992px) {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
@@ -923,7 +923,7 @@ footer nav a {
   }
 }
 
-/* ⚙️ [§ C.2) Layout adjustments for tablet] */
+/* ✨ [§ C.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
 
   /* Header */
@@ -983,7 +983,7 @@ footer nav a {
   }
 }
 
-/* ⚙️ [§ C.3) Layout adjustments for mobile] */
+/* ✨ [§ C.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
 
   /* Global */
