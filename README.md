@@ -17,4 +17,4 @@ No JS allowed. Nor SASS/SCSS/LESS.
 
 ---
 
-_This GitHub repository is NOT endorsed by [OpenClassrooms](https://openclassrooms.com/fr/) in any way._
+<p align="center"><em>This GitHub repository is not part of the OPENCLASSROOMS website or OPENCLASSROOMS SAS. Additionally, this site is NOT endorsed by OPENCLASSROOMS in any way.<br>OPENCLASSROOMS is a trademark of OPENCLASSROOMS, SAS.</em></p>
