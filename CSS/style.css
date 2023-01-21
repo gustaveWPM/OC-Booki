@@ -644,6 +644,7 @@ ol, ul {
   color: var(--booki-chart-primary)
 }
 
+/* Custom breakpoints */
 @media (max-width: 1460px) {
   .lodging-card-wrapper {
     min-width: 200px;
@@ -933,6 +934,15 @@ footer nav a {
   }
 
   /* Lodgings */
+  .city-lodgings-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  #city-lodgings .show-more-btn {
+    display: none;
+  }
+
   #best-lodgings, #city-lodgings {
     flex-basis: 100%;
     border-radius: 0;
@@ -940,7 +950,7 @@ footer nav a {
 
   #city-lodgings {
     background-color: var(--booki-chart-sections-bg-color);
-  }
+  }  
 
   /* Activities */
   #activities {
