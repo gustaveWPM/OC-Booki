@@ -307,6 +307,7 @@ ul {
 }
 
 #header-logo {
+  display: flex;
   align-self: flex-end;
 }
 
@@ -335,10 +336,6 @@ ul {
 
 .searchbar .searchbar-search-button {
   min-width: auto;
-}
-
-.searchbar .searchbar-map-button>i {
-  align-self: center;
 }
 
 .searchbar .searchbar-map-button {
@@ -995,6 +992,7 @@ footer nav a {
   }
 
   #header-logo {
+    display: flex;
     align-self: center;
     margin-top: 25px;
   }
