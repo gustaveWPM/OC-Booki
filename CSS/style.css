@@ -4,13 +4,9 @@
    Use CTRL+F `§` & CTRL+F `***` to navigate throughout this CSS file sections.
 */
 
-
 /*** A. Macro */
-/*
-   A.1) ⚙️ [§ Global Configuration]
-            (You can edit the lines which are underneath this one as you wish)
-*/
-
+/* ⚙️ [§ A.1) Global Configuration] */
+/* (You can edit the lines which are underneath this one as you wish) */
 :root {
   /* Configuration.chart => Static Colors */
   --booki-chart-primary: #0065FC;
@@ -49,7 +45,8 @@ body {
   --_top-level-wrapper-width: 1400px;
 }
 
-/* A.2) [§ Granular Configuration] */
+/* ⚙️ [§ A.2) Granular Configuration] */
+/* (You can edit the lines which are underneath this one as you wish) */
 
 /* Constants: Main title font's size and weight */
 h1 {
@@ -183,8 +180,8 @@ h6 {
 /* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 /* ⛔ Do NOT edit the code BELOW this line unless you know what you are doing */
 
-/* A.3) Preprocessing */
 /* 🧰 [§ A.3) i. Reset CSS => 📖 https://tinyurl.com/reset-css] */
+/* (Preprocessing) */
 * {
   box-sizing: border-box; /* [📖 https://tinyurl.com/border-box] */
   min-width: 0; /* [📖 https://tinyurl.com/flex-min-width-0] */
@@ -222,8 +219,8 @@ ol, ul {
   padding: var(--booki-global-bleed);
 }
 
-/* A.4) 🧰 [§ Utilitary classes]
-            (Kinda minimalist internal CSS framework) => [📖 https://tinyurl.com/fk-clean-code] */
+/* 🧰 [§ A.4) Utilitary classes] */
+/* (Kinda minimalist internal CSS framework) => [📖 https://tinyurl.com/fk-clean-code] */
 .is-normal {
   font-weight: var(--booki-fw-normal);
 }
@@ -264,9 +261,7 @@ ol, ul {
 
 
 /*** B. Micro (Desktop first) */
-/*
-   B.1) 🧱 [§ Header]
-*/
+/* 🧱 [§ B.1) Header] */
 #header, #header-nav-container {
   display: flex;
 }
@@ -309,9 +304,7 @@ ol, ul {
   object-fit: contain;
 }
 
-/*
-   B.2) 🧱 [§ Searchbar]
-*/
+/* 🧱 [§ B.2) Searchbar] */
 .searchbar-container {
   display: flex;
 }
@@ -369,9 +362,7 @@ ol, ul {
   display: none;
 }
 
-/*
-   B.3) 🧱 [§ Filters]
-*/
+/* 🧱 [§ B.3) Filters] */
 #filters-section {
   display: flex;
   flex-wrap: wrap;
@@ -492,9 +483,7 @@ ol, ul {
   }
 }
 
-/*
-   B.4) 🧱 [§ Lodgings]
-*/
+/* 🧱 [§ B.4) i. Lodgings] */
 .lodging-info-icon {
   color: var(--booki-chart-primary);
   border: var(--_border-thickness) solid var(--_border-color);
@@ -561,10 +550,13 @@ ol, ul {
 
 .lodging-card .thumbnail {
   display: flex;
-  height: calc(119px + var(--_delta));
+  height: calc(114px + var(--_delta));
+  margin-top: var(--_delta);
+  margin-left: calc(var(--_negative-delta) * 2);
+  width: 104%; /* {REM} Hack in the matrix :'( */
 }
 
-.lodging-card .thumbnail>img {
+.lodging-card .thumbnail > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -667,9 +659,61 @@ ol, ul {
   }
 }
 
-/*
-   B.5) 🧱 [§ Activities]
-*/
+/* 🧱 [§ B.4) ii. Best-Lodgings] */
+/* Using a "Monkey patch" approach here: no need to create useless classes */
+/* => [📖 https://tinyurl.com/monkey-patch] */
+/* (Also seems like inheritance, yah you got it) */
+
+/* {REM} Let's create a new class for the grid, it's worth */
+.best-lodgings-grid-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 33px 30px;
+}
+
+/* Monkey Patches */
+#best-lodgings .lodging-card-wrapper {
+  min-width: 252px;
+  max-width: 100%;
+  max-height: 144px;
+}
+
+#best-lodgings .lodging-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+#best-lodgings .lodging-card .thumbnail {
+  width: calc(137px - var(--_delta));
+  height: 104%; /* {REM} Hack in the matrix :'( */
+  margin-left: var(--_delta);
+  margin-top: -1px;
+}
+
+#best-lodgings .lodging-card .lodging-card-description {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  margin-left: 20px;
+  width: 50%;
+  line-height: 1.2;
+}
+
+#best-lodgings .lodging-card .lodging-card-description h4 {
+  margin-bottom: var(--_delta);
+}
+
+#best-lodgings .lodging-card .rating-container {
+  margin-top: auto;
+}
+
+/* 🧱 [§ B.5) Activities] */
 #activities h3 {
   display: flex;
   align-self: flex-start;
@@ -716,9 +760,7 @@ ol, ul {
   height: 55px;
 }
 
-/*
-   B.6) 🧱 [§ Footer]
-*/
+/* 🧱 [§ B.6) Footer] */
 #footer {
   background-color: var(--booki-chart-sections-bg-color);
 }
@@ -778,9 +820,7 @@ footer nav a {
 
 
 /*** C. Breakpoints */
-/*
-   C.1) ⚙️ [§ Bleed Manager]
-*/
+/* ⚙️ [§ C.1) Bleed Manager] */
 @media (max-width: 992px) {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
@@ -802,9 +842,7 @@ footer nav a {
   }
 }
 
-/*
-   C.2) ⚙️ [§ Layout adjusting for tablet]
-*/
+/* ⚙️ [§ C.2) Layout adjusting for tablet] */
 @media (max-width: 992px) {
   #activities {
     margin-bottom: 45px;
@@ -859,9 +897,7 @@ footer nav a {
   }
 }
 
-/*
-   C.3) ⚙️ [§ Layout adjusting for mobile]
-*/
+/* ⚙️ [§ C.3) Layout adjusting for mobile] */
 @media (max-width: 768px) {
   /* Global */
   .section-element-a {
