@@ -4,6 +4,7 @@
    Use CTRL+F `§` & CTRL+F `***` to navigate throughout this CSS file sections.
 */
 
+
 /*** A. Macro */
 /*
    A.1) ⚙️ [§ Global Configuration]
@@ -261,6 +262,7 @@ ol, ul {
   filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
 }
 
+
 /*** B. Micro (Desktop first) */
 /*
    B.1) 🧱 [§ Header]
@@ -307,7 +309,9 @@ ol, ul {
   object-fit: contain;
 }
 
-/* Searchbar */
+/*
+   B.2) 🧱 [§ Searchbar]
+*/
 .searchbar-container {
   display: flex;
 }
@@ -365,7 +369,9 @@ ol, ul {
   display: none;
 }
 
-/* Filters section */
+/*
+   B.3) 🧱 [§ Filters]
+*/
 #filters-section {
   display: flex;
   flex-wrap: wrap;
@@ -486,7 +492,9 @@ ol, ul {
   }
 }
 
-/* Lodgings section */
+/*
+   B.4) 🧱 [§ Lodgings]
+*/
 .lodging-info-icon {
   color: var(--booki-chart-primary);
   border: var(--_border-thickness) solid var(--_border-color);
@@ -563,7 +571,7 @@ ol, ul {
 }
 
 .lodging-card-description {
-  margin: auto calc(var(--_delta) * 3);
+  margin: auto 15px;
   padding-bottom: var(--_delta);
   line-height: 1.4;
   z-index: 1;
@@ -579,7 +587,7 @@ ol, ul {
 
 .rating-container {
   display: flex;
-  margin-top: calc(var(--_delta) + 1px);
+  margin-top: 6px;
   font-size: 0.75rem;
   letter-spacing: 1pt;
 }
@@ -658,7 +666,9 @@ ol, ul {
   }
 }
 
-/* Activities section */
+/*
+   B.5) 🧱 [§ Activities]
+*/
 #activities h3 {
   display: flex;
   align-self: flex-start;
@@ -705,7 +715,9 @@ ol, ul {
   height: 55px;
 }
 
-/* Footer */
+/*
+   B.6) 🧱 [§ Footer]
+*/
 #footer {
   background-color: var(--booki-chart-sections-bg-color);
 }
@@ -766,11 +778,8 @@ footer nav a {
 
 /*** C. Breakpoints */
 /*
-   C.1) ⚙️ [§ Kinda Global Monkey Patches]
-            (📖 https://tinyurl.com/monkey-patch)
+   C.1) ⚙️ [§ Bleed Manager]
 */
-
-/* TABLET AND ABOVE */
 @media (max-width: 992px) {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
@@ -781,7 +790,6 @@ footer nav a {
   }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-mobile);
@@ -793,7 +801,9 @@ footer nav a {
   }
 }
 
-/* Tablet */
+/*
+   C.2) ⚙️ [§ Layout adjusting for tablet]
+*/
 @media (max-width: 992px) {
   #activities {
     margin-bottom: 45px;
@@ -848,7 +858,9 @@ footer nav a {
   }
 }
 
-/* Layout updates: Mobile */
+/*
+   C.3) ⚙️ [§ Layout adjusting for mobile]
+*/
 @media (max-width: 768px) {
   /* Global */
   .section-element-a {
