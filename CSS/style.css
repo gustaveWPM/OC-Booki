@@ -43,6 +43,7 @@ body {
   font-weight: var(--booki-fw-normal);
   /* background-color: var(--booki-chart-bg-color); */
   background-image: url(../images/_bonus/background-pattern.png);
+  word-wrap: break-word;
   /* ⛔ ⬆️ IMPLEMENTATION: Don't edit those lines */
 }
 
@@ -188,6 +189,10 @@ h6 {
 
 /* 🧰 [§ A.3) i. Reset CSS => 📖 https://tinyurl.com/reset-css] */
 /* (Preprocessing) */
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
 ::placeholder {
   color: inherit;
 }
@@ -1109,5 +1114,72 @@ footer nav a {
 
   #footer-sections-container:first-child>div {
     margin-left: 0;
+  }
+}
+
+/* Edge cases */
+@media (min-width: 336px) and (max-width: 450px) {
+  .filter-icon-wrapper {
+    width: 20px;
+    transform: scale(2.6) translateX(-8%) translateY(6%);
+  }
+
+  .filter-button-specs {
+    --_vcentered-basis: 65%;
+  }
+}
+
+@media (max-width: 335px) {
+  .lodgings-title-container > i {
+    display: none;
+  }
+
+  .filters-list {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .filters-list .filter-button {
+    margin-right: 0;
+  }
+
+  .lodging-card-wrapper {
+    min-width: 80vw !important;
+  }
+
+  #best-lodgings .lodging-card .thumbnail {
+    min-width: 20vw;
+  }
+
+  #city-lodgings .lodging-card-description * {
+    font-size: 5vw;
+  }
+
+  #best-lodgings .lodging-card-description * {
+    font-size: 4vw;
+  }
+
+  #best-lodgings .lodging-card-description {
+    margin-left: 4vw !important;
+  }
+}
+
+@media (max-width: 260px) {
+  #city-lodgings .lodging-card-description * {
+    font-size: 7vw;
+  }
+
+  .filter-icon-wrapper {
+    display: none;
+  }
+
+  .filter-button-content-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 225px) {
+  body {
+    word-break: break-word;
   }
 }
