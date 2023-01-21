@@ -40,9 +40,10 @@ body {
   font-family: 'Raleway', sans-serif;
   line-height: 1;
   font-weight: var(--booki-fw-normal);
-  /* ⛔ IMPLEMENTATION: Don't edit this line */
-  background-color: var(--booki-chart-bg-color);
-  /* ⛔ IMPLEMENTATION: Don't edit this line */
+  /* ⛔ ⬇️ IMPLEMENTATION: Don't edit this line */
+  /* background-color: var(--booki-chart-bg-color); */
+  background-image: url(../images/_bonus/background-pattern.png);
+  /* ⛔ ⬆️ IMPLEMENTATION: Don't edit this line */
 }
 
 .top-level-wrapper-specs {
@@ -360,7 +361,7 @@ ul {
   min-width: auto;
 }
 
-.searchbar .searchbar-map-button > i {
+.searchbar .searchbar-map-button>i {
   display: flex;
   align-self: center;
 }
