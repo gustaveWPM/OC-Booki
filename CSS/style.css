@@ -1166,12 +1166,16 @@ footer nav a {
     line-height: 9vw !important;
   }
 
-  #city-lodgings .lodging-card-description * {
-    font-size: 5vw;
+  .lodging-card-description h4 {
+    font-size: 5vw !important;
   }
 
-  #best-lodgings .lodging-card-description * {
-    font-size: 4vw;
+  .lodging-card-description p, .price {
+    font-size: 4vw !important;
+  }
+
+  .rating-container > i {
+    font-size: 5vw !important;
   }
 
   #best-lodgings .lodging-card-description {
@@ -1180,10 +1184,6 @@ footer nav a {
 }
 
 @media (max-width: 260px) {
-  #city-lodgings .lodging-card-description * {
-    font-size: 7vw;
-  }
-
   .filter-icon-wrapper {
     display: none;
   }
