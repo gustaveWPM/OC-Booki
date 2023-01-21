@@ -40,10 +40,10 @@ body {
   font-family: 'Raleway', sans-serif;
   line-height: 1;
   font-weight: var(--booki-fw-normal);
-  /* ⛔ ⬇️ IMPLEMENTATION: Don't edit this line */
+  /* ⛔ ⬇️ IMPLEMENTATION: Don't edit those lines */
   /* background-color: var(--booki-chart-bg-color); */
   background-image: url(../images/_bonus/background-pattern.png);
-  /* ⛔ ⬆️ IMPLEMENTATION: Don't edit this line */
+  /* ⛔ ⬆️ IMPLEMENTATION: Don't edit those lines */
 }
 
 .top-level-wrapper-specs {
