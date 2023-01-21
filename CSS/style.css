@@ -422,14 +422,8 @@ ol, ul {
 /* Custom breakpoints */
 @media (max-width: 1060px) {
   #filters-section {
-    padding-right: 0 !important;
-  }
-
-  #filters-section {
     --_label-gap: var(--_label-gap-tablet);
-  }
-
-  #filters-section {
+    padding-right: 0 !important;
     flex-wrap: nowrap;
   }
 
@@ -636,6 +630,62 @@ ol, ul {
   color: var(--booki-chart-primary)
 }
 
+/* 🧱 [§ B.4) ii. Best-Lodgings] */
+/* Using a "Monkey patch" approach here: no need to create useless classes */
+/* => [📖 https://tinyurl.com/monkey-patch] */
+/* (Also seems like inheritance, yah you got it) */
+
+/* {REM} Let's create a new class for the grid, it's worth */
+.best-lodgings-grid-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 33px 30px;
+  margin-bottom: 50px;
+}
+
+/* Monkey Patches */
+#best-lodgings .lodging-card-wrapper {
+  min-width: 252px;
+  max-width: 100%;
+  max-height: 144px;
+}
+
+#best-lodgings .lodging-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+#best-lodgings .lodging-card .thumbnail {
+  min-width: calc(106px - var(--_delta));
+  width: calc(137px - var(--_delta));
+  height: 104%; /* {REM} Hack in the matrix :'( */
+  margin-left: var(--_delta);
+  margin-top: -1px;
+}
+
+#best-lodgings .lodging-card .lodging-card-description {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  margin-left: 20px;
+  width: 50%;
+  line-height: 1.2;
+}
+
+#best-lodgings .lodging-card .lodging-card-description h4 {
+  margin-bottom: var(--_delta);
+}
+
+#best-lodgings .lodging-card .rating-container {
+  margin-top: auto;
+}
+
 /* Custom breakpoints */
 @media (max-width: 1460px) {
   .lodging-card-wrapper {
@@ -659,58 +709,38 @@ ol, ul {
   }
 }
 
-/* 🧱 [§ B.4) ii. Best-Lodgings] */
-/* Using a "Monkey patch" approach here: no need to create useless classes */
-/* => [📖 https://tinyurl.com/monkey-patch] */
-/* (Also seems like inheritance, yah you got it) */
+/* Hackish garbage */
+@media (min-width: 1010px) and (max-width: 1460px) {
+  .best-lodgings-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 
-/* {REM} Let's create a new class for the grid, it's worth */
-.best-lodgings-grid-container {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: space-between;
-  gap: 33px 30px;
-}
+  #best-lodgings .lodging-card .lodging-card-description h4 {
+    width: 94%;
+  }
 
-/* Monkey Patches */
-#best-lodgings .lodging-card-wrapper {
-  min-width: 252px;
-  max-width: 100%;
-  max-height: 144px;
-}
+  #best-lodgings .lodging-card .lodging-card-description p {
+    font-size: 0.8rem;
+    width: 130px;
+  }
 
-#best-lodgings .lodging-card-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: left;
-}
+  #best-lodgings .lodging-card .lodging-card-description {
+    width: 100%;
+    margin-left: calc(var(--_delta) * 3 - 1px);
+  }
 
-#best-lodgings .lodging-card .thumbnail {
-  width: calc(137px - var(--_delta));
-  height: 104%; /* {REM} Hack in the matrix :'( */
-  margin-left: var(--_delta);
-  margin-top: -1px;
-}
+  #best-lodgings .best-lodgings-grid-container > .lodging-card-wrapper:nth-child(odd) .lodging-card-description {
+    font-size: 0.93em;
+  }
 
-#best-lodgings .lodging-card .lodging-card-description {
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  margin-left: 20px;
-  width: 50%;
-  line-height: 1.2;
-}
+  #best-lodgings .lodging-card .lodging-card-description .rating-container {
+    margin-bottom: calc(var(--_negative-delta) * 2);
+  }
 
-#best-lodgings .lodging-card .lodging-card-description h4 {
-  margin-bottom: var(--_delta);
-}
-
-#best-lodgings .lodging-card .rating-container {
-  margin-top: auto;
+  #best-lodgings {
+    min-height: auto;
+  }
 }
 
 /* 🧱 [§ B.5) Activities] */
@@ -842,8 +872,20 @@ footer nav a {
   }
 }
 
-/* ⚙️ [§ C.2) Layout adjusting for tablet] */
-@media (max-width: 992px) {
+/* ⚙️ [§ C.2) Layout adjustments for tablet] */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Header */
+  #header-nav-container > li:first-child > a {
+    margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
+  }
+
+  /* Searchbar */
+  .searchbar {
+    width: var(--_tablet-width);
+    height: 100%;
+  }
+
+  /* Activities */
   #activities {
     margin-bottom: 45px;
   }
@@ -864,15 +906,7 @@ footer nav a {
     margin-top: -4px;
   }
 
-  .searchbar {
-    width: var(--_tablet-width);
-    height: 100%;
-  }
-
-  #header-nav-container > li:first-child > a {
-    margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
-  }
-
+  /* Footer */
   footer {
     background-color: var(--booki-chart-sections-bg-color) !important;
   }
@@ -897,7 +931,7 @@ footer nav a {
   }
 }
 
-/* ⚙️ [§ C.3) Layout adjusting for mobile] */
+/* ⚙️ [§ C.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
   /* Global */
   .section-element-a {
