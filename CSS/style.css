@@ -486,7 +486,6 @@ ol, ul {
 
 #header-nav {
   align-self: stretch;
-  justify-content: space-between;
 }
 
 .header-nav-item {
