@@ -187,6 +187,28 @@ h6 {
 
 /* 🧰 [§ A.3) i. Reset CSS => 📖 https://tinyurl.com/reset-css] */
 /* (Preprocessing) */
+::placeholder {
+  color: inherit;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+:-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+}
+
 * {
   box-sizing: border-box;
   /* [📖 https://tinyurl.com/border-box] */
