@@ -2,13 +2,13 @@
 
 ## You have never done web integration?
 
-I didn't either...
-This is my first web integration (lol).
+I didn't either...  
+This is my first web integration (lol).  
 
-Project made during an _OpenClassrooms_ bootcamp.
+Project made during an _OpenClassrooms_ bootcamp.  
 [Learning path: _Développeur Web_](https://openclassrooms.com/fr/paths/717-developpeur-web)
 
-Vanilla CSS/HTML project.
+Vanilla CSS/HTML project.  
 No JS allowed. Nor SASS/SCSS/LESS.
 
 ### Resources
