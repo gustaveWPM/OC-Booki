@@ -1130,6 +1130,14 @@ footer nav a {
 }
 
 @media (max-width: 335px) {
+  .header-nav-item {
+    min-height: 60px;
+  }
+
+  .searchbar-map-button {
+    display: none !important;
+  }
+
   .lodgings-title-container > i {
     display: none;
   }
@@ -1149,6 +1157,13 @@ footer nav a {
 
   #best-lodgings .lodging-card .thumbnail {
     min-width: 20vw;
+  }
+
+  footer * {
+    font-size: 5.5vw !important;
+    margin-left: 0 !important;
+    padding-left: 1vw !important;
+    line-height: 9vw !important;
   }
 
   #city-lodgings .lodging-card-description * {
@@ -1181,5 +1196,11 @@ footer nav a {
 @media (max-width: 225px) {
   body {
     word-break: break-word;
+  }
+}
+
+@media (max-width: 175px) {
+    #form-section {
+    display: none;
   }
 }
