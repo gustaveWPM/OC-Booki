@@ -165,11 +165,6 @@ h6 {
   margin-right: 10px;
 }
 
-/* Constants: Lodgings city's bottom gap */
-#city-lodgings .city-lodgings-grid-container-specs {
-  margin-bottom: 40px;
-}
-
 /* Constants: Show more button's bottom gap and font's size */
 .show-more-btn-specs {
   margin-bottom: 40px;
@@ -478,6 +473,7 @@ ol, ul {
 }
 
 /* 🧱 [§ B.4) i. Lodgings] */
+/* (None of those property should be in the configuration section since it is tailor-made designed) */
 .lodging-info-icon {
   color: var(--booki-chart-primary);
   border: var(--_border-thickness) solid var(--_border-color);
@@ -507,6 +503,7 @@ ol, ul {
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   gap: 30px 30px;
+  margin-bottom: 40px;
 }
 
 .lodging-card-wrapper {
