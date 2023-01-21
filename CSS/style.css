@@ -338,6 +338,11 @@ ul {
   min-width: auto;
 }
 
+.searchbar .searchbar-map-button > i {
+  display: flex;
+  align-self: center;
+}
+
 .searchbar .searchbar-map-button {
   display: flex;
   min-width: auto;
