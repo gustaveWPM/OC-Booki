@@ -190,6 +190,12 @@ h6 {
   margin-right: 10px;
 }
 
+/* Constants: Components' title margins */
+.component-title-container.has-tweakers {
+  margin: 45px 0;
+  margin-bottom: 25px;
+}
+
 /* Constants: Lodging cards' outline and border radius */
 .lodging-card-wrapper.has-tweakers {
   --_outline-size: 5px;
@@ -559,8 +565,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 45px 0;
-  margin-bottom: 25px;
 }
 
 .component-title-container>i {
