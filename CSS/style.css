@@ -347,7 +347,7 @@ ul {
   color: var(--_menu-active-item-hyperlink-color);
 }
 
-.header-nav-items-container .header-nav-item:first-child>a {
+.header-nav li:first-child {
   margin-right: var(--_nav-btn-deadzone);
 }
 
@@ -971,6 +971,7 @@ footer nav a {
 
   #main>.lodgings-section,
   #main>.activities,
+  #top-level-wrapper>#header,
   #top-level-wrapper>#footer {
     padding: 0;
   }
