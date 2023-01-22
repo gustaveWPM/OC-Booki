@@ -760,7 +760,6 @@ ul {
   }
 }
 
-/* QC Ok till this line */
 /* Hackish garbage */
 @media (min-width: 1010px) and (max-width: 1460px) {
   .best-lodgings-component>.best-lodgings-grid-container {
@@ -768,25 +767,25 @@ ul {
     grid-template-rows: 1fr;
   }
 
-  .best-lodgings-section .lodging-card .lodging-card-description .is-title {
+  .best-lodgings-component .lodging-card>.lodging-card-description>.is-title {
     width: 94%;
   }
 
-  .best-lodgings-section .lodging-card .lodging-card-description p {
+  .best-lodgings-component .lodging-card>.lodging-card-description>.price-p {
     font-size: 0.8rem;
     width: 130px;
   }
 
-  .best-lodgings-section .lodging-card .lodging-card-description {
+  .best-lodgings-component .lodging-card>.lodging-card-description {
     width: 100%;
     margin-left: calc(var(--_outline-size) * 3 - 1px);
   }
 
-  .best-lodgings-component>.best-lodgings-grid-container>.lodging-card-wrapper:nth-child(odd) .lodging-card-description {
+  .best-lodgings-grid-container a:nth-child(odd) {
     font-size: 0.93rem;
   }
 
-  .best-lodgings-section .lodging-card .lodging-card-description .rating-container {
+  .best-lodgings-component .rating-container {
     margin-bottom: calc(var(--_negative-outline-size) * 2);
   }
 
@@ -795,6 +794,7 @@ ul {
   }
 }
 
+/* QC Ok till this line (todo: fix the header responsive bug on mobile) */
 /* 🧱 [§ B.5) Activities] */
 .activities {
   width: 100%;
