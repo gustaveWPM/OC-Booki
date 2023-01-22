@@ -24,60 +24,60 @@
 </head>
 
 <body>
-  <div id="top-level-wrapper" class="top-level-wrapper-specs">
-    <header id="header" class="header-specs">
-      <a id="header-logo" class="header-logo-specs" href="./index.html">
-        <picture id="header-logo-img">
+  <div id="top-level-wrapper" class="has-tweakers">
+    <header id="header" class="has-tweakers">
+      <a class="header-logo has-tweakers" href="./index.html">
+        <picture class="header-logo-picture">
           <source srcset="./images/logo/Booki@3x.png" media="(max-width: 768px)">
           <img src="./images/logo/Booki.png" alt="Logo Booki">
         </picture>
       </a>
-      <nav id="header-nav" class="header-nav-specs">
-        <ul id="header-nav-container" class="is-medium">
-          <li><a class="header-nav-item header-nav-item-specs" href="#city-lodgings">Hébergements</a></li>
-          <li><a class="header-nav-item header-nav-item-specs" href="#activities">Activités</a></li>
+      <nav class="header-nav has-tweakers">
+        <ul class="header-nav-items-container is-fw-medium">
+          <li><a class="header-nav-item has-tweakers" href="#city-lodgings-section">Hébergements</a></li>
+          <li><a class="header-nav-item has-tweakers" href="#activities-section">Activités</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
-      <section id="title-section" class="title-section-specs">
+      <section id="title-section" class="has-tweakers">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <h2>En plein centre-ville ou en pleine nature</h2>
       </section>
-      <div id="form-section">
-        <div class="searchbar-container searchbar-specs">
+      <div id="form-section-selector" class="form-section">
+        <div class="searchbar-container has-tweakers">
           <form class="searchbar" action="#">
-            <label class="searchbar-map-button searchbar-map-button-specs" for="search-input"><i
+            <label class="searchbar-map-button has-tweakers" for="search-input-label-connector"><i
                 class="fa fa-map-marker"></i></label>
-            <input type="text" placeholder="Marseille, France" name="recherche" id="search-input"
-              class="searchbar-input searchbar-input-specs is-bold">
-            <button type="submit" class="searchbar-search-button searchbar-search-button-specs is-bold"><i
+            <input type="text" placeholder="Marseille, France" name="recherche" id="search-input-label-connector"
+              class="searchbar-input has-tweakers is-fw-bold">
+            <button type="submit" class="searchbar-search-button has-tweakers is-fw-bold"><i
                 class="fas fa-search"></i></button>
           </form>
         </div>
       </div>
 
-      <div id="filters-section" class="filters-section-specs">
-        <p class="is-bold is-label">Filtres</p>
-        <div class="filters-list-container">
-          <ul class="filters-list filters-list-specs is-bold">
-            <li class="is-label filter-button filter-button-specs">
+      <div id="filters-section-selector" class="filters-section has-tweakers">
+        <p class="is-fw-bold is-label">Filtres</p>
+        <div class="filters-list-wrapper">
+          <ul class="filters-list-container has-tweakers is-fw-bold">
+            <li class="is-label filter-button has-tweakers">
               <div class="filter-button-content-container">
                 <span class="filter-icon-wrapper"><i class="fas fa-money-bill-wave"
                     aria-hidden="true"></i></span>Économique</div>
             </li>
-            <li class="is-label filter-button filter-button-specs">
+            <li class="is-label filter-button has-tweakers">
               <div class="filter-button-content-container">
                 <span class="filter-icon-wrapper"><i class="fas fa-person" aria-hidden="true"></i></span>Familial
               </div>
             </li>
-            <li class="is-label filter-button filter-button-specs">
+            <li class="is-label filter-button has-tweakers">
               <div class="filter-button-content-container">
                 <span class="filter-icon-wrapper"><i class="fas fa-heart" aria-hidden="true"></i></span>Romantique
               </div>
             </li>
-            <li class="is-label filter-button filter-button-specs">
+            <li class="is-label filter-button has-tweakers">
               <div class="filter-button-content-container">
                 <span class="filter-icon-wrapper"><i class="fas fa-dog" aria-hidden="true"></i></span>Animaux
                 autorisés
@@ -87,16 +87,16 @@
         </div>
       </div>
 
-      <div id="lodging-info">
-        <i class="fas fa-info is-ring lodging-info-icon lodging-info-icon-specs" aria-hidden="true"></i>
+      <div id="lodging-info-selector" class="lodging-info has-tweakers">
+        <i class="fas fa-info is-ring lodging-info-icon has-tweakers" aria-hidden="true"></i>
         <p class="is-caption is-label">
           Plus de 500 logements sont disponibles dans cette ville
         </p>
       </div>
 
-      <div id="lodgings-section">
-        <div id="lodgings">
-          <article id="city-lodgings" class="section-element-a">
+      <div id="lodgings-section" class="lodgings-section">
+        <div class="lodgings-container">
+          <article id="city-lodgings-section" class="city-lodgings section-element-a">
             <div class="city-lodgings-component is-component">
               <div class="lodgings-title-container">
                 <h3>Hébergements à&nbsp;<span class="city-name-selector">Marseille</span></h3>
@@ -254,11 +254,11 @@
                 </a>
               </div>
 
-              <a href="#" class="show-more-btn show-more-btn-specs is-bold">Afficher plus</a>
+              <a href="#" class="show-more-btn has-tweakers is-fw-bold">Afficher plus</a>
             </div>
           </article>
 
-          <article id="best-lodgings" class="section-element-b">
+          <article id="best-lodgings" class="best-lodgings section-element-b">
             <div class="best-lodgings-component is-component">
               <div class="lodgings-title-container">
                 <h3>Les plus populaires</h3>
@@ -341,7 +341,7 @@
       </div>
 
       <!-- QC Ok till this line -->
-      <article id="activities" class="is-component">
+      <article id="activities-section" class="activities is-component">
         <h3>Activités à&nbsp;<span class="city-name-selector">Marseille</span></h3>
         <div class="activities-grid-container">
           <article class="activity-card">
@@ -417,7 +417,7 @@
     </main>
     <footer id="footer">
       <div class="footer-sections-wrapper">
-        <div id="footer-sections-container">
+        <div class="footer-sections-container">
           <div class="footer-section">
             <h6>À propos</h6>
             <nav>
