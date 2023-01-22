@@ -994,7 +994,6 @@ footer nav a {
 
 /* ✨ [§ C.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
-
   /* Header */
   #header-nav-container>li:first-child>a {
     margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
@@ -1134,7 +1133,7 @@ footer nav a {
   }
 }
 
-/* Edge cases */
+/* Edge cases {Bonus} */
 @media (min-width: 336px) and (max-width: 450px) {
   .filter-icon-wrapper {
     width: 20px;
