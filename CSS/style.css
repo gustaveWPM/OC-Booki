@@ -1135,7 +1135,7 @@ footer nav a {
   }
 }
 
-/* Some edge cases {Bonus} */
+/* Some edge cases from the mockup */
 @media (min-width: 336px) and (max-width: 450px) {
   .filter-button .filter-icon-wrapper {
     width: 14pt;
