@@ -1034,6 +1034,10 @@ footer nav a {
   }
 
   /* Header */
+  .header-nav li:first-child {
+    margin-right: 0;
+  }
+  
   #header.enable-tweakers-bypass {
     margin-bottom: 0;
     flex-direction: column;
