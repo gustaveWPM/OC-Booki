@@ -49,7 +49,7 @@ body {
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-chart-bg-color);
   background-image: url(../images/_bonus/background-pattern.png);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   /* ⛔ ⬆️ IMPLEMENTATION: Don't edit those lines */
 }
 
@@ -1014,6 +1014,15 @@ footer nav a {
     order: 0;
   }
 
+  body {
+    background-color: var(--booki-chart-sections-bg-color);
+    background-image: none;
+  }
+
+  #top-level-wrapper {
+    box-shadow: none;
+  }
+
   /* Header */
   #header {
     margin-bottom: 0 !important;
@@ -1122,15 +1131,6 @@ footer nav a {
 }
 
 @media (max-width: 335px) {
-  body {
-    background-color: var(--booki-chart-sections-bg-color);
-    background-image: none;
-  }
-
-  #top-level-wrapper {
-    box-shadow: none;
-  }
-
   .filters-list-container {
     grid-template-rows: repeat(4, auto) !important;
     grid-template-columns: repeat(1, auto) !important;
