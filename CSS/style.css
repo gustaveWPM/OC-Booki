@@ -564,7 +564,7 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
-  gap: 30px 30px;
+  gap: 30px;
   margin-bottom: 40px;
 }
 
