@@ -471,7 +471,7 @@ ul {
 
 /* {REM} Too much unsafe values to move it on the configuration section */
 .filter-icon-wrapper {
-  width: 30px;
+  width: 22pt;
   text-align: center;
   transform: scale(1.25) translateX(-8%);
   color: var(--booki-chart-primary);
@@ -532,7 +532,7 @@ ul {
   }
 
   .filter-icon-wrapper {
-    width: 35px;
+    width: 25pt;
     transform: scale(1.25) translateX(-8%) translateY(-4%);
   }
 
@@ -618,7 +618,7 @@ ul {
 }
 
 .lodging-card-description {
-  margin: auto 15px;
+  margin: auto 11pt;
   padding-bottom: var(--_delta);
   line-height: 1.4;
   z-index: 1;
@@ -684,7 +684,7 @@ ul {
   display: inline-flex;
   text-decoration: none;
   color: inherit;
-  margin-left: 5px;
+  margin-left: 3pt;
 }
 
 #city-lodgings .show-more-btn:hover {
@@ -738,7 +738,7 @@ ul {
   display: flex;
   flex-direction: column;
   height: 80%;
-  margin-left: 20px;
+  margin-left: 14pt;
   width: 50%;
   line-height: 1.2;
 }
@@ -1135,7 +1135,7 @@ footer nav a {
 /* Edge cases {Bonus} */
 @media (min-width: 336px) and (max-width: 450px) {
   .filter-icon-wrapper {
-    width: 20px;
+    width: 14pt;
     transform: scale(2.6) translateX(-8%) translateY(6%);
   }
 
