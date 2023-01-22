@@ -11,9 +11,6 @@
   /* Configuration.globalLayout => font */
   --booki-font: 'Raleway';
 
-  /* Configuration.globalLayout => background image */
-  --booki-bg-img: url("../images/_bonus/background-pattern.png"); /* write `none` to disable this feature */
-
   /* Configuration.chart => Static Colors */
   --booki-chart-primary: #0065FC;
   --booki-chart-bg-color: #F2F2F2;
@@ -46,6 +43,15 @@
   --booki-box-shadow-blur-radius: 10px;
   --booki-box-shadow-spread-radius: 2px;
   --booki-box-shadow-rgba: rgba(0, 0, 0, 0.06);
+  --booki-main-wrapper-drop-shadow-opacity: 0.1;
+  --booki-cards-drop-shadow-opacity: 0.06;
+
+  /* Configuration.globalLayout => background image and color */
+  --booki-bg-img: url("../images/_bonus/background-pattern.png");
+  /* ⬆️ Write `none` to disable this feature */
+  --booki-bg-color: var(--booki-chart-bg-color);
+  /* ⬆️ Write var(--booki-chart-sections-bg-color) to disable this feature */
+  /* (And also set --booki-main-wrapper-drop-shadow-opacity to `0`) */
 }
 
 #top-level-wrapper.has-tweakers {
@@ -245,7 +251,7 @@ body {
   font-family: var(--booki-font), sans-serif;
   line-height: 1;
   font-weight: var(--booki-fw-normal);
-  background-color: var(--booki-chart-bg-color);
+  background-color: var(--booki-bg-color);
   background-image: var(--booki-bg-img);
   overflow-wrap: break-word;
 }
@@ -263,7 +269,7 @@ ul {
   justify-items: center;
   background-color: var(--booki-chart-sections-bg-color);
   max-width: calc(var(--_width) + var(--booki-bleed-current-state-value));
-  box-shadow: 0 0 calc(var(--booki-box-shadow-blur-radius) * 2) calc(var(--booki-box-shadow-spread-radius) * 2) var(--booki-box-shadow-rgba);
+  box-shadow: 0 0 calc(var(--booki-box-shadow-blur-radius) * 2) calc(var(--booki-box-shadow-spread-radius) * 2) rgba(0, 0, 0, var(--booki-main-wrapper-drop-shadow-opacity));
 }
 
 /* Webpage Bleed */
@@ -604,7 +610,7 @@ ul {
   line-height: 1.25rem;
   border-radius: calc(var(--_border-radius) + var(--_outline-size));
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) var(--booki-box-shadow-rgba);
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
 .lodging-card>.thumbnail {
@@ -815,7 +821,7 @@ ul {
   height: var(--_height);
   color: inherit;
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) var(--booki-box-shadow-rgba);
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
 .activity-card>a {
@@ -1040,7 +1046,7 @@ footer nav a {
   .header-nav li:first-child {
     margin-right: 0;
   }
-  
+
   #header.enable-tweakers-bypass {
     margin-bottom: 0;
     flex-direction: column;
