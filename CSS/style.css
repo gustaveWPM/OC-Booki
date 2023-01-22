@@ -40,17 +40,9 @@
   --booki-box-shadow-blur-radius: 10px;
   --booki-box-shadow-spread-radius: 2px;
   --booki-box-shadow-rgba: rgba(0, 0, 0, 0.06);
-}
 
-body {
-  font-family: 'Raleway', sans-serif;
-  /* ⛔ ⬇️ IMPLEMENTATION: Don't edit those lines */
-  line-height: 1;
-  font-weight: var(--booki-fw-normal);
-  background-color: var(--booki-chart-bg-color);
-  background-image: url(../images/_bonus/background-pattern.png);
-  overflow-wrap: break-word;
-  /* ⛔ ⬆️ IMPLEMENTATION: Don't edit those lines */
+  /* Configuration.globalLayout => font */
+  --booki-font: 'Raleway';
 }
 
 #top-level-wrapper.has-tweakers {
@@ -244,6 +236,15 @@ input:placeholder-shown {
   color: inherit;
   font-size: 100%;
   vertical-align: baseline;
+}
+
+body {
+  font-family: var(--booki-font), sans-serif;
+  line-height: 1;
+  font-weight: var(--booki-fw-normal);
+  background-color: var(--booki-chart-bg-color);
+  background-image: url(../images/_bonus/background-pattern.png);
+  overflow-wrap: break-word;
 }
 
 ol,
