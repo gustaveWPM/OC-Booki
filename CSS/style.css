@@ -530,7 +530,6 @@ ul {
 }
 
 /* 🧱 [§ B.4) i. Lodgings] */
-/* (None of those property should be in the configuration section since it is tailor-made designed) */
 .lodging-info {
   display: flex;
   align-items: center;
@@ -568,7 +567,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  justify-content: space-between;
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -585,7 +583,6 @@ ul {
   border-radius: var(--_border-radius);
   outline-offset: var(--_negative-outline-size);
   outline: var(--_outline-size) solid var(--booki-chart-sections-bg-color);
-  z-index: 1;
 }
 
 .lodging-card {
@@ -620,7 +617,6 @@ ul {
   margin: auto 11pt;
   padding-bottom: var(--_outline-size);
   line-height: 1.4;
-  z-index: 1;
 }
 
 .lodging-card>.lodging-card-description>.price-p {
@@ -794,7 +790,6 @@ ul {
   }
 }
 
-/* QC Ok till this line (todo: fix the header responsive bug on mobile) */
 /* 🧱 [§ B.5) Activities] */
 .activities {
   width: 100%;
@@ -815,12 +810,12 @@ ul {
   box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) var(--booki-box-shadow-rgba);
 }
 
-.activity-card a {
+.activity-card>a {
   text-decoration: none;
   color: inherit;
 }
 
-.activity-card-description {
+.activity-card .activity-card-description {
   display: flex;
   align-items: center;
   height: 55px;
@@ -833,22 +828,18 @@ ul {
   overflow: hidden;
 }
 
-.activity-card .thumbnail {
+.activity-card .activity-card-picture-wrapper>.thumbnail {
   display: flex;
   height: var(--_height);
 }
 
-.activity-card .thumbnail>img {
+.activity-card .activity-card-picture-wrapper>.thumbnail>img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.activities .is-title {
-  margin-bottom: 30px;
-}
-
-.activities-grid-container {
+.activities-component>.activities-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -858,14 +849,14 @@ ul {
 
 /* Custom breakpoints */
 @media (max-width: 1460px) {
-  .activities-grid-container {
+  .activities-component>.activities-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 951px) and (max-width: 1250px) {
-  .activities-grid-container {
+  .activities-component>.activities-grid-container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
@@ -874,11 +865,13 @@ ul {
     --_height: 267px;
   }
 
-  .activity-card-description {
+  .activity-card .activity-card-description {
     width: 89%;
   }
+}
 
-  .activity-card-description .append-line-feed {
+@media (min-width: 951px) and (max-width: 992px) {
+  .activity-card .activity-card-description .append-line-feed {
     display: block;
   }
 }
@@ -894,6 +887,7 @@ ul {
   }
 }
 
+/* QC Ok till this line (todo: fix the header responsive bug on mobile) */
 /* 🧱 [§ B.6) Footer] */
 #footer {
   background-color: var(--booki-chart-sections-bg-color);
