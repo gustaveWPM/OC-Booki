@@ -34,6 +34,12 @@
   --booki-fw-medium: 500;
   --booki-fw-semibold: 600;
   --booki-fw-bold: 700;
+
+  /* Configuration.globalLayout => Drop shadows config */
+  --booki-box-shadow-offset-y: 5px;
+  --booki-box-shadow-blur-radius: 10px;
+  --booki-box-shadow-spread-radius: 2px;
+  --booki-box-shadow-rgba: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -593,7 +599,7 @@ ul {
   line-height: 1.25em;
   border-radius: 20px;
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) var(--booki-box-shadow-rgba);
 }
 
 .lodging-card .thumbnail {
@@ -822,11 +828,11 @@ ul {
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 35px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: auto;
   height: var(--_height);
   color: inherit;
   background-color: var(--booki-chart-sections-bg-color);
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) var(--booki-box-shadow-rgba);
 }
 
 .activity-card a {
