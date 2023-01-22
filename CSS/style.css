@@ -249,6 +249,7 @@ ul {
   justify-items: center;
   background-color: var(--booki-chart-sections-bg-color);
   max-width: calc(var(--_top-level-wrapper-width) + var(--booki-bleed-current-state-value));
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Webpage Bleed */
@@ -290,6 +291,12 @@ ul {
 
 .is-unchecked {
   color: var(--booki-chart-bg-color);
+}
+
+.is-component {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 /* {Bonus} Let those crappy pictures shine again [📖 https://tinyurl.com/css-dodge-and-burn-ersatz] */
@@ -345,7 +352,7 @@ ul {
   height: 100%;
 }
 
-#header-logo-img > img {
+#header-logo-img>img {
   object-fit: contain;
 }
 
@@ -536,13 +543,6 @@ ul {
   margin-bottom: 1px;
 }
 
-.best-lodgings-component,
-.city-lodgings-component {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
 .city-lodgings-component {
   width: 91%;
 }
@@ -593,7 +593,7 @@ ul {
   line-height: 1.25em;
   border-radius: 20px;
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.07);
 }
 
 .lodging-card .thumbnail {
@@ -695,9 +695,8 @@ ul {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  justify-content: space-between;
   gap: 33px 30px;
   margin-bottom: 50px;
 }
@@ -780,7 +779,7 @@ ul {
 @media (min-width: 1010px) and (max-width: 1460px) {
   .best-lodgings-grid-container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: 1fr;
   }
 
   #best-lodgings .lodging-card .lodging-card-description h4 {
@@ -811,28 +810,23 @@ ul {
 }
 
 /* 🧱 [§ B.5) Activities] */
-#activities h3 {
-  display: flex;
-  align-self: flex-start;
-  flex: 1 0 100%;
-}
-
 #activities {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 44px;
-  margin-top: 25px;
+  width: 100%;
+  margin-bottom: 45px;
 }
 
 .activity-card {
+  --_height: 444px;
+  --_mobile-height: 46vw;
+  --_description-field-height: 54px;
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 35px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 302px;
+  width: auto;
+  height: var(--_height);
   color: inherit;
+  background-color: var(--booki-chart-sections-bg-color);
 }
 
 .activity-card a {
@@ -841,20 +835,72 @@ ul {
 }
 
 .activity-card-description {
-  margin-left: 8pt;
-  word-break: break-word;
-}
-
-.activity-card img {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-}
-
-.activity-card-description {
   display: flex;
   align-items: center;
   height: 55px;
+  margin-left: 14pt;
+  overflow-wrap: break-word;
+}
+
+.activity-card .activity-card-picture-wrapper {
+  height: calc(var(--_height) - var(--_description-field-height));
+  overflow: hidden;
+}
+
+.activity-card .thumbnail {
+  display: flex;
+  height: var(--_height);
+}
+
+.activity-card .thumbnail>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#activities h3 {
+  margin-bottom: 30px;
+}
+
+.activities-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+  gap: 22px;
+}
+
+@media (max-width: 1460px) {
+  .activities-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1250px) {
+  .activities-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .activity-card {
+    --_height: 267px;
+  }
+
+  .activity-card-description .append-line-feed {
+    display: block;
+  }
+}
+
+@media (max-width: 950px) {
+  .activities-grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .activity-card {
+    --_height: var(--_mobile-height);
+  }
 }
 
 /* 🧱 [§ B.6) Footer] */
@@ -923,7 +969,7 @@ footer nav a {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
   }
 
-  #main>*:not(#lodgings-section) {
+  #main>*:not(#lodgings-section, #activities) {
     padding: var(--booki-global-bleed);
   }
 }
@@ -953,27 +999,6 @@ footer nav a {
     height: 100%;
   }
 
-  /* Activities */
-  #activities {
-    margin-bottom: 45px;
-  }
-
-  .activity-card {
-    width: 182px;
-    height: 267px;
-    flex-flow: nowrap row;
-    flex: 1 1 152px;
-    margin: 0;
-  }
-
-  .activity-card img {
-    height: 210px;
-  }
-
-  .activity-card-description {
-    margin-top: -4px;
-  }
-
   /* Footer */
   footer {
     background-color: var(--booki-chart-sections-bg-color) !important;
@@ -1001,7 +1026,6 @@ footer nav a {
 
 /* ✨ [§ C.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
-
   /* Global */
   .section-element-a {
     order: 1;
@@ -1009,16 +1033,6 @@ footer nav a {
 
   .section-element-b {
     order: 0;
-  }
-
-  #activities {
-    margin: 0 2%;
-    align-items: stretch;
-  }
-
-  .activity-card {
-    flex: 0 0 100%;
-    width: 100%;
   }
 
   /* Header */
@@ -1077,7 +1091,7 @@ footer nav a {
 
   /* Lodgings */
   .city-lodgings-grid-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
 
@@ -1097,17 +1111,7 @@ footer nav a {
 
   /* Activities */
   #activities {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  .activity-card img {
-    height: 135px;
-  }
-
-  .activity-card {
-    width: 94%;
+    width: 91%;
   }
 
   /* Footer */
@@ -1144,7 +1148,7 @@ footer nav a {
     display: none !important;
   }
 
-  .lodgings-title-container > i {
+  .lodgings-title-container>i {
     display: none;
   }
 
@@ -1176,11 +1180,12 @@ footer nav a {
     font-size: 5vw !important;
   }
 
-  .lodging-card-description p, .price {
+  .lodging-card-description p,
+  .price {
     font-size: 4vw !important;
   }
 
-  .rating-container > i {
+  .rating-container>i {
     font-size: 5vw !important;
   }
 
@@ -1206,7 +1211,7 @@ footer nav a {
 }
 
 @media (max-width: 175px) {
-    #form-section {
+  #form-section {
     display: none;
   }
 }
