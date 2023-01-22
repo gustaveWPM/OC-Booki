@@ -47,7 +47,7 @@ body {
   /* ⛔ ⬇️ IMPLEMENTATION: Don't edit those lines */
   line-height: 1;
   font-weight: var(--booki-fw-normal);
-  /* background-color: var(--booki-chart-bg-color); */
+  background-color: var(--booki-chart-bg-color);
   background-image: url(../images/_bonus/background-pattern.png);
   word-wrap: break-word;
   /* ⛔ ⬆️ IMPLEMENTATION: Don't edit those lines */
@@ -341,7 +341,7 @@ ul {
   color: var(--_menu-active-item-hyperlink-color);
 }
 
-.header-nav-items-container>.header-nav-item:first-child>a {
+.header-nav-items-container .header-nav-item:first-child>a {
   margin-right: var(--_nav-btn-deadzone);
 }
 
@@ -877,7 +877,7 @@ ul {
 }
 
 @media (max-width: 950px) {
-  .activities-grid-container {
+  .activities-component>.activities-grid-container {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -973,7 +973,7 @@ footer nav a {
 /* ✨ [§ C.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
   /* Header */
-  .header-nav-items-container>.header-nav-item:first-child>a {
+  .header-nav-items-container .header-nav-item:first-child>a {
     margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
   }
 
@@ -1016,35 +1016,38 @@ footer nav a {
 
   /* Header */
   #header {
-    padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     flex-direction: column;
-  }
-
-  #header,
-  .header-nav,
-  .header-nav-item {
-    width: 100%;
   }
 
   .header-logo {
     display: flex;
     align-self: center;
     margin-top: 25px;
+    margin-bottom: 15px;
     width: 60px;
     height: auto;
   }
 
-  .header-nav {
+  #header>.header-nav {
+    width: 100%;
     --_menu-active-item-border-top-color: var(--booki-chart-bg-color);
     min-height: 50px;
   }
 
-  .header-nav-items-container .header-nav-item {
+  .header-nav ul {
+    display: flex;
     width: 100%;
+    justify-content: center;
   }
 
-  .header-nav-item {
+  .header-nav li {
+    width: 50%;
+    align-self: center;
+  }
+
+  .header-nav-items-container .header-nav-item {
+    width: 100%;
     margin: 30px 0;
     padding-top: 0;
     padding-bottom: 18px;
@@ -1106,91 +1109,44 @@ footer nav a {
   }
 }
 
-/* Edge cases {Bonus} */
+/* Some edge cases {Bonus} */
 @media (min-width: 336px) and (max-width: 450px) {
   .filter-button .filter-icon-wrapper {
     width: 14pt;
     transform: scale(2.6) translateX(-8%) translateY(6%);
   }
 
-  .filter-button {
+  .filters-list-container .filter-button {
     --_vcentered-basis: 65% !important;
   }
 }
 
 @media (max-width: 335px) {
-  .header-nav-item {
-    min-height: 60px;
+  body {
+    background-color: var(--booki-chart-sections-bg-color);
+    background-image: none;
   }
 
-  .searchbar-map-button {
-    display: none !important;
-  }
-
-  .component-title-container>i {
-    display: none;
+  #top-level-wrapper {
+    box-shadow: none;
   }
 
   .filters-list-container {
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto) !important;
+    grid-template-columns: repeat(1, auto) !important;
   }
 
   .filters-list-container .filter-button {
-    margin-right: 0;
-  }
-
-  .lodging-card-wrapper {
-    min-width: 80vw !important;
-  }
-
-  .best-lodgings-section .lodging-card .thumbnail {
-    min-width: 20vw;
-  }
-
-  footer * {
-    font-size: 5.5vw !important;
-    margin-left: 0 !important;
-    padding-left: 1vw !important;
-    line-height: 9vw !important;
-  }
-
-  .lodging-card-description .is-title {
-    font-size: 5vw !important;
-  }
-
-  .lodging-card-description p,
-  .price {
-    font-size: 4vw !important;
-  }
-
-  .rating-container>i {
-    font-size: 5vw !important;
-  }
-
-  .best-lodgings-section .lodging-card-description {
-    margin-left: 4vw !important;
+    margin-right: 0 !important;
   }
 }
 
 @media (max-width: 260px) {
   .filter-button .filter-icon-wrapper {
-    display: none;
+    display: none !important;
   }
 
   .filter-button-content-container {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 225px) {
-  body {
-    word-break: break-word;
-  }
-}
-
-@media (max-width: 175px) {
-  .form-section {
-    display: none;
+    justify-content: center !important;
   }
 }
