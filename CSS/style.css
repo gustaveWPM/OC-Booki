@@ -255,7 +255,7 @@ ul {
   justify-items: center;
   background-color: var(--booki-chart-sections-bg-color);
   max-width: calc(var(--_top-level-wrapper-width) + var(--booki-bleed-current-state-value));
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 calc(var(--booki-box-shadow-blur-radius) * 2) calc(var(--booki-box-shadow-spread-radius) * 2) var(--booki-box-shadow-rgba);
 }
 
 /* Webpage Bleed */
