@@ -1009,11 +1009,6 @@ footer nav a {
     height: 100%;
   }
 
-  /* Footer */
-  footer {
-    background-color: var(--booki-chart-sections-bg-color) !important;
-  }
-
   #footer-sections-container {
     margin: 0;
     background-color: var(--booki-chart-bg-color) !important;
