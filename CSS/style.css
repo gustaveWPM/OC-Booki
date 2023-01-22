@@ -760,6 +760,7 @@ ul {
   }
 }
 
+/* QC Ok till this line */
 /* Hackish garbage */
 @media (min-width: 1010px) and (max-width: 1460px) {
   .best-lodgings-component>.best-lodgings-grid-container {
