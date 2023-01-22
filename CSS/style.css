@@ -768,6 +768,12 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+
+  .lodging-card .thumbnail {
+    margin: 0;
+    width: 100%;
+    /* {REM} Hack in the matrix :'( */
+  }
 }
 
 /* Hackish garbage */
@@ -792,7 +798,7 @@ ul {
   }
 
   #best-lodgings .best-lodgings-grid-container>.lodging-card-wrapper:nth-child(odd) .lodging-card-description {
-    font-size: 0.93em;
+    font-size: 0.93rem;
   }
 
   #best-lodgings .lodging-card .lodging-card-description .rating-container {
