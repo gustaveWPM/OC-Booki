@@ -39,7 +39,7 @@
   --booki-box-shadow-offset-y: 5px;
   --booki-box-shadow-blur-radius: 10px;
   --booki-box-shadow-spread-radius: 2px;
-  --booki-box-shadow-rgba: rgba(0, 0, 0, 0.1);
+  --booki-box-shadow-rgba: rgba(0, 0, 0, 0.06);
 }
 
 body {
@@ -873,7 +873,7 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   width: 100%;
-  gap: 22px;
+  gap: 0 45px;
 }
 
 /* Custom breakpoints */
@@ -892,6 +892,10 @@ ul {
 
   .activity-card {
     --_height: 267px;
+  }
+
+  .activity-card-description {
+    width: 89%;
   }
 
   .activity-card-description .append-line-feed {
