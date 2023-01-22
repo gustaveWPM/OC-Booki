@@ -892,7 +892,7 @@ ul {
   }
 }
 
-/* QC Ok till this line (todo: fix the header responsive bug on mobile) */
+/* QC Ok till this line */
 /* 🧱 [§ B.6) Footer] */
 #footer {
   background-color: var(--booki-chart-sections-bg-color);
