@@ -997,7 +997,7 @@ footer nav a {
 
   /* Header */
   .header-nav-items-container .header-nav-item:first-child>a {
-    margin-right: calc(var(--_nav-btn-deadzone) * 0.5);
+    margin-right: calc(var(--_nav-btn-deadzone) / 2);
   }
 
   /* Searchbar */
