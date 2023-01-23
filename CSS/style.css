@@ -866,6 +866,10 @@ ul {
 
 /* Custom breakpoints */
 @media (max-width: 1460px) {
+  .activity-card {
+    --_height: 250px;
+  }
+
   .activities-component>.activities-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
