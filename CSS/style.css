@@ -66,11 +66,12 @@ h1 {
   font-weight: var(--booki-fw-bold);
 }
 
-h3 {
-  font-size: 1.38rem;
-  font-weight: bold;
+h2 {
+  font-size: 1.35rem;
 }
 
+h2,
+h3,
 h4,
 h5,
 h6 {
@@ -864,6 +865,10 @@ ul {
 }
 
 /* Custom breakpoints */
+/*
+   [OPTIONAL] Removing the following media query will cause no issue.
+              Consider it as a "Bonus".
+*/
 @media (max-width: 1460px) {
   .activity-card {
     --_height: 250px;
