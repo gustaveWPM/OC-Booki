@@ -98,9 +98,9 @@ h6 {
 
 /* Constants: Header navigation's item */
 .header-nav-item.has-tweakers {
-  padding-left: 25px;
+  --_padding-left: 25px;
   /* Defines the mouse-over appearing border-top's left offset */
-  padding-right: 15px;
+  --_padding-right: 15px;
   /* Defines the mouse-over appearing border-top's right offset */
   border-top: 2px var(--_menu-active-item-border-top-color) solid;
   /* Defines the the mouse-over appearing border-top's thickness */
@@ -353,6 +353,9 @@ ul {
 
 .header-nav-item {
   height: 100%;
+  padding-left: var(--_padding-left);
+  padding-right: var(--_padding-right);
+  transform: translateX(var(--_padding-right));
   display: inline-flex;
   text-decoration: none;
   align-items: flex-end;
