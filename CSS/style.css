@@ -966,7 +966,7 @@ ul {
   color: var(--booki-chart-primary);
 }
 
-/* Custom breakpoints ({ToDo} Rearrange these breakpoints in the [C] section) */
+/* Custom breakpoints */
 @media (max-width: 1245px) {
   .footer-sections-wrapper {
     padding-right: 165px;
