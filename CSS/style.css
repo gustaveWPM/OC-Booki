@@ -535,7 +535,6 @@ ul {
     --_gap-y: var(--_gap-y-mobile);
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, auto);
-    flex-basis: calc(100% - var(--booki-bleed-current-state-value));
   }
 
   .filter-button .filter-icon-wrapper {
