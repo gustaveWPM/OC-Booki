@@ -919,7 +919,7 @@ ul {
 
 .footer-sections-wrapper {
   display: flex;
-  padding-right: 140px;
+  padding-right: 95px;
   background-color: var(--booki-chart-bg-color);
   width: 100%;
 }
@@ -943,16 +943,18 @@ ul {
   flex-flow: row nowrap;
   margin: auto;
   padding: 35px 0;
-  padding-left: 75px;
-  justify-content: space-between;
+  padding-left: 3.5vw;
   width: 100%;
 }
 
 .footer-section {
   --_line-height: 25pt;
-  min-width: 300px;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.footer-section:not(:nth-last-child(1)) {
+  min-width: 425px;
 }
 
 .footer-section a {
@@ -967,7 +969,16 @@ ul {
 /* Custom breakpoints ({ToDo} Rearrange these breakpoints in the [C] section) */
 @media (max-width: 1245px) {
   .footer-sections-wrapper {
-    padding-right: 0;
+    padding-right: 165px;
+  }
+
+  .footer-sections-container {
+    justify-content: space-between;
+    padding-left: 70px;
+  }
+
+  .footer-section:not(:nth-last-child(1)) {
+    min-width: 225px;
   }
 }
 
