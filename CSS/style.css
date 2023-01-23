@@ -78,8 +78,6 @@ h6 {
 
 /* Constants: Header nav's deadzone, header's height and its bottom gap */
 #header.has-tweakers {
-  --_nav-btn-deadzone: 34px;
-  /* Defines the gap between each nav button (set it to 0 if you DON'T want any deadzone) */
   min-height: 65px;
   margin-bottom: 55px;
 }
@@ -98,6 +96,8 @@ h6 {
 
 /* Constants: Header navigation's item */
 .header-nav-item.has-tweakers {
+  --_nav-btn-deadzone: 34px;
+  /* Defines the gap between each nav button (set it to 0 if you DON'T want any deadzone) */
   --_padding-left: 25px;
   /* Defines the mouse-over appearing border-top's left offset */
   --_padding-right: 15px;
@@ -1060,9 +1060,16 @@ ul {
   }
 
   /* Header */
-  .header-nav-item {
-    transform: none;
-    margin-right: 0;
+  .header-nav-item.enable-tweakers-bypass {
+    --_nav-btn-deadzone: 0;
+    --_padding-right: 0;
+    --_padding-left: 0;
+    width: 100%;
+    margin: 30px 0;
+    padding-bottom: 18px;
+    border-top: none;
+    border-bottom: 3px solid var(--_menu-active-item-border-top-color);
+    color: var(--_menu-active-item-hyperlink-color);
   }
 
   #header.enable-tweakers-bypass {
@@ -1094,18 +1101,6 @@ ul {
   .header-nav li {
     width: 50%;
     align-self: center;
-  }
-
-  .header-nav-items-container .header-nav-item {
-    width: 100%;
-    margin: 30px 0;
-    padding-top: 0;
-    padding-bottom: 18px;
-    padding-left: 0;
-    padding-right: 0;
-    border-top: 0 solid transparent;
-    border-bottom: 3px solid var(--_menu-active-item-border-top-color);
-    color: var(--_menu-active-item-hyperlink-color);
   }
 
   /* Searchbar */
