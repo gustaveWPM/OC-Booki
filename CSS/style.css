@@ -1061,6 +1061,7 @@ ul {
 
   /* Header */
   .header-nav-item {
+    transform: none;
     margin-right: 0;
   }
 
