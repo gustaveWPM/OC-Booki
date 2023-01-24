@@ -282,7 +282,7 @@ body {
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
   background-image: var(--booki-bg-img);
-  animation: background-animation var(--booki-background-image-animation-length) ease-in-out;
+  animation: background-animation var(--booki-background-image-animation-length) ease-in-out infinite;
   animation-timing-function: linear;
   overflow-wrap: break-word;
 }
