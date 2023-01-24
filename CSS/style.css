@@ -60,7 +60,11 @@
 
   /* Configuration.animations => background slide effect */
   --booki-background-image-width: 200px;
-  --booki-background-image-animation-length: 650s;
+
+  --booki-background-movex: calc(var(--booki-background-image-width) * -10);
+  --booki-background-movey: 0;
+
+  --booki-background-image-animation-length: 250s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => header menu's cursor animation */
@@ -1040,11 +1044,6 @@ ul {
 }
 
 /*** C. Animations */
-:root {
-  --booki-background-movex: calc(var(--booki-background-image-width) * 20);
-  --booki-background-movey: calc(var(--booki-background-image-width) * -10);
-}
-
 @keyframes background-animation {
   0% {
     background-position: var(--booki-background-movex) var(--booki-background-movey);
