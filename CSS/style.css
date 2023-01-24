@@ -56,6 +56,10 @@
   /* Configuration.animations => scale effect on cards hover */
   --booki-card-hover-animation-scale-ratio: 1.07;
   /* ⬆️ Write `none` to disable this feature */
+
+  --booki-background-image-width: 200px;
+  --booki-background-image-animation-length: 50s;
+  /* ⬆️ Write `none` to disable this feature */
 }
 
 #top-level-wrapper.has-tweakers {
@@ -258,6 +262,7 @@ body {
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
   background-image: var(--booki-bg-img);
+  animation: animatedBackground var(--booki-background-image-animation-length) linear infinite;
   overflow-wrap: break-word;
 }
 
@@ -983,6 +988,11 @@ ul {
 }
 
 /*** C. Animations */
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: calc(var(--booki-background-image-width) * -2) var(--booki-background-image-width); }
+}
+
 .lodging-card-wrapper, .activity-card {
   transition: transform 0.25s ease-out;
 }
