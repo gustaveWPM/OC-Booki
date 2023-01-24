@@ -702,18 +702,14 @@ ul {
 }
 
 .city-lodgings-component .show-more-btn {
-  display: inline-flex;
   margin-left: 3pt;
   background: inherit;
   border: none;
-}
-
-.city-lodgings-component .show-more-btn>a {
   text-decoration: none;
   transition: color var(--booki-show-more-button-cursor-animation-length) ease-out;
 }
 
-.city-lodgings-component .show-more-btn>a:hover {
+.city-lodgings-component .show-more-btn:hover {
   color: var(--booki-chart-primary)
 }
 
