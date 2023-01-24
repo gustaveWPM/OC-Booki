@@ -946,6 +946,7 @@ ul {
   display: flex;
   flex-flow: row nowrap;
   margin: auto;
+  margin-bottom: 15px;
   padding: 35px 0;
   padding-left: 3.5vw;
   width: 100%;
