@@ -194,9 +194,10 @@ h6 {
   --_gap-y-mobile: 20px;
 }
 
-/* Constants: Lodging info component's margin */
+/* Constants: Lodging info component's margin and line-height */
 .lodging-info.has-tweakers {
   margin: 25px 0;
+  line-height: 1.75rem;
 }
 
 /* Constants: Lodging info icon's values */
@@ -273,7 +274,7 @@ input:placeholder-shown {
 
 body {
   font-family: var(--booki-font), sans-serif;
-  line-height: 1;
+  line-height: 1rem;
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
   background-image: var(--booki-bg-img);
@@ -299,8 +300,12 @@ ul {
 
 /* Webpage Bleed */
 #top-level-wrapper>*:not(#main),
-#content>* {
+#content>*:not(.filters-section) {
   padding: var(--booki-global-bleed);
+}
+
+.filters-section {
+  padding-left: var(--booki-bleed-current-state-value);
 }
 
 /* 🧰 [§ A.4) Utilitary classes] */
@@ -481,14 +486,12 @@ ul {
 
 .filters-list-wrapper>.filters-list-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   row-gap: var(--_gap-y);
-  column-gap: var(--_gap-x);
 }
 
 .filter-button {
   --_bg-color: var(--booki-chart-sections-bg-color);
-  width: 100%;
   color: inherit;
   cursor: pointer;
   text-align: center;
@@ -499,6 +502,11 @@ ul {
   background-color: var(--_bg-color);
   border: var(--_border-thickness) solid var(--booki-chart-filter-border-color);
   transition: background-color var(--booki-filters-section-menu-cursor-animation-length) ease-out;
+}
+
+/* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+.filters-list-container .filter-button-elm:not(:last-child) {
+  margin-right: var(--_gap-x);
 }
 
 .filter-button .filter-button-content-container {
@@ -520,6 +528,11 @@ ul {
 
 /* Custom breakpoints */
 @media (max-width: 1060px) {
+  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+  .filters-list-container .filter-button-elm:not(:last-child) {
+    --_gap-x: var(--_gap-x-tablet);
+  }
+
   .filters-section {
     --_filters-section-label-gap: var(--_filters-section-label-gap-tablet);
     flex-wrap: nowrap;
@@ -528,12 +541,25 @@ ul {
   .filter-button .filter-icon-wrapper {
     transform: scale(1.15) translateX(-5%);
   }
+
+  .filters-section {
+    padding-right: var(--booki-bleed-current-state-value);
+  }
 }
 
 @media (max-width: 975px) {
+  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
+  .filters-list-container .filter-button-elm:nth-child(even) {
+    margin-right: 0;
+  }
+
   .filters-section {
     flex-wrap: wrap;
     max-width: 100%;
+  }
+
+  .filter-button {
+    width: 100%;
   }
 
   .filters-section>.is-label,
@@ -547,8 +573,8 @@ ul {
 
   .filters-list-wrapper>.filters-list-container {
     --_gap-y: var(--_gap-y-mobile);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 
   .filter-button .filter-icon-wrapper {
@@ -559,13 +585,9 @@ ul {
   .filters-list-container .filter-button {
     --_vcentered-basis: 100%;
   }
-
-  .filters-list-wrapper>.filters-list-container {
-    column-gap: var(--_gap-x-tablet);
-  }
 }
 
-@media (min-width: 366px) and (max-width: 500px) {
+@media (min-width: 366px) and (max-width: 450px) {
   .filter-button .filter-icon-wrapper {
     width: 14pt;
     transform: scale(2.6) translateX(-8%) translateY(6%);
@@ -661,7 +683,7 @@ ul {
 .lodging-card>.lodging-card-description {
   margin: auto 11pt;
   padding-bottom: var(--_outline-size);
-  line-height: 1.4;
+  line-height: 1.4rem;
 }
 
 .lodging-card>.lodging-card-description>.price-p {
@@ -762,7 +784,7 @@ ul {
   height: 80%;
   margin-left: 14pt;
   width: 50%;
-  line-height: 1.2;
+  line-height: 1.2rem;
 }
 
 .best-lodgings-component .lodging-card>.lodging-card-description>.is-title {
@@ -1181,9 +1203,13 @@ ul {
 
 /* Some edge cases */
 @media (max-width: 365px) {
+  .filters-list-wrapper .filters-list-container .filter-button-elm {
+    --_gap-x: 0;
+  }
+
   .filters-list-wrapper>.filters-list-container {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, auto);
   }
 }
 
