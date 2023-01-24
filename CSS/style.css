@@ -527,7 +527,7 @@ ul {
 }
 
 /* Custom breakpoints */
-@media (max-width: 1060px) {
+@media (max-width: 1040px) {
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:not(:last-child) {
     --_gap-x: var(--_gap-x-tablet);
@@ -547,10 +547,16 @@ ul {
   }
 }
 
-@media (max-width: 975px) {
+@media (max-width: 960px) {
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:nth-child(even) {
     margin-right: 0;
+    margin-left: calc(var(--_gap-x-tablet) / 2);
+  }
+
+  .filters-list-container .filter-button-elm:nth-child(odd) {
+    margin-left: 0;
+    margin-right: calc(var(--_gap-x-tablet) / 2);
   }
 
   .filters-section {
@@ -573,8 +579,8 @@ ul {
 
   .filters-list-wrapper>.filters-list-container {
     --_gap-y: var(--_gap-y-mobile);
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .filter-button .filter-icon-wrapper {
@@ -587,7 +593,7 @@ ul {
   }
 }
 
-@media (min-width: 366px) and (max-width: 450px) {
+@media (min-width: 366px) and (max-width: 495px) {
   .filter-button .filter-icon-wrapper {
     width: 14pt;
     transform: scale(2.6) translateX(-8%) translateY(6%);
@@ -1204,7 +1210,7 @@ ul {
 /* Some edge cases */
 @media (max-width: 365px) {
   .filters-list-wrapper .filters-list-container .filter-button-elm {
-    --_gap-x: 0;
+    --_gap-x-tablet: 0;
   }
 
   .filters-list-wrapper>.filters-list-container {
