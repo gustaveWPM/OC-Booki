@@ -528,6 +528,7 @@ ul {
 
 /* Custom breakpoints */
 @media (max-width: 1040px) {
+
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:not(:last-child) {
     --_gap-x: var(--_gap-x-tablet);
@@ -548,6 +549,7 @@ ul {
 }
 
 @media (max-width: 960px) {
+
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:nth-child(even) {
     margin-right: 0;
