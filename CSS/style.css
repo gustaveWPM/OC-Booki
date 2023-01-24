@@ -60,7 +60,7 @@
 
   /* Configuration.animations => background slide effect */
   --booki-background-image-width: 200px;
-  --booki-background-image-animation-length: 50s;
+  --booki-background-image-animation-length: 650s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => header menu's cursor animation */
@@ -278,7 +278,8 @@ body {
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
   background-image: var(--booki-bg-img);
-  animation: animatedBackground var(--booki-background-image-animation-length) linear infinite;
+  animation: background-animation var(--booki-background-image-animation-length) ease-in-out;
+  animation-timing-function: linear;
   overflow-wrap: break-word;
 }
 
@@ -1039,13 +1040,14 @@ ul {
 }
 
 /*** C. Animations */
-@keyframes animatedBackground {
-  0% {
-    background-position: 0 0;
-  }
+:root {
+  --booki-background-movex: calc(var(--booki-background-image-width) * 20);
+  --booki-background-movey: calc(var(--booki-background-image-width) * -10);
+}
 
-  100% {
-    background-position: calc(var(--booki-background-image-width) * -2) var(--booki-background-image-width);
+@keyframes background-animation {
+  0% {
+    background-position: var(--booki-background-movex) var(--booki-background-movey);
   }
 }
 
