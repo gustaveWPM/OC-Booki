@@ -964,7 +964,7 @@ ul {
 
   .footer-sections-container {
     justify-content: space-between;
-    padding-left: 70px;
+    padding-left: calc(var(--booki-bleed-current-state-value) / 2 + 4.5vw);
   }
 
   .footer-section:not(:nth-last-child(1)) {
