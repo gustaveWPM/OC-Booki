@@ -869,9 +869,11 @@ ul {
 
 /* Custom breakpoints */
 /*
-   [OPTIONAL] Removing the following media query will cause no issue.
+   [§ {Read this!} OPTIONAL] Transitive 2x2 state for the "Activities" section.
+              Removing the following media query will cause no issue.
               Consider it as a "Bonus".
 */
+/*
 @media (max-width: 1460px) {
   .activity-card {
     --_height: 250px;
@@ -882,6 +884,7 @@ ul {
     grid-template-rows: repeat(2, 1fr);
   }
 }
+*/
 
 @media (min-width: 951px) and (max-width: 1250px) {
   .activities-component>.activities-grid-container {
