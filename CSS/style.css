@@ -111,9 +111,9 @@ h6 {
   height: 20px;
 }
 
-/* Constants: Title section's bottom gap and line-height */
-#title-section.has-tweakers {
-  margin-bottom: 15px;
+/* Constants: Main section's line-height and first subtitle's margin bottom */
+#content.has-tweakers {
+  --_first-subtitle-margin-bottom: 15px;
   line-height: 1.75rem;
 }
 
@@ -278,12 +278,8 @@ ul {
 
 /* Webpage Bleed */
 #top-level-wrapper>*:not(#main),
-#main>*:not(.filters-section) {
+#content>* {
   padding: var(--booki-global-bleed);
-}
-
-.filters-section {
-  padding-left: var(--booki-bleed-current-state-value);
 }
 
 /* 🧰 [§ A.4) Utilitary classes] */
@@ -380,6 +376,10 @@ ul {
 
 .header-logo-picture>img {
   object-fit: contain;
+}
+
+#content .is-subtitle:first-of-type {
+  margin-bottom: var(--_first-subtitle-margin-bottom);
 }
 
 /* 🧱 [§ B.2) Searchbar] */
@@ -512,10 +512,9 @@ ul {
   }
 }
 
-@media (max-width: 905px) {
+@media (max-width: 975px) {
   .filters-section.enable-tweakers-bypass {
     flex-wrap: wrap;
-    padding: var(--booki-global-bleed);
     max-width: 100%;
   }
 
@@ -575,7 +574,7 @@ ul {
   width: 91%;
 }
 
-.best-lodgings-section>.best-lodgings-component {
+.best-lodgings-section .best-lodgings-component {
   width: 85%;
 }
 
@@ -757,7 +756,7 @@ ul {
   }
 
   .city-lodgings-section>.city-lodgings-component,
-  .best-lodgings-section>.best-lodgings-component {
+  .best-lodgings-section .best-lodgings-component {
     width: 91%;
   }
 }
@@ -1002,10 +1001,6 @@ ul {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
   }
-
-  #main>*:not(.lodgings-section, .activities, .filters-section) {
-    padding: var(--booki-global-bleed);
-  }
 }
 
 @media (max-width: 768px) {
@@ -1013,8 +1008,8 @@ ul {
     --booki-bleed-current-state-value: var(--booki-bleed-mobile);
   }
 
-  #main>.lodgings-section,
-  #main>.activities,
+  #content>.lodgings-section,
+  #content>.activities,
   #top-level-wrapper>#header,
   #top-level-wrapper>#footer {
     padding: 0;
