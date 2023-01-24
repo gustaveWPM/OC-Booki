@@ -702,13 +702,17 @@ ul {
 
 .city-lodgings-component .show-more-btn {
   display: inline-flex;
-  text-decoration: none;
-  color: inherit;
   margin-left: 3pt;
+  background: inherit;
+  border: none;
+}
+
+.city-lodgings-component .show-more-btn>a {
+  text-decoration: none;
   transition: color var(--booki-show-more-button-cursor-animation-length) ease-out;
 }
 
-.city-lodgings-component .show-more-btn:hover {
+.city-lodgings-component .show-more-btn>a:hover {
   color: var(--booki-chart-primary)
 }
 
@@ -1008,15 +1012,22 @@ ul {
 
 /*** C. Animations */
 @keyframes animatedBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: calc(var(--booki-background-image-width) * -2) var(--booki-background-image-width); }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: calc(var(--booki-background-image-width) * -2) var(--booki-background-image-width);
+  }
 }
 
-.lodging-card-wrapper, .activity-card {
+.lodging-card-wrapper,
+.activity-card {
   transition: transform 0.25s ease-out;
 }
 
-.lodging-card-wrapper:hover, .activity-card:hover {
+.lodging-card-wrapper:hover,
+.activity-card:hover {
   transform: scale(var(--booki-card-hover-animation-scale-ratio));
 }
 
