@@ -57,8 +57,21 @@
   --booki-card-hover-animation-scale-ratio: 1.07;
   /* ⬆️ Write `none` to disable this feature */
 
+  /* Configuration.animations => background slide effect */
   --booki-background-image-width: 200px;
   --booki-background-image-animation-length: 50s;
+  /* ⬆️ Write `none` to disable this feature */
+
+  /* Configuration.animations => header menu's cursor animation */
+  --booki-header-menu-cursor-animation-length: 0.3s;
+  /* ⬆️ Write `none` to disable this feature */
+
+  /* Configuration.animations => filters section menu's cursor animation */
+  --booki-filters-section-menu-cursor-animation-length: 0.2s;
+  /* ⬆️ Write `none` to disable this feature */
+
+  /* Configuration.animations => show more button's cursor animation */
+  --booki-show-more-button-cursor-animation-length: 0.2s;
   /* ⬆️ Write `none` to disable this feature */
 }
 
@@ -100,6 +113,7 @@ h6 {
 .header-nav-item.has-tweakers:hover {
   --_menu-active-item-hyperlink-color: var(--booki-chart-primary);
   --_menu-active-item-border-top-color: var(--booki-active-menu-elm-indicator-color);
+  border-top-width: var(--_border-top-width);
 }
 
 /* Constants: Header navigation's item */
@@ -110,7 +124,7 @@ h6 {
   /* Defines the mouse-over appearing border-top's left offset */
   --_padding-right: 15px;
   /* Defines the mouse-over appearing border-top's right offset */
-  border-top: 2px var(--_menu-active-item-border-top-color) solid;
+  --_border-top-width: 3px;
   /* Defines the the mouse-over appearing border-top's thickness */
 }
 
@@ -363,6 +377,8 @@ ul {
   align-items: flex-end;
   justify-content: center;
   color: var(--_menu-active-item-hyperlink-color);
+  border-top: var(--_border-top-width) var(--_menu-active-item-border-top-color) solid;
+  transition: border-top var(--booki-header-menu-cursor-animation-length) linear, border-bottom var(--booki-header-menu-cursor-animation-length) linear;
 }
 
 .header-nav-items-container>li:first-child>.header-nav-item {
@@ -479,6 +495,7 @@ ul {
   line-height: var(--_vcentered-basis);
   background-color: var(--_bg-color);
   border: var(--_border-thickness) solid var(--booki-chart-filter-border-color);
+  transition: background-color var(--booki-filters-section-menu-cursor-animation-length) ease-out;
 }
 
 /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
@@ -687,6 +704,7 @@ ul {
   text-decoration: none;
   color: inherit;
   margin-left: 3pt;
+  transition: color var(--booki-show-more-button-cursor-animation-length) ease-out;
 }
 
 .city-lodgings-component .show-more-btn:hover {
@@ -1068,9 +1086,13 @@ ul {
     width: 100%;
     margin: 30px 0;
     padding-bottom: 18px;
-    border-top: none;
+    border-top-width: 0;
     border-bottom: 3px solid var(--_menu-active-item-border-top-color);
     color: var(--_menu-active-item-hyperlink-color);
+  }
+
+  .header-nav-item.enable-tweakers-bypass:hover {
+    border-top-width: 0;
   }
 
   #header.enable-tweakers-bypass {
