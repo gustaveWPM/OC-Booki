@@ -486,6 +486,7 @@ ul {
 
 .filter-button {
   --_bg-color: var(--booki-chart-sections-bg-color);
+  width: 100%;
   color: inherit;
   cursor: pointer;
   text-align: center;
@@ -499,7 +500,7 @@ ul {
 }
 
 /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-.filters-list-container .filter-button:not(:last-child) {
+.filters-list-container .filter-button-elm:not(:last-child) {
   margin-right: var(--_gap-x);
 }
 
@@ -528,7 +529,7 @@ ul {
   }
 
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-  .filters-list-container .filter-button:not(:last-child) {
+  .filters-list-container .filter-button-elm:not(:last-child) {
     --_gap-x: var(--_gap-x-tablet);
   }
 
@@ -544,7 +545,7 @@ ul {
   }
 
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-  .filters-list-container .filter-button:nth-child(even) {
+  .filters-list-container .filter-button-elm:nth-child(even) {
     margin-right: 0;
   }
 
@@ -1187,7 +1188,7 @@ ul {
     grid-template-columns: repeat(1, auto);
   }
 
-  .filters-list-wrapper .filters-list-container .filter-button {
+  .filters-list-wrapper .filters-list-container .filter-button-elm {
     --_gap-x: 0;
   }
 }
