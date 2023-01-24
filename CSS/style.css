@@ -52,6 +52,10 @@
   --booki-bg-color: var(--booki-chart-bg-color);
   /* ⬆️ Write var(--booki-chart-sections-bg-color) to disable this feature */
   /* (And also set --booki-main-wrapper-drop-shadow-opacity to `0`) */
+
+  /* Configuration.animations => scale effect on cards hover */
+  --booki-card-hover-animation-scale-ratio: 1.07;
+  /* ⬆️ Write `none` to disable this feature */
 }
 
 #top-level-wrapper.has-tweakers {
@@ -818,6 +822,7 @@ ul {
 
 .activity-card {
   --_height: 444px;
+  --_tablet-height: 267px;
   --_mobile-height: 46vw;
   --_description-field-height: 54px;
   overflow: hidden;
@@ -868,23 +873,11 @@ ul {
 }
 
 /* Custom breakpoints */
-/*
-   [§ {Read this!} OPTIONAL] Transitive 2x2 state for the "Activities" section.
-              Removing the following media query will cause no issue.
-              Consider it as a "Bonus".
-*/
-/*
-@media (max-width: 1460px) {
+@media (max-width: 1350px) {
   .activity-card {
-    --_height: 250px;
-  }
-
-  .activities-component>.activities-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    --_height: var(--_tablet-height);
   }
 }
-*/
 
 @media (min-width: 951px) and (max-width: 1250px) {
   .activities-component>.activities-grid-container {
@@ -892,16 +885,12 @@ ul {
     grid-template-rows: auto;
   }
 
-  .activity-card {
-    --_height: 267px;
-  }
-
   .activity-card .activity-card-description {
     width: 89%;
   }
 }
 
-@media (min-width: 951px) and (max-width: 992px) {
+@media (min-width: 951px) and (max-width: 1024px) {
   .activity-card .activity-card-description .append-line-feed {
     display: block;
   }
@@ -911,10 +900,6 @@ ul {
   .activities-component>.activities-grid-container {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
-  }
-
-  .activity-card {
-    --_height: var(--_mobile-height);
   }
 }
 
@@ -1001,8 +986,17 @@ ul {
   }
 }
 
-/*** C. Breakpoints */
-/* ✨ [§ C.1) Bleed Manager] */
+/*** C. Animations */
+.lodging-card-wrapper, .activity-card {
+  transition: transform 0.25s ease-out;
+}
+
+.lodging-card-wrapper:hover, .activity-card:hover {
+  transform: scale(var(--booki-card-hover-animation-scale-ratio));
+}
+
+/*** D. Breakpoints */
+/* ✨ [§ D.1) Bleed Manager] */
 @media (max-width: 992px) {
   :root {
     --booki-bleed-current-state-value: var(--booki-bleed-tablet);
@@ -1022,7 +1016,7 @@ ul {
   }
 }
 
-/* ✨ [§ C.2) Layout adjustments for tablet] */
+/* ✨ [§ D.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
 
   /* Header */
@@ -1037,7 +1031,7 @@ ul {
   }
 }
 
-/* ✨ [§ C.3) Layout adjustments for mobile] */
+/* ✨ [§ D.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
 
   /* Global */
@@ -1140,6 +1134,10 @@ ul {
   /* Activities */
   .activities {
     width: 91%;
+  }
+
+  .activity-card {
+    --_height: var(--_mobile-height);
   }
 }
 
