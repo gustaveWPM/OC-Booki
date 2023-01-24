@@ -673,6 +673,10 @@ ul {
   width: 420px;
 }
 
+.best-lodgings-section>.aside-content {
+  width: 100%;
+}
+
 .city-lodgings-component .show-more-btn {
   display: inline-flex;
   text-decoration: none;
@@ -684,7 +688,7 @@ ul {
   color: var(--booki-chart-primary)
 }
 
-/* 🧱 [§ B.4) ii. Best-Lodgings] */
+/* 🧱 [§ B.4) ii. Best-Lodgings Component] */
 /* Using a "Monkey patch" approach here: no need to create useless classes */
 /* => [📖 https://tinyurl.com/monkey-patch] */
 /* (Also seems like inheritance, yah you got it) */
