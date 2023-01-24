@@ -54,6 +54,7 @@
   /* (And also set --booki-main-wrapper-drop-shadow-opacity to `0`) */
 
   /* Configuration.animations => scale effect on cards hover */
+  --booki-card-hover-animation-scale-length: 0.25s;
   --booki-card-hover-animation-scale-ratio: 1.07;
   /* ⬆️ Write `none` to disable this feature */
 
@@ -71,7 +72,7 @@
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => show more button's cursor animation */
-  --booki-show-more-button-cursor-animation-length: 0.2s;
+  --booki-show-more-button-cursor-animation-length: 0.15s;
   /* ⬆️ Write `none` to disable this feature */
 }
 
@@ -1023,7 +1024,7 @@ ul {
 
 .lodging-card-wrapper,
 .activity-card {
-  transition: transform 0.25s ease-out;
+  transition: transform var(--booki-card-hover-animation-scale-length) ease-out;
 }
 
 .lodging-card-wrapper:hover,
