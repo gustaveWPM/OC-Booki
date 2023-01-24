@@ -481,8 +481,9 @@ ul {
 
 .filters-list-wrapper>.filters-list-container {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   row-gap: var(--_gap-y);
+  column-gap: var(--_gap-x);
 }
 
 .filter-button {
@@ -498,11 +499,6 @@ ul {
   background-color: var(--_bg-color);
   border: var(--_border-thickness) solid var(--booki-chart-filter-border-color);
   transition: background-color var(--booki-filters-section-menu-cursor-animation-length) ease-out;
-}
-
-/* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-.filters-list-container .filter-button-elm:not(:last-child) {
-  margin-right: var(--_gap-x);
 }
 
 .filter-button .filter-button-content-container {
@@ -529,11 +525,6 @@ ul {
     flex-wrap: nowrap;
   }
 
-  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-  .filters-list-container .filter-button-elm:not(:last-child) {
-    --_gap-x: var(--_gap-x-tablet);
-  }
-
   .filter-button .filter-icon-wrapper {
     transform: scale(1.15) translateX(-5%);
   }
@@ -543,11 +534,6 @@ ul {
   .filters-section {
     flex-wrap: wrap;
     max-width: 100%;
-  }
-
-  /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
-  .filters-list-container .filter-button-elm:nth-child(even) {
-    margin-right: 0;
   }
 
   .filters-section>.is-label,
@@ -561,8 +547,8 @@ ul {
 
   .filters-list-wrapper>.filters-list-container {
     --_gap-y: var(--_gap-y-mobile);
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .filter-button .filter-icon-wrapper {
@@ -572,6 +558,21 @@ ul {
 
   .filters-list-container .filter-button {
     --_vcentered-basis: 100%;
+  }
+
+  .filters-list-wrapper>.filters-list-container {
+    column-gap: var(--_gap-x-tablet);
+  }
+}
+
+@media (min-width: 366px) and (max-width: 500px) {
+  .filter-button .filter-icon-wrapper {
+    width: 14pt;
+    transform: scale(2.6) translateX(-8%) translateY(6%);
+  }
+
+  .filters-list-container .filter-button {
+    --_vcentered-basis: 65%;
   }
 }
 
@@ -1178,26 +1179,11 @@ ul {
   }
 }
 
-/* Some edge cases from the mockup */
-@media (min-width: 336px) and (max-width: 450px) {
-  .filter-button .filter-icon-wrapper {
-    width: 14pt;
-    transform: scale(2.6) translateX(-8%) translateY(6%);
-  }
-
-  .filters-list-container .filter-button {
-    --_vcentered-basis: 65%;
-  }
-}
-
-@media (max-width: 335px) {
+/* Some edge cases */
+@media (max-width: 365px) {
   .filters-list-wrapper>.filters-list-container {
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(1, auto);
-  }
-
-  .filters-list-wrapper .filters-list-container .filter-button-elm {
-    --_gap-x: 0;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
