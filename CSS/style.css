@@ -1214,6 +1214,15 @@ ul {
 
 /* Some edge cases */
 @media (max-width: 365px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: var(--_page-title-line-height);
+  }
+
   .filters-list-wrapper .filters-list-container .filter-button-elm {
     --_gap-x-tablet: 0;
   }
