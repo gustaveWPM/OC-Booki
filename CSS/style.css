@@ -1222,6 +1222,10 @@ ul {
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(1, auto);
   }
+
+  .footer-section {
+    min-width: 225px;
+  }
 }
 
 @media (max-width: 260px) {
