@@ -1222,6 +1222,10 @@ ul {
     line-height: var(--_page-title-line-height);
   }
 
+  .best-lodgings-component .lodging-card>.lodging-card-description {
+    width: 100%;
+  }
+
   .filters-list-wrapper .filters-list-container .filter-button-elm {
     --_gap-x-tablet: 0;
   }
