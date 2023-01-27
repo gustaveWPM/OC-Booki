@@ -226,7 +226,7 @@ h6 {
 }
 
 /* Constants: Show more button's bottom gap and font's size */
-.show-more-btn.has-tweakers {
+.show-more-btn-wrapper.has-tweakers {
   margin-bottom: 40px;
   font-size: 1.2rem;
 }
@@ -836,9 +836,13 @@ ul {
     margin: 0;
     width: 100%;
   }
+
+  .lodgings-container {
+    padding-bottom: 0;
+  }
 }
 
-/* Hackish garbage */
+/* Hackish cases */
 @media (min-width: 1010px) and (max-width: 1460px) {
   .best-lodgings-component>.best-lodgings-grid-container {
     grid-template-columns: repeat(3, 1fr);
@@ -1188,7 +1192,7 @@ ul {
     grid-template-rows: repeat(6, 1fr);
   }
 
-  .city-lodgings-component .show-more-btn {
+  .city-lodgings-component .show-more-btn-wrapper {
     display: none;
   }
 
@@ -1214,6 +1218,7 @@ ul {
 
 /* Some edge cases */
 @media (max-width: 365px) {
+
   h1,
   h2,
   h4,
@@ -1232,7 +1237,7 @@ ul {
 
   .filters-list-wrapper>.filters-list-container {
     grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: auto;
   }
 
   .footer-section {
