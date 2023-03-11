@@ -47,7 +47,7 @@
   --booki-cards-drop-shadow-opacity: 0.06;
 
   /* Configuration.globalLayout => background image and color */
-  --booki-bg-img: url("../images/_bonus/background-pattern.png");
+  --booki-bg-img: url("../images/bonus/background-pattern.png");
   /* ⬆️ Write `none` to disable this feature */
   --booki-bg-color: var(--booki-chart-bg-color);
   /* ⬆️ Write var(--booki-chart-sections-bg-color) to disable this feature */
