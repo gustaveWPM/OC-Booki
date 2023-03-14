@@ -1,5 +1,5 @@
 /*
-   [CSS] Booki v1.3
+   [CSS] Booki v1.5
    This codebase is designed for the lastest Gecko & Blink based browsers only.
    Free for non commercial and commercial use. Just beware of cheating if you're into OC... 😏
    Use CTRL+F `§` & CTRL+F `***` to navigate throughout this CSS file sections.
@@ -662,8 +662,8 @@ ul {
   max-width: 100%;
   height: 199px;
   border-radius: var(--_border-radius);
-  outline-offset: var(--_negative-outline-size);
-  outline: var(--_outline-size) solid var(--booki-chart-sections-bg-color);
+  border: var(--_outline-size) solid var(--booki-chart-sections-bg-color);
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
 .lodging-card {
@@ -675,15 +675,13 @@ ul {
   color: inherit;
   overflow: hidden;
   line-height: 1.25rem;
-  border-radius: calc(var(--_border-radius) + var(--_outline-size));
+  border-radius: 15px;
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
 .lodging-card>.thumbnail {
   display: flex;
   height: calc(114px + var(--_outline-size));
-  margin-top: var(--_outline-size);
   margin-left: calc(var(--_negative-outline-size) * 2);
   width: 104%;
 }
@@ -788,7 +786,6 @@ ul {
   min-width: calc(106px - var(--_outline-size));
   width: calc(137px - var(--_outline-size));
   height: 104%;
-  margin-left: var(--_outline-size);
   margin-top: -1px;
 }
 
