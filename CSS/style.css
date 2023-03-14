@@ -43,8 +43,8 @@
   --booki-box-shadow-offset-y: 5px;
   --booki-box-shadow-blur-radius: 10px;
   --booki-box-shadow-spread-radius: 2px;
-  --booki-main-wrapper-drop-shadow-opacity: 0.1;
-  --booki-cards-drop-shadow-opacity: 0.06;
+  --booki-main-wrapper-drop-shadow-opacity: .1;
+  --booki-cards-drop-shadow-opacity: .06;
 
   /* Configuration.globalLayout => background image and color */
   --booki-bg-img: url("../images/bonus/background-pattern.png");
@@ -54,7 +54,7 @@
   /* (And also set --booki-main-wrapper-drop-shadow-opacity to `0`) */
 
   /* Configuration.animations => scale effect on cards hover */
-  --booki-card-hover-animation-scale-length: 0.25s;
+  --booki-card-hover-animation-scale-length: .25s;
   --booki-card-hover-animation-scale-ratio: 1.07;
   /* ⬆️ Write `none` to disable this feature */
 
@@ -68,15 +68,15 @@
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => header menu's cursor animation */
-  --booki-header-menu-cursor-animation-length: 0.3s;
+  --booki-header-menu-cursor-animation-length: .3s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => filters section menu's cursor animation */
-  --booki-filters-section-menu-cursor-animation-length: 0.2s;
+  --booki-filters-section-menu-cursor-animation-length: .2s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => show more button's cursor animation */
-  --booki-show-more-button-cursor-animation-length: 0.15s;
+  --booki-show-more-button-cursor-animation-length: .15s;
   /* ⬆️ Write `none` to disable this feature */
 }
 
@@ -184,9 +184,9 @@ h6 {
 .filter-button.has-tweakers {
   --_vcentered-basis: 105%;
   /* Defines the vertical scale (use PERCENTS) */
-  --_border-thickness: 0.15rem;
+  --_border-thickness: .15rem;
   border-radius: 30px;
-  padding: 0.9rem 1.2rem 0.9rem 0.9rem;
+  padding: .9rem 1.2rem .9rem .9rem;
   /* Defines the padding as: up | right | down | left */
 }
 
@@ -207,9 +207,9 @@ h6 {
 /* Constants: Lodging info icon's values */
 .lodging-info-icon.has-tweakers {
   --_border-color: var(--booki-chart-bg-color);
-  --_border-thickness: 0.12rem;
+  --_border-thickness: .12rem;
   padding: 5px 9px;
-  font-size: 0.7rem;
+  font-size: .7rem;
   margin-right: 10px;
 }
 
@@ -315,6 +315,19 @@ ul {
 
 /* 🧰 [§ A.4) Utilitary classes] */
 /* (Kinda minimalist internal CSS framework) => [📖 https://tinyurl.com/fk-clean-code] */
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .is-fw-normal {
   font-weight: var(--booki-fw-normal);
 }
@@ -356,7 +369,7 @@ ul {
 
 /* {Bonus} Let those crappy pictures shine again [📖 https://tinyurl.com/css-dodge-and-burn-ersatz] */
 .kinda-dodge-and-burn-filter {
-  filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
+  filter: saturate(130%) brightness(.55) contrast(110%) brightness(1.875) saturate(105%);
 }
 
 
@@ -521,8 +534,9 @@ ul {
 
 /* {REM} Too much unsafe values to move it on the configuration section */
 .filter-button .filter-icon-wrapper {
+  display: flex;
+  justify-content: center;
   width: 22pt;
-  text-align: center;
   transform: scale(1.25) translateX(-8%);
   color: var(--booki-chart-primary);
   font-size: var(--_vcentered-basis);
@@ -532,7 +546,6 @@ ul {
   --_bg-color: var(--booki-chart-filter-btn-hover);
 }
 
-/* Custom breakpoints */
 @media (max-width: 1040px) {
 
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
@@ -594,6 +607,7 @@ ul {
   .filter-button .filter-icon-wrapper {
     width: 25pt;
     transform: scale(1.25) translateX(-8%) translateY(-4%);
+    margin-top: -1px;
   }
 
   .filters-list-container .filter-button {
@@ -603,12 +617,16 @@ ul {
 
 @media (min-width: 366px) and (max-width: 495px) {
   .filter-button .filter-icon-wrapper {
-    width: 14pt;
-    transform: scale(2.6) translateX(-8%) translateY(6%);
+    width: 25px;
+    transform: scale(1.1);
   }
 
-  .filters-list-container .filter-button {
-    --_vcentered-basis: 65%;
+  .filter-button.enable-tweakers-bypass {
+    padding: .5rem .8rem .5rem .5rem;
+  }
+
+  .filter-button .filter-button-txt {
+    font-size: 65%;
   }
 }
 
@@ -699,13 +717,13 @@ ul {
 }
 
 .lodging-card>.lodging-card-description>.price-p {
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
 
 .rating-container {
   display: flex;
   margin-top: 6px;
-  font-size: 0.75rem;
+  font-size: .75rem;
   letter-spacing: 1pt;
 }
 
@@ -714,7 +732,7 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 50px;
-  gap: calc(var(--booki-bleed-current-state-value) * 0.8);
+  gap: calc(var(--booki-bleed-current-state-value) * .8);
 }
 
 .best-lodgings-section,
@@ -808,6 +826,10 @@ ul {
 
 /* Custom breakpoints */
 @media (max-width: 1460px) {
+  body {
+    animation: none;
+  }
+
   .lodging-card-wrapper {
     min-width: 200px;
   }
@@ -851,7 +873,7 @@ ul {
   }
 
   .best-lodgings-component .lodging-card>.lodging-card-description>.price-p {
-    font-size: 0.8rem;
+    font-size: .8rem;
     width: 130px;
   }
 
@@ -861,7 +883,7 @@ ul {
   }
 
   .best-lodgings-grid-container a:nth-child(odd) {
-    font-size: 0.93rem;
+    font-size: .93rem;
   }
 
   .best-lodgings-component .rating-container {
