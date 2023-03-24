@@ -277,7 +277,7 @@ input:placeholder-shown {
 }
 
 body {
-  font-family: var(--booki-font), sans-serif;
+  font-family: sans-serif;
   line-height: 1rem;
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
@@ -285,6 +285,12 @@ body {
   animation: background-animation var(--booki-background-image-animation-length) ease-in-out infinite;
   animation-timing-function: linear;
   overflow-wrap: break-word;
+}
+
+@media (min-width:481px) {
+  body {
+    font-family: var(--booki-font), sans-serif;
+  }
 }
 
 ol,
