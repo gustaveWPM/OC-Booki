@@ -434,6 +434,8 @@ ul {
 .searchbar .searchbar-input {
   display: flex;
   align-items: center;
+  border-radius: 0;
+  outline: none;
 }
 
 .searchbar {
