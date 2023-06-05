@@ -80,10 +80,6 @@
   /* ⬆️ Write `none` to disable this feature */
 }
 
-#top-level-wrapper.has-tweakers {
-  --_width: 1400px;
-}
-
 /* ⚙️ [§ A.2) Granular Configuration] */
 /* (You can edit the lines which are underneath this one as you wish) */
 
@@ -100,6 +96,11 @@ h4,
 h5,
 h6 {
   font-weight: var(--booki-fw-bold);
+}
+
+/* Constants: Top level wrapper width */
+#top-level-wrapper.has-tweakers {
+  --_width: 1400px;
 }
 
 /* Constants: Header nav's deadzone, header's height and its bottom gap */
