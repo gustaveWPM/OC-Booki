@@ -13,14 +13,14 @@
   --booki-font: 'Raleway';
 
   /* Configuration.chart => Static Colors */
-  --booki-chart-primary: #0065FC;
-  --booki-chart-bg-color: #F2F2F2;
+  --booki-chart-primary: #0065fc;
+  --booki-chart-bg-color: #f2f2f2;
   --booki-chart-sections-bg-color: white;
-  --booki-chart-filter-border-color: #D9D9D9;
+  --booki-chart-filter-border-color: #d9d9d9;
   /* {REM} Unspecified value, but retrieved it on the mockup */
 
   /* Configuration.chart => FX Colors */
-  --booki-chart-filter-btn-hover: #DEEBFF;
+  --booki-chart-filter-btn-hover: #deebff;
   --booki-inactive-menu-elm-indicator-color: transparent;
   --booki-active-menu-elm-indicator-color: var(--booki-chart-primary);
   --booki-chart-blue-btn-hover: var(--booki-chart-primary);
@@ -43,18 +43,18 @@
   --booki-box-shadow-offset-y: 5px;
   --booki-box-shadow-blur-radius: 10px;
   --booki-box-shadow-spread-radius: 2px;
-  --booki-main-wrapper-drop-shadow-opacity: .1;
-  --booki-cards-drop-shadow-opacity: .06;
+  --booki-main-wrapper-drop-shadow-opacity: 0.1;
+  --booki-cards-drop-shadow-opacity: 0.06;
 
   /* Configuration.globalLayout => background image and color */
-  --booki-bg-img: url("../images/bonus/background-pattern.png");
+  --booki-bg-img: url('../images/bonus/background-pattern.png');
   /* ⬆️ Write `none` to disable this feature */
   --booki-bg-color: var(--booki-chart-bg-color);
   /* ⬆️ Write var(--booki-chart-sections-bg-color) to disable this feature */
   /* (And also set --booki-main-wrapper-drop-shadow-opacity to `0`) */
 
   /* Configuration.animations => scale effect on cards hover */
-  --booki-card-hover-animation-scale-length: .25s;
+  --booki-card-hover-animation-scale-length: 0.25s;
   --booki-card-hover-animation-scale-ratio: 1.07;
   /* ⬆️ Write `none` to disable this feature */
 
@@ -68,15 +68,15 @@
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => header menu's cursor animation */
-  --booki-header-menu-cursor-animation-length: .3s;
+  --booki-header-menu-cursor-animation-length: 0.3s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => filters section menu's cursor animation */
-  --booki-filters-section-menu-cursor-animation-length: .2s;
+  --booki-filters-section-menu-cursor-animation-length: 0.2s;
   /* ⬆️ Write `none` to disable this feature */
 
   /* Configuration.animations => show more button's cursor animation */
-  --booki-show-more-button-cursor-animation-length: .15s;
+  --booki-show-more-button-cursor-animation-length: 0.15s;
   /* ⬆️ Write `none` to disable this feature */
 }
 
@@ -160,7 +160,7 @@ h6 {
 }
 
 /* Constants: Searchbar map button's icon specs */
-.searchbar .searchbar-map-button.has-tweakers>i {
+.searchbar .searchbar-map-button.has-tweakers > i {
   font-size: 1.15rem;
   padding: 18px;
 }
@@ -172,8 +172,8 @@ h6 {
 
 /* Constants: Searchbar search button's label */
 .searchbar .searchbar-search-button.has-tweakers:before {
-  --_mobile-content: "";
-  content: "Rechercher";
+  --_mobile-content: '';
+  content: 'Rechercher';
 }
 
 /* Constants: Searchbar search input's specs */
@@ -185,9 +185,9 @@ h6 {
 .filter-button.has-tweakers {
   --_vcentered-basis: 105%;
   /* Defines the vertical scale (use PERCENTS) */
-  --_border-thickness: .15rem;
+  --_border-thickness: 0.15rem;
   border-radius: 30px;
-  padding: .9rem 1.2rem .9rem .9rem;
+  padding: 0.9rem 1.2rem 0.9rem 0.9rem;
   /* Defines the padding as: up | right | down | left */
 }
 
@@ -208,9 +208,9 @@ h6 {
 /* Constants: Lodging info icon's values */
 .lodging-info-icon.has-tweakers {
   --_border-color: var(--booki-chart-bg-color);
-  --_border-thickness: .12rem;
+  --_border-thickness: 0.12rem;
   padding: 5px 9px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   margin-right: 10px;
 }
 
@@ -282,15 +282,15 @@ body {
   line-height: 1rem;
   font-weight: var(--booki-fw-normal);
   background-color: var(--booki-bg-color);
-  background-image: var(--booki-bg-img);
-  animation: background-animation var(--booki-background-image-animation-length) ease-in-out infinite;
-  animation-timing-function: linear;
   overflow-wrap: break-word;
 }
 
-@media (min-width:481px) {
+@media (min-width: 481px) {
   body {
     font-family: var(--booki-font), sans-serif;
+    background-image: var(--booki-bg-img);
+    animation: background-animation var(--booki-background-image-animation-length) ease-in-out infinite;
+    animation-timing-function: linear;
   }
 }
 
@@ -307,12 +307,13 @@ ul {
   justify-items: center;
   background-color: var(--booki-chart-sections-bg-color);
   max-width: calc(var(--_width) + var(--booki-bleed-current-state-value));
-  box-shadow: 0 0 calc(var(--booki-box-shadow-blur-radius) * 2) calc(var(--booki-box-shadow-spread-radius) * 2) rgba(0, 0, 0, var(--booki-main-wrapper-drop-shadow-opacity));
+  box-shadow: 0 0 calc(var(--booki-box-shadow-blur-radius) * 2) calc(var(--booki-box-shadow-spread-radius) * 2)
+    rgba(0, 0, 0, var(--booki-main-wrapper-drop-shadow-opacity));
 }
 
 /* Webpage Bleed */
-#top-level-wrapper>*:not(#main),
-#content>*:not(.filters-section) {
+#top-level-wrapper > *:not(#main),
+#content > *:not(.filters-section) {
   padding: var(--booki-global-bleed);
 }
 
@@ -363,9 +364,8 @@ ul {
 
 /* {Bonus} Let those crappy pictures shine again [📖 https://tinyurl.com/css-dodge-and-burn-ersatz] */
 .kinda-dodge-and-burn-filter {
-  filter: saturate(130%) brightness(.55) contrast(110%) brightness(1.875) saturate(105%);
+  filter: saturate(130%) brightness(0.55) contrast(110%) brightness(1.875) saturate(105%);
 }
-
 
 /*** B. Micro (Desktop first) */
 /* 🧱 [§ B.1) i. Header] */
@@ -400,7 +400,7 @@ ul {
   transition: border-top var(--booki-header-menu-cursor-animation-length) linear;
 }
 
-.header-nav-items-container>li:first-child>.header-nav-item {
+.header-nav-items-container > li:first-child > .header-nav-item {
   margin-right: var(--_nav-btn-deadzone);
 }
 
@@ -415,7 +415,7 @@ ul {
   height: 100%;
 }
 
-.header-logo-picture>img {
+.header-logo-picture > img {
   object-fit: contain;
 }
 
@@ -451,7 +451,7 @@ ul {
   border-radius: var(--_border-radius) 0 0 var(--_border-radius);
 }
 
-.searchbar .searchbar-map-button>i {
+.searchbar .searchbar-map-button > i {
   display: flex;
   align-self: center;
 }
@@ -483,7 +483,7 @@ ul {
   --_search-btn-bg-color: var(--booki-chart-blue-btn-hover);
 }
 
-.searchbar .searchbar-search-button>i {
+.searchbar .searchbar-search-button > i {
   display: none;
 }
 
@@ -495,11 +495,11 @@ ul {
   max-width: calc(var(--_filters-section-max-width) + var(--booki-bleed-current-state-value));
 }
 
-.filters-section>.is-label {
+.filters-section > .is-label {
   margin-right: var(--_filters-section-label-gap);
 }
 
-.filters-list-wrapper>.filters-list-container {
+.filters-list-wrapper > .filters-list-container {
   display: grid;
   grid-template-columns: repeat(4, auto);
   row-gap: var(--_gap-y);
@@ -543,7 +543,6 @@ ul {
 }
 
 @media (max-width: 1040px) {
-
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:not(:last-child) {
     --_gap-x: var(--_gap-x-tablet);
@@ -564,7 +563,6 @@ ul {
 }
 
 @media (max-width: 960px) {
-
   /* {REM} Had to simulate gap cause it was buggy, provided "as is"... ¯\_(ツ)_/¯ */
   .filters-list-container .filter-button-elm:nth-child(even) {
     margin-right: 0;
@@ -585,16 +583,16 @@ ul {
     width: 100%;
   }
 
-  .filters-section>.is-label,
+  .filters-section > .is-label,
   .filters-list-wrapper {
     flex-basis: 100%;
   }
 
-  .filters-section>.is-label {
+  .filters-section > .is-label {
     margin-bottom: var(--_filters-section-label-gap-mobile);
   }
 
-  .filters-list-wrapper>.filters-list-container {
+  .filters-list-wrapper > .filters-list-container {
     --_gap-y: var(--_gap-y-mobile);
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -618,7 +616,7 @@ ul {
   }
 
   .filter-button.enable-tweakers-bypass {
-    padding: .5rem .8rem .5rem .5rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.5rem;
   }
 
   .filter-button .filter-button-txt {
@@ -644,11 +642,11 @@ ul {
   align-items: center;
 }
 
-.component-title-container>i {
+.component-title-container > i {
   font-size: 1.25rem;
 }
 
-.city-lodgings-section>.city-lodgings-component {
+.city-lodgings-section > .city-lodgings-component {
   width: 91%;
 }
 
@@ -656,7 +654,7 @@ ul {
   width: 85%;
 }
 
-.city-lodgings-component>.city-lodgings-grid-container {
+.city-lodgings-component > .city-lodgings-grid-container {
   width: 100%;
   height: auto;
   display: grid;
@@ -666,7 +664,7 @@ ul {
   margin-bottom: 40px;
 }
 
-.city-lodgings-component>.city-lodgings-grid-container>a {
+.city-lodgings-component > .city-lodgings-grid-container > a {
   text-decoration: none;
 }
 
@@ -677,7 +675,8 @@ ul {
   height: 199px;
   border-radius: var(--_border-radius);
   border: var(--_outline-size) solid var(--booki-chart-sections-bg-color);
-  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius)
+    rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
 .lodging-card {
@@ -693,33 +692,33 @@ ul {
   background-color: var(--booki-chart-sections-bg-color);
 }
 
-.lodging-card>.thumbnail {
+.lodging-card > .thumbnail {
   display: flex;
   height: calc(114px + var(--_outline-size));
   margin-left: calc(var(--_negative-outline-size) * 2);
   width: 104%;
 }
 
-.lodging-card>.thumbnail>img {
+.lodging-card > .thumbnail > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.lodging-card>.lodging-card-description {
+.lodging-card > .lodging-card-description {
   margin: auto 11pt;
   padding-bottom: var(--_outline-size);
   line-height: 1.4rem;
 }
 
-.lodging-card>.lodging-card-description>.price-p {
-  font-size: .9rem;
+.lodging-card > .lodging-card-description > .price-p {
+  font-size: 0.9rem;
 }
 
 .rating-container {
   display: flex;
   margin-top: 6px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   letter-spacing: 1pt;
 }
 
@@ -728,7 +727,7 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 50px;
-  gap: calc(var(--booki-bleed-current-state-value) * .8);
+  gap: calc(var(--booki-bleed-current-state-value) * 0.8);
 }
 
 .best-lodgings-section,
@@ -746,7 +745,7 @@ ul {
   width: 420px;
 }
 
-.best-lodgings-section>.aside-content {
+.best-lodgings-section > .aside-content {
   width: 100%;
 }
 
@@ -759,7 +758,7 @@ ul {
 }
 
 .city-lodgings-component .show-more-btn:hover {
-  color: var(--booki-chart-primary)
+  color: var(--booki-chart-primary);
 }
 
 /* 🧱 [§ B.4) ii. Best-Lodgings Component] */
@@ -768,7 +767,7 @@ ul {
 /* (Also seems like inheritance, yah you got it) */
 
 /* {REM} Let's create a new class for the grid, it's worth */
-.best-lodgings-component>.best-lodgings-grid-container {
+.best-lodgings-component > .best-lodgings-grid-container {
   width: 100%;
   height: auto;
   display: grid;
@@ -778,7 +777,7 @@ ul {
   margin-bottom: 50px;
 }
 
-.best-lodgings-component>.best-lodgings-grid-container>a {
+.best-lodgings-component > .best-lodgings-grid-container > a {
   text-decoration: none;
 }
 
@@ -796,14 +795,14 @@ ul {
   justify-content: left;
 }
 
-.best-lodgings-component .lodging-card>.thumbnail {
+.best-lodgings-component .lodging-card > .thumbnail {
   min-width: calc(106px - var(--_outline-size));
   width: calc(137px - var(--_outline-size));
   height: 104%;
   margin-top: -1px;
 }
 
-.best-lodgings-component .lodging-card>.lodging-card-description {
+.best-lodgings-component .lodging-card > .lodging-card-description {
   display: flex;
   flex-direction: column;
   height: 80%;
@@ -812,7 +811,7 @@ ul {
   line-height: 1.2rem;
 }
 
-.best-lodgings-component .lodging-card>.lodging-card-description>.is-title {
+.best-lodgings-component .lodging-card > .lodging-card-description > .is-title {
   margin-bottom: var(--_outline-size);
 }
 
@@ -835,19 +834,19 @@ ul {
     flex-basis: 100%;
   }
 
-  .city-lodgings-section>.city-lodgings-component,
+  .city-lodgings-section > .city-lodgings-component,
   .best-lodgings-section .best-lodgings-component {
     width: 91%;
   }
 }
 
 @media (max-width: 943px) {
-  .city-lodgings-component>.city-lodgings-grid-container {
+  .city-lodgings-component > .city-lodgings-grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 
-  .lodging-card>.thumbnail {
+  .lodging-card > .thumbnail {
     margin: 0;
     width: 100%;
   }
@@ -859,27 +858,27 @@ ul {
 
 /* Hackish cases */
 @media (min-width: 1010px) and (max-width: 1460px) {
-  .best-lodgings-component>.best-lodgings-grid-container {
+  .best-lodgings-component > .best-lodgings-grid-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
 
-  .best-lodgings-component .lodging-card>.lodging-card-description>.is-title {
+  .best-lodgings-component .lodging-card > .lodging-card-description > .is-title {
     width: 94%;
   }
 
-  .best-lodgings-component .lodging-card>.lodging-card-description>.price-p {
-    font-size: .8rem;
+  .best-lodgings-component .lodging-card > .lodging-card-description > .price-p {
+    font-size: 0.8rem;
     width: 130px;
   }
 
-  .best-lodgings-component .lodging-card>.lodging-card-description {
+  .best-lodgings-component .lodging-card > .lodging-card-description {
     width: 100%;
     margin-left: calc(var(--_outline-size) * 3 - 1px);
   }
 
   .best-lodgings-grid-container a:nth-child(odd) {
-    font-size: .93rem;
+    font-size: 0.93rem;
   }
 
   .best-lodgings-component .rating-container {
@@ -909,10 +908,11 @@ ul {
   height: var(--_height);
   color: inherit;
   background-color: var(--booki-chart-sections-bg-color);
-  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius) rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
+  box-shadow: 0 var(--booki-box-shadow-offset-y) var(--booki-box-shadow-blur-radius) var(--booki-box-shadow-spread-radius)
+    rgba(0, 0, 0, var(--booki-cards-drop-shadow-opacity));
 }
 
-.activity-card>a {
+.activity-card > a {
   text-decoration: none;
   color: inherit;
 }
@@ -930,18 +930,18 @@ ul {
   overflow: hidden;
 }
 
-.activity-card .activity-card-picture-wrapper>.thumbnail {
+.activity-card .activity-card-picture-wrapper > .thumbnail {
   display: flex;
   height: var(--_height);
 }
 
-.activity-card .activity-card-picture-wrapper>.thumbnail>img {
+.activity-card .activity-card-picture-wrapper > .thumbnail > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.activities-component>.activities-grid-container {
+.activities-component > .activities-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -957,7 +957,7 @@ ul {
 }
 
 @media (min-width: 951px) and (max-width: 1250px) {
-  .activities-component>.activities-grid-container {
+  .activities-component > .activities-grid-container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
@@ -974,7 +974,7 @@ ul {
 }
 
 @media (max-width: 950px) {
-  .activities-component>.activities-grid-container {
+  .activities-component > .activities-grid-container {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -994,12 +994,12 @@ ul {
   width: 100%;
 }
 
-.footer-section>.is-title,
+.footer-section > .is-title,
 .footer-section a {
   line-height: var(--_line-height);
 }
 
-.footer-section>.is-title {
+.footer-section > .is-title {
   margin-bottom: 5px;
 }
 
@@ -1093,19 +1093,18 @@ ul {
     --booki-bleed-current-state-value: var(--booki-bleed-mobile);
   }
 
-  #content>.lodgings-section,
-  #content>.activities,
-  #top-level-wrapper>#header,
-  #top-level-wrapper>#footer {
+  #content > .lodgings-section,
+  #content > .activities,
+  #top-level-wrapper > #header,
+  #top-level-wrapper > #footer {
     padding: 0;
   }
 }
 
 /* ✨ [§ D.2) Layout adjustments for tablet] */
 @media (min-width: 769px) and (max-width: 992px) {
-
   /* Header */
-  .header-nav-items-container>li:first-child>.header-nav-item {
+  .header-nav-items-container > li:first-child > .header-nav-item {
     margin-right: calc(var(--_nav-btn-deadzone) / 2);
   }
 
@@ -1118,7 +1117,6 @@ ul {
 
 /* ✨ [§ D.3) Layout adjustments for mobile] */
 @media (max-width: 768px) {
-
   /* Global */
   .section-element-a {
     display: flex;
@@ -1171,7 +1169,7 @@ ul {
     height: auto;
   }
 
-  #header>.header-nav {
+  #header > .header-nav {
     width: 100%;
     --_menu-active-item-border-top-color: var(--booki-chart-bg-color);
     min-height: 50px;
@@ -1197,12 +1195,12 @@ ul {
     content: var(--_mobile-content);
   }
 
-  .searchbar .searchbar-search-button>i {
+  .searchbar .searchbar-search-button > i {
     display: flex;
   }
 
   /* Lodgings */
-  .city-lodgings-component>.city-lodgings-grid-container {
+  .city-lodgings-component > .city-lodgings-grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
@@ -1233,7 +1231,6 @@ ul {
 
 /* Some edge cases */
 @media (max-width: 365px) {
-
   h1,
   h2,
   h4,
@@ -1242,7 +1239,7 @@ ul {
     line-height: var(--_page-title-line-height);
   }
 
-  .best-lodgings-component .lodging-card>.lodging-card-description {
+  .best-lodgings-component .lodging-card > .lodging-card-description {
     width: 100%;
   }
 
@@ -1250,7 +1247,7 @@ ul {
     --_gap-x-tablet: 0;
   }
 
-  .filters-list-wrapper>.filters-list-container {
+  .filters-list-wrapper > .filters-list-container {
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto;
   }
