@@ -1,288 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <link rel="icon" type="image/x-icon" href="./images/bonus/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Trouvez l'Hébergement et les Activités pour des vacances idéales sur Booki.fr, site de Voyages N°1 en France. Tarifs imbattables et Réservation Gratuite."
+    />
+    <title>Booki | En plein centre-ville, ou en pleine nature</title>
+    <link href="./css/style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/575c2fb10a.js" crossorigin="anonymous" defer></script>
+    <link
+      rel="preload"
+      as="style"
+      media="(min-width:481px)"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      onload="this.rel='stylesheet'"
+    />
+  </head>
 
-<head>
-  <link rel="icon" type="image/x-icon" href="./images/bonus/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="description"
-    content="Trouvez l'Hébergement et les Activités pour des vacances idéales sur Booki.fr, site de Voyages N°1 en France. Tarifs imbattables et Réservation Gratuite.">
-  <title>Booki | En plein centre-ville, ou en pleine nature</title>
-  <link href="./css/style.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/575c2fb10a.js" crossorigin="anonymous" defer></script>
-  <link rel="preload" as="style" media="(min-width:481px)"
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
-    onload="this.rel='stylesheet'">
-</head>
+  <body>
+    <div id="top-level-wrapper" class="has-tweakers">
+      <header id="header" class="has-tweakers enable-tweakers-bypass">
+        <a aria-label="Logo Booki" class="header-logo has-tweakers" href="./index.html">
+          <img class="header-logo-picture" src="./images/logo/booki.svg" alt="" />
+        </a>
+        <nav class="header-nav has-tweakers">
+          <ul class="header-nav-items-container is-fw-medium">
+            <li><a class="header-nav-item has-tweakers enable-tweakers-bypass" href="#city-lodgings-section">Hébergements</a></li>
+            <li><a class="header-nav-item has-tweakers enable-tweakers-bypass" href="#activities-section">Activités</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<body>
-  <div id="top-level-wrapper" class="has-tweakers">
-    <header id="header" class="has-tweakers enable-tweakers-bypass">
-      <a aria-label="Logo Booki" class="header-logo has-tweakers" href="./index.html">
-        <img class="header-logo-picture" src="./images/logo/booki.svg" alt="">
-      </a>
-      <nav class="header-nav has-tweakers">
-        <ul class="header-nav-items-container is-fw-medium">
-          <li><a class="header-nav-item has-tweakers enable-tweakers-bypass"
-              href="#city-lodgings-section">Hébergements</a></li>
-          <li><a class="header-nav-item has-tweakers enable-tweakers-bypass" href="#activities-section">Activités</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section id="content" class="has-tweakers">
-        <div class="page-title">
-          <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-          <p class="is-subtitle">En plein centre-ville ou en pleine nature</p>
-        </div>
-        <div id="form-section" class="form-section">
-          <div class="searchbar-container has-tweakers">
-            <form class="searchbar" action="#">
-              <label class="searchbar-map-button has-tweakers" for="search-input-label-connector"><i
-                  class="fa fa-map-marker"></i></label>
-              <input type="text" placeholder="Marseille, France" name="recherche" id="search-input-label-connector"
-                class="searchbar-input has-tweakers is-fw-bold">
-              <button aria-label="Rechercher" type="submit"
-                class="searchbar-search-button has-tweakers enable-tweakers-bypass is-fw-bold"><i
-                  class="fas fa-search"></i></button>
-            </form>
+      <main id="main">
+        <section id="content" class="has-tweakers">
+          <div class="page-title">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p class="is-subtitle">En plein centre-ville ou en pleine nature</p>
           </div>
-        </div>
-
-        <div id="filters-section" class="filters-section">
-          <p class="is-fw-bold is-label">Filtres</p>
-          <nav class="filters-list-wrapper">
-            <ul class="filters-list-container has-tweakers is-fw-bold">
-              <li class="filter-button-elm">
-                <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
-                  <span class="filter-button-content-container">
-                    <span class="filter-icon-wrapper"><i class="fas fa-money-bill-wave"
-                        aria-hidden="true"></i></span><span class="filter-button-txt">Économique</span></span>
+          <div id="form-section" class="form-section">
+            <div class="searchbar-container has-tweakers">
+              <form class="searchbar" action="#">
+                <label class="searchbar-map-button has-tweakers" for="search-input-label-connector"><i class="fa fa-map-marker"></i></label>
+                <input
+                  type="text"
+                  placeholder="Marseille, France"
+                  name="recherche"
+                  id="search-input-label-connector"
+                  class="searchbar-input has-tweakers is-fw-bold"
+                />
+                <button aria-label="Rechercher" type="submit" class="searchbar-search-button has-tweakers enable-tweakers-bypass is-fw-bold">
+                  <i class="fas fa-search"></i>
                 </button>
-              </li>
-              <li class="filter-button-elm">
-                <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
-                  <span class="filter-button-content-container">
-                    <span class="filter-icon-wrapper"><i class="fas fa-person" aria-hidden="true"></i></span><span
-                      class="filter-button-txt">Familial</span>
-                  </span>
-                </button>
-              </li>
-              <li class="filter-button-elm">
-                <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
-                  <span class="filter-button-content-container">
-                    <span class="filter-icon-wrapper"><i class="fas fa-heart" aria-hidden="true"></i></span><span
-                      class="filter-button-txt">Romantique</span>
-                  </span>
-                </button>
-              </li>
-              <li class="filter-button-elm">
-                <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
-                  <span class="filter-button-content-container">
-                    <span class="filter-icon-wrapper"><i class="fas fa-dog" aria-hidden="true"></i></span><span
-                      class="filter-button-txt">Animaux autorisés</span>
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+              </form>
+            </div>
+          </div>
 
-        <div id="lodging-info-selector" class="lodging-info has-tweakers">
-          <i class="fas fa-info is-ring lodging-info-icon has-tweakers" aria-hidden="true"></i>
-          <p class="is-caption is-label">
-            Plus de 500 logements sont disponibles dans cette ville
-          </p>
-        </div>
+          <div id="filters-section" class="filters-section">
+            <p class="is-fw-bold is-label">Filtres</p>
+            <nav class="filters-list-wrapper">
+              <ul class="filters-list-container has-tweakers is-fw-bold">
+                <li class="filter-button-elm">
+                  <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
+                    <span class="filter-button-content-container">
+                      <span class="filter-icon-wrapper"><i class="fas fa-money-bill-wave" aria-hidden="true"></i></span
+                      ><span class="filter-button-txt">Économique</span></span
+                    >
+                  </button>
+                </li>
+                <li class="filter-button-elm">
+                  <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
+                    <span class="filter-button-content-container">
+                      <span class="filter-icon-wrapper"><i class="fas fa-person" aria-hidden="true"></i></span
+                      ><span class="filter-button-txt">Familial</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="filter-button-elm">
+                  <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
+                    <span class="filter-button-content-container">
+                      <span class="filter-icon-wrapper"><i class="fas fa-heart" aria-hidden="true"></i></span
+                      ><span class="filter-button-txt">Romantique</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="filter-button-elm">
+                  <button class="is-label filter-button has-tweakers enable-tweakers-bypass">
+                    <span class="filter-button-content-container">
+                      <span class="filter-icon-wrapper"><i class="fas fa-dog" aria-hidden="true"></i></span
+                      ><span class="filter-button-txt">Animaux autorisés</span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-        <div id="lodgings-section" class="lodgings-section">
-          <div class="lodgings-container">
-            <article id="city-lodgings-section" class="city-lodgings-section section-element-a">
-              <div class="city-lodgings-component is-component">
-                <div class="component-title-container has-tweakers">
-                  <h2 class="is-title">Hébergements à&nbsp;<span class="city-name-selector">Marseille</span></h2>
-                </div>
-                <div class="city-lodgings-grid-container">
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.webp"
-                            alt="Aperçu de l'Auberge La Canebière">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Auberge La Canebière</h3>
-                          <p class="price-p">Nuit à partir de 25<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.webp"
-                            alt="Aperçu de l'Hôtel du port">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Hôtel du port</h3>
-                          <p class="price-p">Nuit à partir de 52<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.webp"
-                            alt="Aperçu de l'Hôtel Les mouettes">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Hôtel Les mouettes</h3>
-                          <p class="price-p">Nuit à partir de 76<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.webp"
-                            alt="Aperçu de l'Hôtel de la mer">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Hôtel de la mer</h3>
-                          <p class="price-p">Nuit à partir de 46<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.webp"
-                            alt="Aperçu de l'Auberge Le Panier">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Auberge Le Panier</h3>
-                          <p class="price-p">Nuit à partir de 23<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                  <a href="#">
-                    <div class="lodging-card-wrapper has-tweakers">
-                      <article class="lodging-card">
-                        <picture class="thumbnail">
-                          <source srcset="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.webp"
-                            media="(max-width: 768px)">
-                          <source srcset="./images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.webp"
-                            media="(max-width: 1281px)">
-                          <img src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.webp"
-                            alt="Aperçu de l'Hôtel Chez Amina">
-                        </picture>
-                        <div class="lodging-card-description">
-                          <h3 class="is-title">Hôtel Chez Amina</h3>
-                          <p class="price-p">Nuit à partir de 96<span class="is-fw-semibold">€</span></p>
-                          <div class="rating-container">
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-checked" aria-hidden="true"></i>
-                            <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </a>
-                </div>
+          <div id="lodging-info-selector" class="lodging-info has-tweakers">
+            <i class="fas fa-info is-ring lodging-info-icon has-tweakers" aria-hidden="true"></i>
+            <p class="is-caption is-label">Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
 
-                <div class="show-more-btn-wrapper has-tweakers">
-                  <a href="#" class="show-more-btn is-fw-bold">Afficher plus</a>
-                </div>
-              </div>
-            </article>
-
-            <aside id="best-lodgings-section" class="best-lodgings-section section-element-b">
-              <article class="aside-content">
-                <div class="best-lodgings-component is-component">
+          <div id="lodgings-section" class="lodgings-section">
+            <div class="lodgings-container">
+              <article id="city-lodgings-section" class="city-lodgings-section section-element-a">
+                <div class="city-lodgings-component is-component">
                   <div class="component-title-container has-tweakers">
-                    <h2 class="is-title">Les plus populaires</h2>
-                    <i class="fas fa-chart-line is-blue"></i>
+                    <h2 class="is-title">Hébergements à&nbsp;<span class="city-name-selector">Marseille</span></h2>
                   </div>
-                  <div class="best-lodgings-grid-container">
+                  <div class="city-lodgings-grid-container">
                     <a href="#">
                       <div class="lodging-card-wrapper has-tweakers">
                         <article class="lodging-card">
                           <picture class="thumbnail">
-                            <source srcset="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.webp"
-                              media="(max-width: 1281px)">
-                            <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.webp"
-                              alt="Aperçu de l'Hôtel Le soleil du matin">
+                            <source srcset="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.webp"
+                              alt="Aperçu de l'Auberge La Canebière"
+                            />
                           </picture>
                           <div class="lodging-card-description">
-                            <h3 class="is-title">Hôtel Le soleil du matin</h3>
-                            <p class="price-p">Nuit à partir de 128<span class="is-fw-semibold">€</span></p>
+                            <h3 class="is-title">Auberge La Canebière</h3>
+                            <p class="price-p">Nuit à partir de 25<span class="is-fw-semibold">€</span></p>
                             <div class="rating-container">
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
@@ -298,14 +141,17 @@
                       <div class="lodging-card-wrapper has-tweakers">
                         <article class="lodging-card">
                           <picture class="thumbnail">
-                            <source srcset="./images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.webp"
-                              media="(max-width: 1281px)">
-                            <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.webp"
-                              alt="Aperçu des Chambres d'hôtes Au coeur de l'eau">
+                            <source srcset="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.webp"
+                              alt="Aperçu de l'Hôtel du port"
+                            />
                           </picture>
                           <div class="lodging-card-description">
-                            <h3 class="is-title">Chambres d’hôtes Au cœur de l’eau</h3>
-                            <p class="price-p">Nuit à partir de 71<span class="is-fw-semibold">€</span></p>
+                            <h3 class="is-title">Hôtel du port</h3>
+                            <p class="price-p">Nuit à partir de 52<span class="is-fw-semibold">€</span></p>
                             <div class="rating-container">
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
@@ -321,14 +167,17 @@
                       <div class="lodging-card-wrapper has-tweakers">
                         <article class="lodging-card">
                           <picture class="thumbnail">
-                            <source srcset="./images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.webp"
-                              media="(max-width: 1281px)">
-                            <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.webp"
-                              alt="Aperçu de l'Hôtel Bleu et Blanc">
+                            <source srcset="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.webp"
+                              alt="Aperçu de l'Hôtel Les mouettes"
+                            />
                           </picture>
                           <div class="lodging-card-description">
-                            <h3 class="is-title">Hôtel Bleu et Blanc</h3>
-                            <p class="price-p">Nuit à partir de 68<span class="is-fw-semibold">€</span></p>
+                            <h3 class="is-title">Hôtel Les mouettes</h3>
+                            <p class="price-p">Nuit à partir de 76<span class="is-fw-semibold">€</span></p>
                             <div class="rating-container">
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
                               <i class="fas fa-star is-checked" aria-hidden="true"></i>
@@ -340,127 +189,301 @@
                         </article>
                       </div>
                     </a>
+                    <a href="#">
+                      <div class="lodging-card-wrapper has-tweakers">
+                        <article class="lodging-card">
+                          <picture class="thumbnail">
+                            <source srcset="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.webp"
+                              alt="Aperçu de l'Hôtel de la mer"
+                            />
+                          </picture>
+                          <div class="lodging-card-description">
+                            <h3 class="is-title">Hôtel de la mer</h3>
+                            <p class="price-p">Nuit à partir de 46<span class="is-fw-semibold">€</span></p>
+                            <div class="rating-container">
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="lodging-card-wrapper has-tweakers">
+                        <article class="lodging-card">
+                          <picture class="thumbnail">
+                            <source srcset="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.webp"
+                              alt="Aperçu de l'Auberge Le Panier"
+                            />
+                          </picture>
+                          <div class="lodging-card-description">
+                            <h3 class="is-title">Auberge Le Panier</h3>
+                            <p class="price-p">Nuit à partir de 23<span class="is-fw-semibold">€</span></p>
+                            <div class="rating-container">
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="lodging-card-wrapper has-tweakers">
+                        <article class="lodging-card">
+                          <picture class="thumbnail">
+                            <source srcset="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.webp" media="(max-width: 768px)" />
+                            <source srcset="./images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.webp" media="(max-width: 1281px)" />
+                            <img
+                              loading="lazy"
+                              src="./images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.webp"
+                              alt="Aperçu de l'Hôtel Chez Amina"
+                            />
+                          </picture>
+                          <div class="lodging-card-description">
+                            <h3 class="is-title">Hôtel Chez Amina</h3>
+                            <p class="price-p">Nuit à partir de 96<span class="is-fw-semibold">€</span></p>
+                            <div class="rating-container">
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                              <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="show-more-btn-wrapper has-tweakers">
+                    <a href="#" class="show-more-btn is-fw-bold">Afficher plus</a>
                   </div>
                 </div>
               </article>
-            </aside>
+
+              <aside id="best-lodgings-section" class="best-lodgings-section section-element-b">
+                <article class="aside-content">
+                  <div class="best-lodgings-component is-component">
+                    <div class="component-title-container has-tweakers">
+                      <h2 class="is-title">Les plus populaires</h2>
+                      <i class="fas fa-chart-line is-blue"></i>
+                    </div>
+                    <div class="best-lodgings-grid-container">
+                      <a href="#">
+                        <div class="lodging-card-wrapper has-tweakers">
+                          <article class="lodging-card">
+                            <picture class="thumbnail">
+                              <source srcset="./images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.webp" media="(max-width: 1281px)" />
+                              <img
+                                src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.webp"
+                                alt="Aperçu de l'Hôtel Le soleil du matin"
+                              />
+                            </picture>
+                            <div class="lodging-card-description">
+                              <h3 class="is-title">Hôtel Le soleil du matin</h3>
+                              <p class="price-p">Nuit à partir de 128<span class="is-fw-semibold">€</span></p>
+                              <div class="rating-container">
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="lodging-card-wrapper has-tweakers">
+                          <article class="lodging-card">
+                            <picture class="thumbnail">
+                              <source srcset="./images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.webp" media="(max-width: 1281px)" />
+                              <img
+                                src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.webp"
+                                alt="Aperçu des Chambres d'hôtes Au coeur de l'eau"
+                              />
+                            </picture>
+                            <div class="lodging-card-description">
+                              <h3 class="is-title">Chambres d’hôtes Au cœur de l’eau</h3>
+                              <p class="price-p">Nuit à partir de 71<span class="is-fw-semibold">€</span></p>
+                              <div class="rating-container">
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="lodging-card-wrapper has-tweakers">
+                          <article class="lodging-card">
+                            <picture class="thumbnail">
+                              <source srcset="./images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.webp" media="(max-width: 1281px)" />
+                              <img
+                                loading="lazy"
+                                src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.webp"
+                                alt="Aperçu de l'Hôtel Bleu et Blanc"
+                              />
+                            </picture>
+                            <div class="lodging-card-description">
+                              <h3 class="is-title">Hôtel Bleu et Blanc</h3>
+                              <p class="price-p">Nuit à partir de 68<span class="is-fw-semibold">€</span></p>
+                              <div class="rating-container">
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-checked" aria-hidden="true"></i>
+                                <i class="fas fa-star is-unchecked" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </aside>
+            </div>
+          </div>
+
+          <article id="activities-section" class="activities is-component">
+            <div class="activities-component">
+              <div class="component-title-container has-tweakers">
+                <h2 class="is-title">Activités à&nbsp;<span class="city-name-selector">Marseille</span></h2>
+              </div>
+              <div class="activities-grid-container">
+                <article class="activity-card">
+                  <a href="#">
+                    <div class="activity-card-picture-wrapper">
+                      <picture class="thumbnail">
+                        <source srcset="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.webp" media="(max-width: 768px)" />
+                        <source srcset="./images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.webp" media="(min-width: 1250px)" />
+                        <img
+                          loading="lazy"
+                          src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.webp"
+                          class="kinda-dodge-and-burn-filter"
+                          alt="Aperçu Vieux-Port"
+                        />
+                      </picture>
+                    </div>
+                    <div class="activity-card-description">
+                      <h3>Vieux-Port</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="activity-card">
+                  <a href="#">
+                    <div class="activity-card-picture-wrapper">
+                      <picture class="thumbnail">
+                        <source srcset="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.webp" media="(max-width: 950px)" />
+                        <source srcset="./images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.webp" media="(min-width: 1250px)" />
+                        <img
+                          loading="lazy"
+                          src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.webp"
+                          class="kinda-dodge-and-burn-filter"
+                          alt="Aperçu Fort de Pomègues"
+                        />
+                      </picture>
+                    </div>
+                    <div class="activity-card-description">
+                      <h3>Fort de Pomègues</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="activity-card">
+                  <a href="#">
+                    <div class="activity-card-picture-wrapper">
+                      <picture class="thumbnail">
+                        <source srcset="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp" media="(max-width: 768px)" />
+                        <source srcset="./images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp" media="(min-width: 1250px)" />
+                        <img
+                          loading="lazy"
+                          src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp"
+                          class="kinda-dodge-and-burn-filter"
+                          alt="Aperçu Parc national des Calanques"
+                        />
+                      </picture>
+                    </div>
+                    <div class="activity-card-description">
+                      <h3>Parc national des Calanques</h3>
+                    </div>
+                  </a>
+                </article>
+                <article class="activity-card">
+                  <a href="#">
+                    <div class="activity-card-picture-wrapper">
+                      <picture class="thumbnail">
+                        <source srcset="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.webp" media="(max-width: 768px)" />
+                        <source srcset="./images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.webp" media="(min-width: 1250px)" />
+                        <img
+                          loading="lazy"
+                          src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.webp"
+                          class="kinda-dodge-and-burn-filter"
+                          alt="Aperçu Notre-Dame-de-la-Garde"
+                        />
+                      </picture>
+                    </div>
+                    <div class="activity-card-description">
+                      <h3>Notre-Dame-<wbr /><span class="append-line-feed"></span>de-la-Garde</h3>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="footer-sections-wrapper">
+          <div class="footer-sections-container">
+            <section class="footer-section">
+              <h4 class="is-title">À propos</h4>
+              <nav>
+                <ul>
+                  <li><a href="#">Fonctionnement du site</a></li>
+                  <li><a href="#">Conditions générales</a></li>
+                  <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section class="footer-section">
+              <h4 class="is-title">Nos hébergements</h4>
+              <nav>
+                <ul>
+                  <li><a href="#">Charte qualité</a></li>
+                  <li><a href="#">Proposer votre hôtel</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section class="footer-section">
+              <h4 class="is-title">Assistance</h4>
+              <nav>
+                <ul>
+                  <li><a href="#">Centre d’aide</a></li>
+                  <li><a href="#">Nous contacter</a></li>
+                </ul>
+              </nav>
+            </section>
           </div>
         </div>
-
-        <article id="activities-section" class="activities is-component">
-          <div class="activities-component">
-            <div class="component-title-container has-tweakers">
-              <h2 class="is-title">Activités à&nbsp;<span class="city-name-selector">Marseille</span></h2>
-            </div>
-            <div class="activities-grid-container">
-              <article class="activity-card">
-                <a href="#">
-                  <div class="activity-card-picture-wrapper">
-                    <picture class="thumbnail">
-                      <source srcset="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.webp"
-                        media="(max-width: 768px)">
-                      <source srcset="./images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.webp"
-                        media="(min-width: 1250px)">
-                      <img src="./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.webp"
-                        class="kinda-dodge-and-burn-filter" alt="Aperçu Vieux-Port">
-                    </picture>
-                  </div>
-                  <div class="activity-card-description">
-                    <h3>Vieux-Port</h3>
-                  </div>
-                </a>
-              </article>
-              <article class="activity-card">
-                <a href="#">
-                  <div class="activity-card-picture-wrapper">
-                    <picture class="thumbnail">
-                      <source srcset="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.webp"
-                        media="(max-width: 950px)">
-                      <source srcset="./images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.webp"
-                        media="(min-width: 1250px)">
-                      <img src="./images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.webp"
-                        class="kinda-dodge-and-burn-filter" alt="Aperçu Fort de Pomègues">
-                    </picture>
-                  </div>
-                  <div class="activity-card-description">
-                    <h3>Fort de Pomègues</h3>
-                  </div>
-                </a>
-              </article>
-              <article class="activity-card">
-                <a href="#">
-                  <div class="activity-card-picture-wrapper">
-                    <picture class="thumbnail">
-                      <source srcset="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp"
-                        media="(max-width: 768px)">
-                      <source srcset="./images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp"
-                        media="(min-width: 1250px)">
-                      <img src="./images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.webp"
-                        class="kinda-dodge-and-burn-filter" alt="Aperçu Parc national des Calanques">
-                    </picture>
-                  </div>
-                  <div class="activity-card-description">
-                    <h3>Parc national des Calanques</h3>
-                  </div>
-                </a>
-              </article>
-              <article class="activity-card">
-                <a href="#">
-                  <div class="activity-card-picture-wrapper">
-                    <picture class="thumbnail">
-                      <source srcset="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.webp"
-                        media="(max-width: 768px)">
-                      <source srcset="./images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.webp"
-                        media="(min-width: 1250px)">
-                      <img src="./images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.webp"
-                        class="kinda-dodge-and-burn-filter" alt="Aperçu Notre-Dame-de-la-Garde">
-                    </picture>
-                  </div>
-                  <div class="activity-card-description">
-                    <h3>Notre-Dame-<wbr><span class="append-line-feed"></span>de-la-Garde</h3>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer id="footer">
-      <div class="footer-sections-wrapper">
-        <div class="footer-sections-container">
-          <section class="footer-section">
-            <h4 class="is-title">À propos</h4>
-            <nav>
-              <ul>
-                <li><a href="#">Fonctionnement du site</a></li>
-                <li><a href="#">Conditions générales</a></li>
-                <li><a href="#">Données et confidentialité</a></li>
-              </ul>
-            </nav>
-          </section>
-          <section class="footer-section">
-            <h4 class="is-title">Nos hébergements</h4>
-            <nav>
-              <ul>
-                <li><a href="#">Charte qualité</a></li>
-                <li><a href="#">Proposer votre hôtel</a></li>
-              </ul>
-            </nav>
-          </section>
-          <section class="footer-section">
-            <h4 class="is-title">Assistance</h4>
-            <nav>
-              <ul>
-                <li><a href="#">Centre d’aide</a></li>
-                <li><a href="#">Nous contacter</a></li>
-              </ul>
-            </nav>
-          </section>
-        </div>
-      </div>
-    </footer>
-  </div>
-</body>
-
+      </footer>
+    </div>
+  </body>
 </html>
